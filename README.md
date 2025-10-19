@@ -36,23 +36,34 @@
 
 ## How to install
 
-- For users with experience in klipper, python, ssh, etc. Do not proceed if you do not know what you are doing
-
 - Install [zmod](https://github.com/ghzserg/zmod) following the instructions
 
-- Change the native display to Guppyscreen DISPLAY_OFF
+- Change the native display to Guppyscreen → Run the `DISPLAY_OFF` command
 
-- Change web ui to mainsail WEB
+- Change web ui to mainsail → Run the `WEB` command
 
-- Log in to your AD5X via ssh (user:root, password: root)
-
-- Download and run the update.sh script
-
-	`curl -L -o update.sh https://raw.githubusercontent.com/function3d/zmod_ff5x/refs/heads/1.6/bambufy/update.sh`
-
-	`./update.sh`
+- Open **Mainsail** and navigate to **Machine → mod_data → user.moonraker.conf**.
+- At the **end of the file**, add the following section and save:
+```
+[update_manager bambufy]
+type: git_repo
+channel: stable
+path: /root/printer_data/config/mod_data/bambufy/
+origin: https://github.com/function3d/bambufy.git
+is_system_service: False
+primary_branch: master
+```
+- Open **Machine → mod_data → user.cfg**
+- At the **beginning of the file**, add the following section and save:
+```
+[include bambufy/user.cfg]
+```
+- Run the RESTART command
 
 - Use this [3MF](https://github.com/function3d/zmod_ff5x/raw/refs/heads/1.6/bambufy/PinkyWings_FireDragon.3mf) with Bambu Studio (from there you can save settings such as user profiles)
+
+## How to uninstall
+- Run the `BAMBUFY INSTALL=0` command
 
 ## Pull request yours issues
 Let's do what Flashforge didn't want to do
