@@ -51,9 +51,9 @@ def install_mainsail():
         edit_config_json(config_json)
         create_custom_css()
         #(MOD_DATA_DIR / "web.conf").write_text("CLIENT=mainsail\n", encoding="utf-8")
-    (MOD_DATA_DIR / "user.cfg").write_text("[include bambufy/user.cfg]", encoding="utf-8")
-    ensure_upstream()                                                                                                                                                                         
-    sync_with_upstream(get_default_branch("origin"))
+        (MOD_DATA_DIR / "user.cfg").write_text("[include bambufy/user.cfg]", encoding="utf-8")
+        ensure_upstream()                                                                                                                                                                         
+        sync_with_upstream(get_default_branch("origin"))
 
 def run_git(args):
     """Ejecuta comandos git en el repositorio."""
