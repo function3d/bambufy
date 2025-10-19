@@ -12,13 +12,6 @@ BACKUP_DIR = ROOT_DIR / "mainsail_"
 THEME_DIR = Path("cd /usr/data/config/.theme")
 MOD_DATA_DIR = Path("/usr/data/config/mod_data")
 
-def download_filei_(url, dest):
-    r = requests.get(url, stream=True)
-    r.raise_for_status()
-    with open(dest, "wb") as f:
-        for chunk in r.iter_content(chunk_size=8192):
-            f.write(chunk)
-            
 def download_file(url, dest):
     subprocess.run(["curl", "-s", "-L", "-o", dest, url], check=True)
 
@@ -27,14 +20,12 @@ def unzip_file(zip_path, dest_dir):
         zip_ref.extractall(dest_dir)
     os.remove(zip_path)
 
-
 def edit_config_json(config_path):
     if not config_path.exists():
         return
     content = config_path.read_text(encoding="utf-8")
     new_content = content.replace('"port": null,', '"port": "7125",')
     config_path.write_text(new_content, encoding="utf-8")
-
 
 def create_custom_css():
     THEME_DIR.mkdir(parents=True, exist_ok=True)
