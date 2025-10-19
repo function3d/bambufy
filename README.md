@@ -1,144 +1,68 @@
-# Bambu Studio
-## Machine start G-code
+# Bambufy AD5X
+ - Compatible with Bambu Studio, better management of the prime tower
+   ([3MF](https://github.com/function3d/zmod_ff5x/raw/refs/heads/1.6/PinkyWings_FireDragon.3mf))
+  - Purge sequences fully controlled by Bambu Studio (same behavior as
+   Bambu Lab printers)
+   - Accurate time and material usage estimates
+   - 24 mm retraction before filament cut on every color change (saves ~7
+   meters of filament across 300 color changes)
+   - Reduced purge multiplier (≈ 0.7) possible without color mixing in
+   most prints
+   - “Flush into object infill” and “flush into object supports”
+   effectively reduce filament waste
+   - **Material-to-waste ratio rarely exceeds 50%, even on 4-color prints**
+   - **Mainsail displays true colors directly from the slicer**
+   - **45 seconds color change time**
+   - Bed leveling before print (Level On/Off)
+   - External spool printing (IFS On/Off)
+   - Backup printing mode – up to 4 kg of uninterrupted printing (Backup
+   On/Off)
+  - Automatic fallback when IFS runs out: the remaining filament in the
+   printhead is used until the next color change
+   - Filament state detection at print_start to identify the active
+   filament in the extruder
+   - Detection of jams, breaks, or filament runout
+   - Improved routine for automatic print recovery after power outages or
+   errors
 
-```
-START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] TOOL={initial_no_support_extruder}
-T{initial_no_support_extruder}
-SET_PRINT_STATS_INFO TOTAL_LAYER=[total_layer_count]
-```
+## Bambu Studio
+<img width="1436" height="799" alt="image" src="https://github.com/user-attachments/assets/1d6a9e77-8b35-4d04-96d4-d92022a3500b" />
+
+## Flush volumes
+<img width="1307" height="810" alt="image" src="https://github.com/user-attachments/assets/fea280f2-809d-4bae-a744-4a4c36465881" />
+
+## Mainsail
+<img width="1059" height="810" alt="image" src="https://github.com/user-attachments/assets/bf80b66f-46e2-4b48-af52-d6f44f5accc8" />
+
+## How to install
+
+- For users with experience in klipper, python, ssh, etc. Do not proceed if you do not know what you are doing
+
+- Install [zmod](https://github.com/ghzserg/zmod) following the instructions
+
+- Change the native display to Guppyscreen DISPLAY_OFF
+
+- Change web ui to mainsail WEB
+
+- Log in to your AD5X via ssh (user:root, password: root)
+
+- Download and run the update.sh script
+
+	`curl -L -o update.sh https://raw.githubusercontent.com/function3d/zmod_ff5x/refs/heads/1.6/bambufy/update.sh`
+
+	`./update.sh`
+
+- Use this [3MF](https://github.com/function3d/zmod_ff5x/raw/refs/heads/1.6/bambufy/PinkyWings_FireDragon.3mf) with Bambu Studio (from there you can save settings such as user profiles)
+
+## Pull request yours issues
+Let's do what Flashforge didn't want to do
+
+## Results
+<img width="1005" height="1113" alt="image" src="https://github.com/user-attachments/assets/f6812bbf-ffd2-45d0-85fb-2e95d7d04b9b" />
+<img width="1200" height="1600" alt="image" src="https://github.com/user-attachments/assets/8ad8ce59-6f45-44ef-88ec-be9ecdcfb7f0" />
+
+## Credits
+Sergei (ghzserg) [zmod](https://github.com/ghzserg/zmod)
 
 
-## Machine end G-code
 
-```
-END_PRINT
-```
-
-## Layer change G-code
-
-```
-;AFTER_LAYER_CHANGE
-;[layer_z]
-SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
-; layer num/total_layer_count: {layer_num+1}/[total_layer_count]
-```
-
-##  Change filament G-code
-
-```
-{if old_filament_temp < new_filament_temp}
-M104 S[new_filament_temp]
-{endif}
-G1 Z{max_layer_z + 3.0} F1200
-M204 S9000
-T[next_extruder]
-{if next_extruder < 255}
-{if flush_length > 0}
-_GOTO_TRASH
-{endif}
-{if flush_length_1 > 1}
-; FLUSH_START
-{if flush_length_1 > 23.7}
-G1 E23.7 F{old_filament_e_feedrate} ; do not need pulsatile flushing for start part
-G1 E{(flush_length_1 - 23.7) * 0.04} F{old_filament_e_feedrate/2}
-G1 E{(flush_length_1 - 23.7) * 0.21} F{old_filament_e_feedrate}
-G1 E{(flush_length_1 - 23.7) * 0.04} F{old_filament_e_feedrate/2}
-G1 E{(flush_length_1 - 23.7) * 0.21} F{new_filament_e_feedrate}
-G1 E{(flush_length_1 - 23.7) * 0.04} F{new_filament_e_feedrate/2}
-G1 E{(flush_length_1 - 23.7) * 0.21} F{new_filament_e_feedrate}
-M106 P1 S128
-G1 E{(flush_length_1 - 23.7) * 0.04} F{new_filament_e_feedrate/2}
-G1 E{(flush_length_1 - 23.7) * 0.21} F{new_filament_e_feedrate}
-{else}
-G1 E{flush_length_1} F{old_filament_e_feedrate}
-{endif}
-; FLUSH_END
-{endif}
-{if flush_length_1 > 45 && flush_length_2 > 1}
-; WIPE
-M106 P1 S0
-G1 E-[new_retract_length_toolchange] F1800
-_SBROS_TRASH
-G1 E[new_retract_length_toolchange] F1800
-{endif}
-
-M104 S[new_filament_temp]
-
-{if flush_length_2 > 1}
-; FLUSH_START
-G1 E{flush_length_2 * 0.04} F{new_filament_e_feedrate/2}
-G1 E{flush_length_2 * 0.21} F{new_filament_e_feedrate}
-G1 E{flush_length_2 * 0.04} F{new_filament_e_feedrate/2}
-G1 E{flush_length_2 * 0.21} F{new_filament_e_feedrate}
-G1 E{flush_length_2 * 0.04} F{new_filament_e_feedrate/2}
-G1 E{flush_length_2 * 0.21} F{new_filament_e_feedrate}
-M106 P1 S128
-G1 E{flush_length_2 * 0.04} F{new_filament_e_feedrate/2}
-G1 E{flush_length_2 * 0.21} F{new_filament_e_feedrate}
-; FLUSH_END
-{endif}
-
-{if flush_length_2 > 45 && flush_length_3 > 1}
-; WIPE
-M106 P1 S0
-G1 E-[new_retract_length_toolchange] F1800
-_SBROS_TRASH
-G1 E[new_retract_length_toolchange] F1800
-{endif}
-
-{if flush_length_3 > 1}
-; FLUSH_START
-G1 E{flush_length_3 * 0.04} F{new_filament_e_feedrate/2}
-G1 E{flush_length_3 * 0.21} F{new_filament_e_feedrate}
-G1 E{flush_length_3 * 0.04} F{new_filament_e_feedrate/2}
-G1 E{flush_length_3 * 0.21} F{new_filament_e_feedrate}
-G1 E{flush_length_3 * 0.04} F{new_filament_e_feedrate/2}
-G1 E{flush_length_3 * 0.21} F{new_filament_e_feedrate}
-M106 P1 S128
-G1 E{flush_length_3 * 0.04} F{new_filament_e_feedrate/2}
-G1 E{flush_length_3 * 0.21} F{new_filament_e_feedrate}
-; FLUSH_END
-{endif}
-
-{if flush_length_3 > 45 && flush_length_4 > 1}
-; WIPE
-M106 P1 S0
-G1 E-[new_retract_length_toolchange] F1800
-_SBROS_TRASH
-G1 E[new_retract_length_toolchange] F1800
-{endif}
-
-{if flush_length_4 > 1}
-; FLUSH_START
-G1 E{flush_length_4 * 0.04} F{new_filament_e_feedrate/2}
-G1 E{flush_length_4 * 0.21} F{new_filament_e_feedrate}
-G1 E{flush_length_4 * 0.04} F{new_filament_e_feedrate/2}
-G1 E{flush_length_4 * 0.21} F{new_filament_e_feedrate}
-G1 E{flush_length_4 * 0.04} F{new_filament_e_feedrate/2}
-G1 E{flush_length_4 * 0.21} F{new_filament_e_feedrate}
-M106 P1 S128
-G1 E{flush_length_4 * 0.04} F{new_filament_e_feedrate/2}
-G1 E{flush_length_4 * 0.21} F{new_filament_e_feedrate}
-; FLUSH_END
-{endif}
-
-;WIPE
-M106 P1 S0
-G1 E-[new_retract_length_toolchange] F1800
-{if flush_length > 0}
-_SBROS_TRASH
-{endif}
-G1 Y220 F12000 ;Exit trash
-
-{if layer_z <= (initial_layer_print_height + 0.001)}
-M204 S[initial_layer_acceleration]
-{else}
-M204 S[default_acceleration]
-{endif}
-{endif}
-```
-
-## Pause G-code
-```
-PAUSE
-```
