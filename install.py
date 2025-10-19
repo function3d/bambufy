@@ -37,12 +37,6 @@ def create_custom_css():
 """
     (THEME_DIR / "custom.css").write_text(css_content, encoding="utf-8")
 
-def update():
-    repo_path = os.path.dirname(os.path.abspath(__file__))
-    subprocess.run(["git", "-C", repo_path, "fetch", "--all"], check=True)
-    subprocess.run(["git", "-C", repo_path, "reset", "--hard", f"origin/{branch}"], check=True)
-    #subprocess.run(["git", "-C", repo_path, "clean", "-fd"], check=True)  # elimina archivos sin seguimiento
-    
 def install_mainsail():
     if not BACKUP_DIR.exists():
         MAINSAIL_DIR.rename(BACKUP_DIR)
