@@ -8,9 +8,9 @@
    meters of filament across 300 color changes)
    - Reduced purge multiplier (≈ 0.7) possible without color mixing in
    most prints
-   - “Flush into object infill” and “flush into object supports”
+   - `Flush into object infill` `flush into object supports` and `flush into object`
    effectively reduce filament waste
-   - **Material-to-waste ratio rarely exceeds 50%, even on 4-color prints**
+   - **Material-to-waste ratio rarely exceeds 50%, even on 4-color prints** (weight print > 70g)
    - **Mainsail displays true colors directly from the slicer**
    - **45 seconds color change time**
    - Bed leveling before print (Level On/Off)
@@ -21,7 +21,7 @@
    printhead is used until the next color change
    - Filament state detection at print_start to identify the active
    filament in the extruder
-   - Detection of jams, breaks, or filament runout
+   - Detection of jams, breaks and filament runout
    - Improved routine for automatic print recovery after power outages or
    errors
 
@@ -36,7 +36,7 @@
 
 ## How to install
 
-- Install [zmod](https://github.com/ghzserg/zmod) following the instructions
+- Install [zmod](https://github.com/ghzserg/zmod) following the [instructions](https://github.com/ghzserg/zmod/wiki/Setup_en#installing-the-mod)
 
 - Change the native display to Guppyscreen → Run the `DISPLAY_OFF` command
 
