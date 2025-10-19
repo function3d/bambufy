@@ -40,7 +40,7 @@
 
 - Change the native display to Guppyscreen → Run the `DISPLAY_OFF` command
 
-- Change web ui to mainsail → Run the `WEB` command
+- Change web ui to **Mainsail** → Run the `WEB` command
 
 - Open **Mainsail** and navigate to **Machine → mod_data → user.moonraker.conf**.
 - At the **end of the file**, add the following section and save:
@@ -54,12 +54,10 @@ is_system_service: False
 primary_branch: master
 ```
 - Open **Machine → mod_data → user.cfg**
-- At the **beginning of the file**, add the following section and save:
+- At the **beginning of the file**, add the following section and **SAVE & RESTART**:
 ```
 [include bambufy/user.cfg]
 ```
-- Run the RESTART command
-
 - Use this [3MF](https://github.com/function3d/zmod_ff5x/raw/refs/heads/1.6/bambufy/PinkyWings_FireDragon.3mf) with Bambu Studio (from there you can save settings such as user profiles)
 
 ## How to uninstall
