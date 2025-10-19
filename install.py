@@ -50,6 +50,25 @@ def install_mainsail():
         #(MOD_DATA_DIR / "web.conf").write_text("CLIENT=mainsail\n", encoding="utf-8")
     (MOD_DATA_DIR / "user.cfg").write_text("[include bambufy/user.cfg]", encoding="utf-8")
 
+    repo_path = "/usr/data/config/mod"
+    try:
+        subprocess.run(
+            ["git", "-C", repo_path, "remote", "add", "upstream", "https://github.com/function3d/zmod_ff5x.git"],
+            check=True
+        )
+    except subprocess.CalledProcessError:
+        subprocess.run(
+            ["git", "-C", repo_path, "fetch", "upstream"],
+            check=True
+        )
+    try:
+        subprocess.run(
+            ["git", "-C", repo_path, "checkout", "-b", "1.6", "upstream/1.6"],
+            check=True
+        )
+    except subprocess.CalledProcessError:
+        subprocess.run(["git", "-C", repo_path, "checkout", "1.6"], check=True)
+
 def uninstall_mainsail():
     if BACKUP_DIR.exists():
         shutil.rmtree(MAINSAIL_DIR)
@@ -66,8 +85,6 @@ def main():
         install_mainsail()
     elif action == "uninstall":
         uninstall_mainsail()
-    elif action == "update":
-        update()
 
 if __name__ == "__main__":
     main()
