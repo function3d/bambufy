@@ -47,7 +47,12 @@ def create_custom_css():
 """
     (THEME_DIR / "custom.css").write_text(css_content, encoding="utf-8")
 
-
+def update():
+    repo_path = os.path.dirname(os.path.abspath(__file__))
+    subprocess.run(["git", "-C", repo_path, "fetch", "--all"], check=True)
+    subprocess.run(["git", "-C", repo_path, "reset", "--hard", f"origin/{branch}"], check=True)
+    #subprocess.run(["git", "-C", repo_path, "clean", "-fd"], check=True)  # elimina archivos sin seguimiento
+    
 def install_mainsail():
     if not BACKUP_DIR.exists():
         print("Backup de mainsail existente...")
@@ -60,9 +65,8 @@ def install_mainsail():
         config_json = MAINSAIL_DIR / "config.json"
         edit_config_json(config_json)
         create_custom_css()
-        (MOD_DATA_DIR / "web.conf").write_text("CLIENT=mainsail\n", encoding="utf-8")
-
-
+        #(MOD_DATA_DIR / "web.conf").write_text("CLIENT=mainsail\n", encoding="utf-8")
+    MOD_DATA_DIR / "user.cfg".write_text("[include bambufy/user.cfg]", encoding="utf-8")
 
 def uninstall_mainsail():
     if BACKUP_DIR.exists():
@@ -73,26 +77,6 @@ def uninstall_mainsail():
             css_path.unlink()
         (MOD_DATA_DIR / "web.conf").write_text("CLIENT=fluidd\n", encoding="utf-8")
     MOD_DATA_DIR / "user.cfg".write_text("", encoding="utf-8")
-
-
-
-def update():   
-    restore_path = MOD_DATA_DIR / "bambufy/restore_gcode.sh"
-    download_file(
-        "https://raw.githubusercontent.com/function3d/zmod_ff5x/refs/heads/1.6/bambufy/restore_gcode.sh",
-        restore_path
-    )
-    restore_path.chmod(0o755)
-
-    download_file(
-        "https://raw.githubusercontent.com/function3d/zmod_ff5x/refs/heads/1.6/bambufy/preprint.py",
-        MOD_DATA_DIR / "bambufy/preprint.py"
-    )
-    
-    download_file(
-        "https://raw.githubusercontent.com/function3d/zmod_ff5x/refs/heads/1.6/bambufy/user.cfg",
-        MOD_DATA_DIR / "bambufy/user.cfg"
-    )
 
 def main():
     action = sys.argv[1] if len(sys.argv) > 1 else "install"
