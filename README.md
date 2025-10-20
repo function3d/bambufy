@@ -53,12 +53,14 @@ origin: https://github.com/function3d/bambufy.git
 is_system_service: False
 primary_branch: master
 ```
-- Open **Machine → mod_data → user.cfg**
+- Reboot the printer Run the `REBOOT` command
+- Open **Mainsail** and navigate to **Machine → mod_data → user.cfg**
 - At the **beginning of the file**, add the following section:
 ```
 [include bambufy/user.cfg]
 ```
 - **SAVE & RESTART** user.cfg
+- Reboot the printer Run the `REBOOT`command
 - Use this [3MF](https://github.com/function3d/zmod_ff5x/raw/refs/heads/1.6/bambufy/PinkyWings_FireDragon.3mf) with Bambu Studio (from there you can save settings such as user profiles)
 
 ## How to uninstall
