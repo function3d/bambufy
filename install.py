@@ -47,27 +47,27 @@ def create_custom_css():
     print(f"Created custom CSS: {THEME_DIR / 'custom.css'}")
 
 def install_mainsail():
-    print("Starting Mainsail installation...")
     if not BACKUP_DIR.exists():
+        print("Starting Mainsail installation...")
         MAINSAIL_DIR.rename(BACKUP_DIR)
         print(f"Existing Mainsail backed up to {BACKUP_DIR}")
 
-    zip_path = ROOT_DIR / "mainsail.zip"
-    url = "https://github.com/function3d/mainsail/releases/download/v2.13.2-sms/mainsail.zip"
-    download_file(url, zip_path)
-    unzip_file(zip_path, MAINSAIL_DIR)
-    edit_config_json(MAINSAIL_DIR / "config.json")
-    create_custom_css()
+        zip_path = ROOT_DIR / "mainsail.zip"
+        url = "https://github.com/function3d/mainsail/releases/download/v2.13.2-sms/mainsail.zip"
+        download_file(url, zip_path)
+        unzip_file(zip_path, MAINSAIL_DIR)
+        edit_config_json(MAINSAIL_DIR / "config.json")
+        create_custom_css()
 
-    (MOD_DATA_DIR / "user.cfg").write_text("[include bambufy/user.cfg]", encoding="utf-8")
-    print(f"Updated user configuration: {MOD_DATA_DIR / 'user.cfg'}")
+        (MOD_DATA_DIR / "user.cfg").write_text("[include bambufy/user.cfg]", encoding="utf-8")
+        print(f"Updated user configuration: {MOD_DATA_DIR / 'user.cfg'}")
 
-    ensure_upstream()
-    sync_with_upstream(get_default_branch("origin"))
+        ensure_upstream()
+        sync_with_upstream(get_default_branch("origin"))
     
-    print("Installation completed. Printer will reboot.")
-    with open("/tmp/printer", "a", encoding='utf-8') as f:
-        f.write('REBOOT\n')
+        print("Installation completed. Printer will reboot.")
+        with open("/tmp/printer", "a", encoding='utf-8') as f:
+            f.write('REBOOT\n')
 
 def run_git(args):
     """Execute git commands inside chroot and return CompletedProcess."""
@@ -121,8 +121,8 @@ def get_default_branch(remote="origin"):
     return match.group(1) if match else None
 
 def uninstall_mainsail():
-    print("Starting Mainsail uninstallation...")
     if BACKUP_DIR.exists():
+        print("Starting Mainsail uninstallation...")
         shutil.rmtree(MAINSAIL_DIR)
         BACKUP_DIR.rename(MAINSAIL_DIR)
         print(f"Mainsail restored from backup: {BACKUP_DIR} -> {MAINSAIL_DIR}")
@@ -136,7 +136,7 @@ def uninstall_mainsail():
         print(f"Cleared user configuration: {MOD_DATA_DIR / 'user.cfg'}")
 
         revert_to_origin()
-    print("Uninstallation completed.")
+        print("Uninstallation completed.")
 
 def main():
     action = sys.argv[1] if len(sys.argv) > 1 else "install"
