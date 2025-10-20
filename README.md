@@ -10,7 +10,7 @@
    most prints
    - `Flush into object infill` `flush into object supports` and `flush into object`
    effectively reduce filament waste
-   - **Material-to-waste ratio rarely exceeds 50%, even on 4-color prints** (weight print > 70g)
+   - **Material-to-waste ratio rarely exceeds 50%, even on 4-color prints** (0.2mm layer height, weight print > 70g)
    - **Mainsail displays true colors directly from the slicer**
    - **45 seconds color change time**
    - Bed leveling before print (Level On/Off)
