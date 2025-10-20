@@ -55,8 +55,7 @@ primary_branch: master
 ```
 - Reboot the printer Run the `REBOOT` command
 - Check that a folder named bambufy has been created inside **Mainsail → Machine → mod_data**
-- Open **Machine → mod_data → user.cfg**
-- At the **beginning of the file**, add the following section:
+- Add At the of **Machine → mod_data → user.cfg** the following line:
 ```
 [include bambufy/user.cfg]
 ```
