@@ -42,7 +42,8 @@
 
 - Change web ui to **Mainsail** running the `WEB` command
 
-- Open **Mainsail** and navigate to **Machine → mod_data → user.moonraker.conf**.
+- Open **Mainsail** and navigate to **Machine → mod_data → user.moonraker.conf**
+  
 - At the **end of the file**, add the following section and save:
 ```
 [update_manager bambufy]
@@ -53,13 +54,17 @@ origin: https://github.com/function3d/bambufy.git
 is_system_service: False
 primary_branch: master
 ```
+
 - Reboot the printer running the `REBOOT` command
+  
 - Check that a folder named `bambufy` has been created inside **Mainsail → Machine → mod_data**
+  
 - Add at the beginning of the file **Machine → mod_data → user.cfg** the following line:
 ```
 [include bambufy/user.cfg]
 ```
 - **SAVE & RESTART** user.cfg
+  
 - Use this [3MF](https://github.com/function3d/zmod_ff5x/raw/refs/heads/1.6/bambufy/PinkyWings_FireDragon.3mf) with Bambu Studio (from there you can save settings such as user profiles)
 
 ## How to uninstall
