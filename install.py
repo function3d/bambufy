@@ -68,7 +68,8 @@ def install_mainsail():
         print("Installation completed. Printer will reboot.")
         with open("/tmp/printer", "a", encoding='utf-8') as f:
             f.write('REBOOT\n')
-
+    else:
+        print("Install: Ok")
 def run_git(args):
     """Execute git commands inside chroot and return CompletedProcess."""
     return subprocess.run(
