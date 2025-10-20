@@ -54,10 +54,11 @@ is_system_service: False
 primary_branch: master
 ```
 - Open **Machine → mod_data → user.cfg**
-- At the **beginning of the file**, add the following section and **SAVE & RESTART**:
+- At the **beginning of the file**, add the following section:
 ```
 [include bambufy/user.cfg]
 ```
+- **SAVE & RESTART** user.cfg
 - Use this [3MF](https://github.com/function3d/zmod_ff5x/raw/refs/heads/1.6/bambufy/PinkyWings_FireDragon.3mf) with Bambu Studio (from there you can save settings such as user profiles)
 
 ## How to uninstall
