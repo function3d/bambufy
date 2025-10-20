@@ -62,6 +62,7 @@ primary_branch: master
 
 ## How to uninstall
 - Run the `BAMBUFY INSTALL=0` command
+- Optional: go back to stock screen `DISPLAY_ON` and go back to Fluidd `WEB`
 
 ## Pull request yours issues
 Let's do what Flashforge didn't want to do
