@@ -63,6 +63,7 @@ primary_branch: master
 
 ## How to uninstall
 - Run the `BAMBUFY INSTALL=0` command
+- Remove the `[update_manager bambufy]` section from Machine → mod_data → user.moonraker.conf
 - Optional: go back to stock screen `DISPLAY_ON` and go back to Fluidd `WEB`
 
 ## Pull request yours issues
