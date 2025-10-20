@@ -26,21 +26,21 @@
    errors
 
 ## Bambu Studio
-<img width="1436" height="799" alt="image" src="https://github.com/user-attachments/assets/1d6a9e77-8b35-4d04-96d4-d92022a3500b" />
+<img width="812" width="1436" height="799" alt="image" src="https://github.com/user-attachments/assets/1d6a9e77-8b35-4d04-96d4-d92022a3500b" />
 
 ## Flush volumes
-<img width="1307" height="810" alt="image" src="https://github.com/user-attachments/assets/fea280f2-809d-4bae-a744-4a4c36465881" />
+<img width="812" width="1307" height="810" alt="image" src="https://github.com/user-attachments/assets/fea280f2-809d-4bae-a744-4a4c36465881" />
 
 ## Mainsail
-<img width="1059" height="810" alt="image" src="https://github.com/user-attachments/assets/bf80b66f-46e2-4b48-af52-d6f44f5accc8" />
+<img width="812" width="1059" height="810" alt="image" src="https://github.com/user-attachments/assets/bf80b66f-46e2-4b48-af52-d6f44f5accc8" />
 
 ## How to install
 
 - Install [zmod](https://github.com/ghzserg/zmod) following the [instructions](https://github.com/ghzserg/zmod/wiki/Setup_en#installing-the-mod)
 
-- Change the native display to Guppyscreen → Run the `DISPLAY_OFF` command
+- Change the native display to **Guppyscreen** running the `DISPLAY_OFF` command
 
-- Change web ui to **Mainsail** → Run the `WEB` command
+- Change web ui to **Mainsail** running the `WEB` command
 
 - Open **Mainsail** and navigate to **Machine → mod_data → user.moonraker.conf**.
 - At the **end of the file**, add the following section and save:
@@ -53,8 +53,8 @@ origin: https://github.com/function3d/bambufy.git
 is_system_service: False
 primary_branch: master
 ```
-- Reboot the printer Run the `REBOOT` command
-- Check that a folder named bambufy has been created inside **Mainsail → Machine → mod_data**
+- Reboot the printer running the `REBOOT` command
+- Check that a folder named `bambufy` has been created inside **Mainsail → Machine → mod_data**
 - Add at the beginning of the file **Machine → mod_data → user.cfg** the following line:
 ```
 [include bambufy/user.cfg]
@@ -65,14 +65,14 @@ primary_branch: master
 ## How to uninstall
 - Run the `BAMBUFY INSTALL=0` command
 - Remove the `[update_manager bambufy]` section from Machine → mod_data → user.moonraker.conf
-- Optional: go back to stock screen `DISPLAY_ON` and go back to Fluidd `WEB`
+- Optional: Go back to stock screen `DISPLAY_ON` and go back to Fluidd `WEB`
 
 ## Pull request yours issues
 Let's do what Flashforge didn't want to do
 
 ## Results
-<img width="1005" height="1113" alt="image" src="https://github.com/user-attachments/assets/f6812bbf-ffd2-45d0-85fb-2e95d7d04b9b" />
-<img width="1200" height="1600" alt="image" src="https://github.com/user-attachments/assets/8ad8ce59-6f45-44ef-88ec-be9ecdcfb7f0" />
+<img width="812" alt="image" src="https://github.com/user-attachments/assets/f6812bbf-ffd2-45d0-85fb-2e95d7d04b9b" />
+<img width="812" alt="image" src="https://github.com/user-attachments/assets/8ad8ce59-6f45-44ef-88ec-be9ecdcfb7f0" />
 
 ## Credits
 Sergei (ghzserg) [zmod](https://github.com/ghzserg/zmod)
