@@ -60,7 +60,6 @@ primary_branch: master
 [include bambufy/user.cfg]
 ```
 - **SAVE & RESTART** user.cfg
-- Reboot the printer Run the `REBOOT`command
 - Use this [3MF](https://github.com/function3d/zmod_ff5x/raw/refs/heads/1.6/bambufy/PinkyWings_FireDragon.3mf) with Bambu Studio (from there you can save settings such as user profiles)
 
 ## How to uninstall
