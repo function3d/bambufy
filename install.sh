@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 set -e
 
 ROOT_DIR="/usr/data/.mod/.zmod/root"
