@@ -61,7 +61,7 @@ primary_branch: master
   
 - **SAVE & RESTART** user.cfg
   
-- Use this [3MF](https://github.com/function3d/zmod_ff5x/raw/refs/heads/1.6/bambufy/PinkyWings_FireDragon.3mf) with Bambu Studio (from there you can save settings such as user profiles)
+- Use this [3MF](https://github.com/function3d/bambufy/releases/download/v1.0.0/PinkyWing_FireDragon.3mf) with Bambu Studio (from there you can save settings such as user profiles)
 
 ## How to uninstall
 - Run the `BAMBUFY INSTALL=0` command
