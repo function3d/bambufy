@@ -48,7 +48,7 @@
 ```
 [update_manager bambufy]
 type: git_repo
-channel: stable
+channel: dev
 path: /root/printer_data/config/mod_data/plugins/bambufy/
 origin: https://github.com/function3d/bambufy.git
 is_system_service: False
