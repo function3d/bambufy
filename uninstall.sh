@@ -19,7 +19,5 @@ if [[ -d "$BACKUP_DIR" ]]; then
   fi
 
   echo "Uninstallation completed."
-else
-  echo "No backup found. Nothing to uninstall."
 fi
 }
