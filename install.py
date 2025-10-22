@@ -11,8 +11,6 @@ MAINSAIL_DIR = ROOT_DIR / "mainsail"
 BACKUP_DIR = ROOT_DIR / "mainsail_"
 THEME_DIR = Path("/usr/data/config/.theme")
 MOD_DATA_DIR = Path("/usr/data/config/mod_data")
-repo_path = "/usr/data/config/mod"
-upstream_url = "https://github.com/function3d/zmod_ff5x.git"
 
 def download_file(url, dest):
     print(f"Downloading {url} to {dest}")
