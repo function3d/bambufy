@@ -1,5 +1,4 @@
 #!/bin/sh
-set -e
 
 ROOT_DIR="/usr/data/.mod/.zmod/root"
 MAINSAIL_DIR="$ROOT_DIR/mainsail"
