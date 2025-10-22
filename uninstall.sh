@@ -20,4 +20,3 @@ if [[ -d "$BACKUP_DIR" ]]; then
 
   echo "Uninstallation completed."
 fi
-}
