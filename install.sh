@@ -59,7 +59,5 @@ if [[ ! -d "$BACKUP_DIR" ]]; then
   create_custom_css
   echo "Installation completed"
   echo "Press Ctrl+F5 to reload Mainsail"
-else
-  echo "Install: Ok"
 fi
 
