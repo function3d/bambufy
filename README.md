@@ -49,20 +49,16 @@
 [update_manager bambufy]
 type: git_repo
 channel: stable
-path: /root/printer_data/config/mod_data/bambufy/
+path: /root/printer_data/config/mod_data/plugins/bambufy/
 origin: https://github.com/function3d/bambufy.git
 is_system_service: False
 primary_branch: master
 ```
 
-- Reboot the printer running the `REBOOT` command
+- Run ```ENABLE_PLUGIN name=bambufy```
   
 - Check that a folder named `bambufy` has been created inside **Mainsail → Machine → mod_data**
   
-- Add at the beginning of the file **Machine → mod_data → user.cfg** the following line:
-```
-[include bambufy/user.cfg]
-```
 - **SAVE & RESTART** user.cfg
   
 - Use this [3MF](https://github.com/function3d/zmod_ff5x/raw/refs/heads/1.6/bambufy/PinkyWings_FireDragon.3mf) with Bambu Studio (from there you can save settings such as user profiles)
