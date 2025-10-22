@@ -20,6 +20,6 @@ if [[ ! -d "${MOD}/root/mainsail_" ]]; then
   margin:0 2px !important;
 }
 EOF
-  echo "Installation completed"
+  echo "Installation completed. Press Ctrl + F5 to reload Mainsail"
 fi
 
