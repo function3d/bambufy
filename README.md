@@ -57,7 +57,7 @@ primary_branch: master
 
 - Run ```ENABLE_PLUGIN name=bambufy```
   
-- Check that a folder named `bambufy` has been created inside **Mainsail → Machine → mod_data**
+- Check that a folder named `bambufy` has been created inside **Mainsail → Machine → mod_data → plugins**
   
 - **SAVE & RESTART** user.cfg
   
