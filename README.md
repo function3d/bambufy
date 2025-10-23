@@ -50,12 +50,12 @@ origin: https://github.com/function3d/bambufy.git
 is_system_service: False
 primary_branch: master
 ```
-- Run ```ENABLE_PLUGIN name=bambufy``` from the console.
+- Run `ENABLE_PLUGIN name=bambufy` command from the console.
 - Check that a folder named `bambufy` has been created inside **Mainsail → Machine → mod_data → plugins**
 - Use this [3MF](https://github.com/function3d/bambufy/releases/download/v1.0.0/PinkyWing_FireDragon.3mf) with Bambu Studio (from there you can save settings such as user profiles)
 
 ## How to uninstall
-- Run the `BAMBUFY INSTALL=0` command
+- Run the `DISABLE_PLUGIN name=bambufy` command from the console.
 - (Optional) Remove the `[update_manager bambufy]` section from Machine → mod_data → user.moonraker.conf
 - (Optional) Go back to stock screen `DISPLAY_ON`
 - (Optional) Go back to Fluidd `WEB`
