@@ -41,7 +41,8 @@
 - (Опционально) Верните Fluidd командой `WEB`
 
 ## Многоцветная печать без «poop» (Orca)
-- Перейдите в `Printer settings` > `Machine G-code` и очистите `Change filament G-code`
+- Используйте этот [3MF](https://github.com/function3d/bambufy/releases/download/v1.1.0/ArticulatedCuteTurtle_Multicolor4Color_Orca_nopoop.3mf) или
+- Перейдите в `Printer settings` > `Machine G-code` и замените 'Change filament G-code' на [это](https://github.com/function3d/bambufy/blob/master/MACHINE_GCODE.md#change-filament-g-code-no-poop-orca)
 - Перейдите в `Printer settings` > `Multimaterial` и установите флажок `purge in prime tower`
 
 ## Сообщайте об ошибках и предлагайте улучшения
