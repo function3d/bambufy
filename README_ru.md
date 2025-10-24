@@ -1,7 +1,7 @@
 # Bambufy AD5X
  - Совместим с Bambu Studio, улучшенное управление башней подачи ([3MF](https://github.com/function3d/bambufy/releases/download/v1.1.0/ArticulatedCuteTurtle_Multicolor4Color_BambuStudio.3mf))
  - Совместим с Orca slicer ([3MF](https://github.com/function3d/bambufy/releases/download/v1.1.0/ArticulatedCuteTurtle_Multicolor4Color_Orca.3mf))
- - Последовательности продувки полностью управляются Bambu Studio (такое же поведение, как у принтеров Bambu Lab)
+ - Последовательности очистки полностью контролируются слайсером (такое же поведение, как у принтеров Bambu Lab)
  - Точные оценки времени печати и расхода материала
  - Ретракт 24 мм перед обрезкой нити при каждой смене цвета (экономия ~7 метров нити на 300 сменах цвета)
  - Возможность снижения множителя продувки (≈ 0.7) без смешивания цветов в большинстве печатей
