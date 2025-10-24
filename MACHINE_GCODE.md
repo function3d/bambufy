@@ -32,19 +32,19 @@ SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
 ##  Change filament G-code
 
 ```
-{if old_filament_temp < new_filament_temp}
+{if old_filament_temp < new_filament_temp};if old_filament_temp < new_filament_temp
 M104 S[new_filament_temp]
-{endif}
+{endif};end if old_filament_temp < new_filament_temp
 G1 Z{max_layer_z + 3.0} F1200
 M204 S9000
 T[next_extruder]
-{if next_extruder < 255}
-{if flush_length > 0}
+{if next_extruder < 255};if next_extruder < 255
+{if flush_length > 0};if flush_length > 0
 _GOTO_TRASH
-{endif}
-{if flush_length_1 > 1}
+{endif};end if flush_length > 0
+{if flush_length_1 > 1};if flush_length_1 > 1
 ; FLUSH_START
-{if flush_length_1 > 23.7}
+{if flush_length_1 > 23.7};if flush_length_1 > 23.7
 G1 E23.7 F{old_filament_e_feedrate} ; do not need pulsatile flushing for start part
 G1 E{(flush_length_1 - 23.7) * 0.04} F{old_filament_e_feedrate/2}
 G1 E{(flush_length_1 - 23.7) * 0.21} F{old_filament_e_feedrate}
@@ -55,22 +55,20 @@ G1 E{(flush_length_1 - 23.7) * 0.21} F{new_filament_e_feedrate}
 M106 P1 S128
 G1 E{(flush_length_1 - 23.7) * 0.04} F{new_filament_e_feedrate/2}
 G1 E{(flush_length_1 - 23.7) * 0.21} F{new_filament_e_feedrate}
-{else}
+{else};else if flush_length_1 > 1
 G1 E{flush_length_1} F{old_filament_e_feedrate}
-{endif}
+{endif};end if flush_length_1 > 23.7
 ; FLUSH_END
-{endif}
-{if flush_length_1 > 45 && flush_length_2 > 1}
+{endif};end if flush_length_1 > 1
+{if flush_length_1 > 45 && flush_length_2 > 1};if flush_length_1 > 45 && flush_length_2 > 1
 ; WIPE
 M106 P1 S0
 G1 E-[new_retract_length_toolchange] F1800
 _SBROS_TRASH
 G1 E[new_retract_length_toolchange] F1800
-{endif}
-
+{endif};end if flush_length_1 > 45 && flush_length_2 > 1
 M104 S[new_filament_temp]
-
-{if flush_length_2 > 1}
+{if flush_length_2 > 1};if flush_length_2 > 1
 ; FLUSH_START
 G1 E{flush_length_2 * 0.04} F{new_filament_e_feedrate/2}
 G1 E{flush_length_2 * 0.21} F{new_filament_e_feedrate}
@@ -82,17 +80,15 @@ M106 P1 S128
 G1 E{flush_length_2 * 0.04} F{new_filament_e_feedrate/2}
 G1 E{flush_length_2 * 0.21} F{new_filament_e_feedrate}
 ; FLUSH_END
-{endif}
-
-{if flush_length_2 > 45 && flush_length_3 > 1}
+{endif};end if flush_length_2 > 1
+{if flush_length_2 > 45 && flush_length_3 > 1};if flush_length_2 > 45 && flush_length_3 > 1
 ; WIPE
 M106 P1 S0
 G1 E-[new_retract_length_toolchange] F1800
 _SBROS_TRASH
 G1 E[new_retract_length_toolchange] F1800
-{endif}
-
-{if flush_length_3 > 1}
+{endif};end if flush_length_2 > 45 && flush_length_3 > 1
+{if flush_length_3 > 1};if flush_length_3 > 1
 ; FLUSH_START
 G1 E{flush_length_3 * 0.04} F{new_filament_e_feedrate/2}
 G1 E{flush_length_3 * 0.21} F{new_filament_e_feedrate}
@@ -104,17 +100,15 @@ M106 P1 S128
 G1 E{flush_length_3 * 0.04} F{new_filament_e_feedrate/2}
 G1 E{flush_length_3 * 0.21} F{new_filament_e_feedrate}
 ; FLUSH_END
-{endif}
-
-{if flush_length_3 > 45 && flush_length_4 > 1}
+{endif};end if flush_length_3 > 1
+{if flush_length_3 > 45 && flush_length_4 > 1};if flush_length_3 > 45 && flush_length_4 > 1
 ; WIPE
 M106 P1 S0
 G1 E-[new_retract_length_toolchange] F1800
 _SBROS_TRASH
 G1 E[new_retract_length_toolchange] F1800
-{endif}
-
-{if flush_length_4 > 1}
+{endif};end if flush_length_3 > 45 && flush_length_4 > 1
+{if flush_length_4 > 1};if flush_length_4 > 1
 ; FLUSH_START
 G1 E{flush_length_4 * 0.04} F{new_filament_e_feedrate/2}
 G1 E{flush_length_4 * 0.21} F{new_filament_e_feedrate}
@@ -126,26 +120,39 @@ M106 P1 S128
 G1 E{flush_length_4 * 0.04} F{new_filament_e_feedrate/2}
 G1 E{flush_length_4 * 0.21} F{new_filament_e_feedrate}
 ; FLUSH_END
-{endif}
-
-
-{if flush_length > 0}
- ;WIPE
- M106 P1 S0
- G1 E-[new_retract_length_toolchange] F1800
- _SBROS_TRASH
- G1 Y220 ;Exit trash
-{endif}
-
-
-{if layer_z <= (initial_layer_print_height + 0.001)}
+{endif};end if flush_length_4 > 1
+{if flush_length > 0};if flush_length > 0
+; WIPE
+M106 P1 S0
+G1 E-[new_retract_length_toolchange] F1800
+_SBROS_TRASH
+G1 Y220 ;Exit trash
+{endif};end if flush_length > 0
+{endif};end if next_extruder < 255
+M104 S[new_filament_temp]
+{if layer_z <= (initial_layer_print_height + 0.001)};if layer_z <= (initial_layer_print_height + 0.001)
 M204 S[initial_layer_acceleration]
-{else}
+{else};else if layer_z <= initial_layer_print_height
 M204 S[default_acceleration]
+{endif};end if layer_z <= initial_layer_print_height
+
+```
+##  Change filament G-code no poop (Orca)
+```
+{if old_filament_temp < new_filament_temp}
+M104 S[new_filament_temp]
 {endif}
+G1 Z{max_layer_z + 3.0} F1200
+M204 S9000
+T[next_extruder]
+M104 S[new_filament_temp]
+G1 Y220 ;Exit trash
+{if layer_z <= (initial_layer_print_height + 0.001)}
+  M204 S[initial_layer_acceleration]
+{else}
+  M204 S[default_acceleration]
 {endif}
 ```
-
 ## Pause G-code
 ```
 PAUSE
