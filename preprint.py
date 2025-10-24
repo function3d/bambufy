@@ -4,8 +4,6 @@ import os
 import re
 import math
 
-# ---------------------- Funciones auxiliares ----------------------
-
 def compute_bbox_from_block(block):
     """Calcula el bounding box (xmin, ymin, xmax, ymax) de un bloque G-code."""
     re_cmd = re.compile(r'^(?P<cmd>G[0-9]+)\b', re.IGNORECASE)
@@ -76,7 +74,6 @@ def compute_bbox_from_block(block):
 
 
 def extract_wipe_block_from_file(path):
-    """Extrae el bloque WIPE_TOWER_START ... WIPE_TOWER_END del G-code."""
     with open(path, 'r', encoding='utf-8', errors='ignore') as f:
         text = f.read()
     start = text.find('; WIPE_TOWER_START')
@@ -87,11 +84,7 @@ def extract_wipe_block_from_file(path):
 
 
 def extract_filament_info(filename):
-    """Extrae herramientas, colores, tipos y feedrates del G-code."""
     re_tool     = re.compile(r"^T(\d+)")
-    re_color    = re.compile(r"^; filament_colour = (.*)")
-    re_type     = re.compile(r"^; filament_type = (.*)")
-    re_feedrate = re.compile(r"^; filament_max_volumetric_speed = (.*)")
 
     tools = set()
     colors, types = [], []
@@ -101,20 +94,23 @@ def extract_filament_info(filename):
         for line in gcode:
             if m := re_tool.match(line):
                 tools.add(m.group(1))
-            elif m := re_color.match(line):
-                colors = m.group(1).split(";")
-            elif m := re_type.match(line):
-                types = m.group(1).split(";")
-            elif m := re_feedrate.match(line):
-                values = (float(x) for x in m.group(1).split(',') if x)
+                continue
+            if not colors and line.startswith("; filament_colour ="):
+                colors = line.split("=")[1].strip().split(";")
+                continue
+            if not types and line.startswith("; filament_type ="):
+                types = line.split("=")[1].strip().split(";")
+                continue
+            if not feedrates and line.startswith("; filament_max_volumetric_speed ="):
+                values = (float(x) for x in line.split("=")[1].split(","))
                 feedrates = ','.join(str(round(v * 2 / 5 * 60)) for v in values)
+                continue
 
     return tools, colors, types, feedrates
 
 
-# ---------------------- Código principal ----------------------
 if len(sys.argv) < 2:
-    print("Uso: script.py <archivo.gcode>")
+    print("Uso: script.py <file.gcode>")
     sys.exit(1)
 
 file_path = sys.argv[1]
