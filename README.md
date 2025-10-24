@@ -1,6 +1,6 @@
 # Bambufy AD5X
    - Compatible with Bambu Studio, better management of the prime tower
-   ([3MF](https://github.com/function3d/bambufy/releases/download/v1.0.0/PinkyWing_FireDragon.3mf))
+   ([3MF](https://github.com/function3d/bambufy/releases/download/v1.1.0/ArticulatedCuteTurtle_Multicolor4Color_BambuStudio.3mf))
    - Compatible with Orca slicer ([3MF](https://github.com/function3d/bambufy/releases/download/v1.1.0/ArticulatedCuteTurtle_Multicolor4Color_Orca.3mf))
    - Purge sequences fully controlled by Bambu Studio (same behavior as
    Bambu Lab printers)
@@ -41,7 +41,8 @@
 - Change the native display to **Guppyscreen** running the `DISPLAY_OFF` command
 - Change web ui to **Mainsail** running the `WEB` command
 - Run `ENABLE_PLUGIN name=bambufy` command from the console.
-- Use this [3MF](https://github.com/function3d/bambufy/releases/download/v1.0.0/PinkyWing_FireDragon.3mf) with Bambu Studio (from there you can save settings such as user profiles)
+- Use this [3MF](https://github.com/function3d/bambufy/releases/download/v1.1.0/ArticulatedCuteTurtle_Multicolor4Color_BambuStudio.3mf) with Bambu Studio (from there you can save settings such as user profiles)
+- Use this [3MF](https://github.com/function3d/bambufy/releases/download/v1.1.0/ArticulatedCuteTurtle_Multicolor4Color_Orca.3mf) with Orca slicer.
 
 ## How to uninstall
 - Run the `DISABLE_PLUGIN name=bambufy` command from the console.
