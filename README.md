@@ -50,7 +50,7 @@
 - (Optional) Go back to Fluidd `WEB`
 
 ## Multicolor printing no poop (Orca)
-- Go to `Printer settings` > `Machine G-code` and empty the `Change filament G-code`
+- Go to `Printer settings` > `Machine G-code` and replace the `Change filament G-code` with [this](https://github.com/function3d/bambufy/blob/master/MACHINE_GCODE.md#change-filament-g-code-no-poop-orca)
 - Go to `Printer settings` > `Multimaterial` and check `purge in prime tower`
 
 ## Pull request yours issues
