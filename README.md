@@ -1,7 +1,8 @@
 # Bambufy AD5X
- - Compatible with Bambu Studio, better management of the prime tower
+   - Compatible with Bambu Studio, better management of the prime tower
    ([3MF](https://github.com/function3d/bambufy/releases/download/v1.0.0/PinkyWing_FireDragon.3mf))
-  - Purge sequences fully controlled by Bambu Studio (same behavior as
+   - Compatible with Orca slicer ([3MF](https://github.com/function3d/bambufy/releases/download/v1.1.0/ArticulatedCuteTurtle_Multicolor4Color_Orca.3mf))
+   - Purge sequences fully controlled by Bambu Studio (same behavior as
    Bambu Lab printers)
    - Accurate time and material usage estimates
    - 24 mm retraction before filament cut on every color change (saves ~7
@@ -17,7 +18,7 @@
    - External spool printing (IFS On/Off)
    - Backup printing mode – up to 4 kg of uninterrupted printing (Backup
    On/Off)
-  - Automatic fallback when IFS runs out: the remaining filament in the
+   - Automatic fallback when IFS runs out: the remaining filament in the
    printhead is used until the next color change
    - Filament state detection at print_start to identify the active
    filament in the extruder
@@ -46,6 +47,10 @@
 - Run the `DISABLE_PLUGIN name=bambufy` command from the console.
 - (Optional) Go back to stock screen `DISPLAY_ON`
 - (Optional) Go back to Fluidd `WEB`
+
+## Multicolor printing no poop (Orca)
+- Go to `Printer settings` > `Machine G-code` and empty the `Change filament G-code`
+- Go to `Printer settings` > `Multimaterial` and check `purge in prime tower`
 
 ## Pull request yours issues
 Let's do what Flashforge didn't want to do
