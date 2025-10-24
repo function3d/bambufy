@@ -39,24 +39,11 @@
 - Install [zmod](https://github.com/ghzserg/zmod) following the [instructions](https://github.com/ghzserg/zmod/wiki/Setup_en#installing-the-mod)
 - Change the native display to **Guppyscreen** running the `DISPLAY_OFF` command
 - Change web ui to **Mainsail** running the `WEB` command
-- Open **Mainsail** and navigate to **Machine → mod_data → user.moonraker.conf**
-- At the **end of the file**, add the following section and save:
-```
-[update_manager bambufy]
-type: git_repo
-channel: dev
-path: /root/printer_data/config/mod_data/plugins/bambufy/
-origin: https://github.com/function3d/bambufy.git
-is_system_service: False
-primary_branch: master
-```
 - Run `ENABLE_PLUGIN name=bambufy` command from the console.
-- Check that a folder named `bambufy` has been created inside **Mainsail → Machine → mod_data → plugins**
 - Use this [3MF](https://github.com/function3d/bambufy/releases/download/v1.0.0/PinkyWing_FireDragon.3mf) with Bambu Studio (from there you can save settings such as user profiles)
 
 ## How to uninstall
 - Run the `DISABLE_PLUGIN name=bambufy` command from the console.
-- (Optional) Remove the `[update_manager bambufy]` section from Machine → mod_data → user.moonraker.conf
 - (Optional) Go back to stock screen `DISPLAY_ON`
 - (Optional) Go back to Fluidd `WEB`
 
@@ -69,6 +56,3 @@ Let's do what Flashforge didn't want to do
 
 ## Credits
 Sergei (ghzserg) [zmod](https://github.com/ghzserg/zmod)
-
-
-
