@@ -139,19 +139,21 @@ M204 S[default_acceleration]
 ```
 ##  Change filament G-code no poop (Orca)
 ```
-{if old_filament_temp < new_filament_temp}
+{if old_filament_temp < new_filament_temp};if old_filament_temp < new_filament_temp
 M104 S[new_filament_temp]
-{endif}
+{endif};end if old_filament_temp < new_filament_temp
 G1 Z{max_layer_z + 3.0} F1200
 M204 S9000
 T[next_extruder]
 M104 S[new_filament_temp]
+{if flush_length > 0};if flush_length > 0
 G1 Y220 ;Exit trash
-{if layer_z <= (initial_layer_print_height + 0.001)}
+{endif};end if flush_length > 0
+{if layer_z <= (initial_layer_print_height + 0.001)};if layer_z <= (initial_layer_print_height + 0.001)
   M204 S[initial_layer_acceleration]
-{else}
+{else};else if layer_z <= (initial_layer_print_height + 0.001)
   M204 S[default_acceleration]
-{endif}
+{endif};end if layer_z <= (initial_layer_print_height + 0.001)
 ```
 ## Pause G-code
 ```
