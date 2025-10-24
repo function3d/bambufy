@@ -1,6 +1,6 @@
 # Bambufy AD5X
- - Совместим с Bambu Studio, улучшенное управление башней подачи  
-   ([3MF](https://github.com/function3d/bambufy/releases/download/v1.0.0/PinkyWing_FireDragon.3mf))
+ - Совместим с Bambu Studio, улучшенное управление башней подачи ([3MF](https://github.com/function3d/bambufy/releases/download/v1.0.0/PinkyWing_FireDragon.3mf))
+ - Совместим с Orca slicer ([3MF](https://github.com/function3d/bambufy/releases/download/v1.1.0/ArticulatedCuteTurtle_Multicolor4Color_Orca.3mf))
  - Последовательности продувки полностью управляются Bambu Studio (такое же поведение, как у принтеров Bambu Lab)
  - Точные оценки времени печати и расхода материала
  - Ретракт 24 мм перед обрезкой нити при каждой смене цвета (экономия ~7 метров нити на 300 сменах цвета)
@@ -38,6 +38,10 @@
 - Выполните в консоли команду `DISABLE_PLUGIN name=bambufy`
 - (Опционально) Верните родной экран командой `DISPLAY_ON`
 - (Опционально) Верните Fluidd командой `WEB`
+
+## Многоцветная печать без «poop» (Orca)
+- Перейдите в `Printer settings` > `Machine G-code` и очистите `Change filament G-code`
+- Перейдите в `Printer settings` > `Multimaterial` и установите флажок `purge in prime tower`
 
 ## Сообщайте об ошибках и предлагайте улучшения
 Сделаем то, что Flashforge не захотел делать
