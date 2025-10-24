@@ -1,5 +1,5 @@
 # Bambufy AD5X
- - Совместим с Bambu Studio, улучшенное управление башней подачи ([3MF](https://github.com/function3d/bambufy/releases/download/v1.0.0/PinkyWing_FireDragon.3mf))
+ - Совместим с Bambu Studio, улучшенное управление башней подачи ([3MF](https://github.com/function3d/bambufy/releases/download/v1.1.0/ArticulatedCuteTurtle_Multicolor4Color_BambuStudio.3mf))
  - Совместим с Orca slicer ([3MF](https://github.com/function3d/bambufy/releases/download/v1.1.0/ArticulatedCuteTurtle_Multicolor4Color_Orca.3mf))
  - Последовательности продувки полностью управляются Bambu Studio (такое же поведение, как у принтеров Bambu Lab)
  - Точные оценки времени печати и расхода материала
@@ -32,7 +32,8 @@
 - Переключите родной дисплей на **Guppyscreen**, выполнив команду `DISPLAY_OFF`
 - Переключите веб-интерфейс на **Mainsail**, выполнив команду `WEB`
 - Выполните в консоли команду `ENABLE_PLUGIN name=bambufy`
-- Используйте этот [3MF](https://github.com/function3d/bambufy/releases/download/v1.0.0/PinkyWing_FireDragon.3mf) в Bambu Studio (оттуда можно сохранять настройки, такие как пользовательские профили)
+- Используйте этот [3MF](https://github.com/function3d/bambufy/releases/download/v1.1.0/ArticulatedCuteTurtle_Multicolor4Color_BambuStudio.3mf) в Bambu Studio (оттуда можно сохранять настройки, такие как пользовательские профили)
+- Используйте этот [3MF](https://github.com/function3d/bambufy/releases/download/v1.1.0/ArticulatedCuteTurtle_Multicolor4Color_Orca.3mf) в Orca Slicer.
 
 ## Удаление
 - Выполните в консоли команду `DISABLE_PLUGIN name=bambufy`
