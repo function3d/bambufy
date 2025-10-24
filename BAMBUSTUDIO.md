@@ -1,5 +1,5 @@
-# Bambu Studio
-## Machine start G-code
+# Machine G-code for Bambu Studio and Orca slicer
+## Machine start G-code Bambu Studio
 
 ```
 START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] TOOL={initial_no_support_extruder}
@@ -7,6 +7,12 @@ T{initial_no_support_extruder}
 SET_PRINT_STATS_INFO TOTAL_LAYER=[total_layer_count]
 ```
 
+## Machine start G-code Orca slicer
+
+```
+START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] TOOL={initial_no_support_extruder}
+SET_PRINT_STATS_INFO TOTAL_LAYER=[total_layer_count]
+```
 
 ## Machine end G-code
 
@@ -122,13 +128,15 @@ G1 E{flush_length_4 * 0.21} F{new_filament_e_feedrate}
 ; FLUSH_END
 {endif}
 
-;WIPE
-M106 P1 S0
-G1 E-[new_retract_length_toolchange] F1800
+
 {if flush_length > 0}
-_SBROS_TRASH
+ ;WIPE
+ M106 P1 S0
+ G1 E-[new_retract_length_toolchange] F1800
+ _SBROS_TRASH
+ G1 Y220 ;Exit trash
 {endif}
-G1 Y220 F12000 ;Exit trash
+
 
 {if layer_z <= (initial_layer_print_height + 0.001)}
 M204 S[initial_layer_acceleration]
