@@ -2,7 +2,7 @@
    - Compatible with Bambu Studio, better management of the prime tower
    ([3MF](https://github.com/function3d/bambufy/releases/download/v1.1.0/ArticulatedCuteTurtle_Multicolor4Color_BambuStudio.3mf))
    - Compatible with Orca slicer ([3MF](https://github.com/function3d/bambufy/releases/download/v1.1.0/ArticulatedCuteTurtle_Multicolor4Color_Orca.3mf))
-   - Purge sequences fully controlled by Bambu Studio (same behavior as
+   - Purge sequences fully controlled by the slicer (same behavior as
    Bambu Lab printers)
    - Accurate time and material usage estimates
    - 24 mm retraction before filament cut on every color change (saves ~7
