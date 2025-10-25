@@ -103,7 +103,7 @@ def extract_filament_info(filename):
                 continue
             if not feedrates and line.startswith("; filament_max_volumetric_speed ="):
                 values = (float(x) for x in line.split("=")[1].split(","))
-                feedrates = ','.join(str(round(v * 2 / 5 * 60)) for v in values)
+                feedrates = ','.join(str(round(v / 2 * 60)) for v in values)
                 continue
 
     return tools, colors, types, feedrates
