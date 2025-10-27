@@ -84,7 +84,7 @@ def extract_wipe_block_from_file(path):
 
 
 def extract_filament_info(filename):
-    re_tool     = re.compile(r"^T(\d+)")
+    re_tool = re.compile(r"^\s*T(\d+)")
 
     tools = set()
     colors, types = [], []

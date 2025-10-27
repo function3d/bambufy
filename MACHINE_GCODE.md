@@ -1,6 +1,6 @@
 # Machine G-code for Bambu Studio and Orca slicer
 
-## Machine start G-code Bambu Studio
+## Bambu Studio: Machine start G-code
 
 ```
 START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] TOOL={initial_no_support_extruder}
@@ -8,7 +8,7 @@ T{initial_no_support_extruder}
 SET_PRINT_STATS_INFO TOTAL_LAYER=[total_layer_count]
 ```
 
-## Machine start G-code Orca slicer
+## Orca slicer: Machine start G-code
 
 ```
 START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] TOOL={initial_no_support_extruder}
@@ -172,7 +172,7 @@ M204 S9000
   G1 Z{max_layer_z + 3.0} F1200
   T[next_extruder]
   {if next_extruder < 255}
-    {if flush_length > 0}
+    {if flush_length > 1}
       _GOTO_TRASH
     {endif}
     {if flush_length_1 > 1}
@@ -192,15 +192,42 @@ M204 S9000
         G1 E{flush_length_1} F{old_filament_e_feedrate}
       {endif}
       ; FLUSH_END
+      {if flush_length_1 > 45 && flush_length_2 > 1}
+        ; WIPE
+        M106 P1 S0
+        G1 E-[new_retract_length_toolchange] F1800
+        _SBROS_TRASH
+        G1 E[new_retract_length_toolchange] F1800
+      {endif}
     {endif}
-    {if flush_length_1 > 45 && flush_length_2 > 1}
-      ; WIPE
-      M106 P1 S0
-      G1 E-[new_retract_length_toolchange] F1800
-      _SBROS_TRASH
-      G1 E[new_retract_length_toolchange] F1800
+    {if flush_length > 1 && flush_length_1 == 0}
+      ; FLUSH_START
+      {if flush_length > 23.7}
+        G1 E23.7 F{old_filament_e_feedrate} ; do not need pulsatile flushing for start part
+        G1 E{(flush_length - 23.7) * 0.04} F{old_filament_e_feedrate/2}
+        G1 E{(flush_length - 23.7) * 0.21} F{old_filament_e_feedrate}
+        G1 E{(flush_length - 23.7) * 0.04} F{old_filament_e_feedrate/2}
+        G1 E{(flush_length - 23.7) * 0.21} F{new_filament_e_feedrate}
+        G1 E{(flush_length - 23.7) * 0.04} F{new_filament_e_feedrate/2}
+        G1 E{(flush_length - 23.7) * 0.21} F{new_filament_e_feedrate}
+        M106 P1 S128
+        G1 E{(flush_length - 23.7) * 0.04} F{new_filament_e_feedrate/2}
+        G1 E{(flush_length - 23.7) * 0.21} F{new_filament_e_feedrate}
+      {else}
+        G1 E{flush_length} F{old_filament_e_feedrate}
+      {endif}
+      ; FLUSH_END
+      {if flush_length > 45 && flush_length_2 > 1}
+        ; WIPE
+        M106 P1 S0
+        G1 E-[new_retract_length_toolchange] F1800
+        _SBROS_TRASH
+        G1 E[new_retract_length_toolchange] F1800
+      {endif}
     {endif}
+
     M104 S[new_filament_temp]
+
     {if flush_length_2 > 1}
       ; FLUSH_START
       G1 E{flush_length_2 * 0.04} F{new_filament_e_feedrate/2}
@@ -274,7 +301,9 @@ M104 S[new_filament_temp]
   M204 S[default_acceleration]
 {endif}
 ```
+
 ## Pause G-code
+
 ```
 PAUSE
 ```
