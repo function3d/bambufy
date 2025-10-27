@@ -49,10 +49,7 @@
 - (Optional) Go back to stock screen `DISPLAY_ON`
 - (Optional) Go back to Fluidd `WEB`
 
-## Multicolor printing no poop (Orca)
-- Use this [3MF](https://github.com/function3d/bambufy/releases/download/v1.1.0/ArticulatedCuteTurtle_Multicolor4Color_Orca_nopoop.3mf) or
-- Go to `Printer settings` > `Machine G-code` and replace the `Change filament G-code` with [this](https://github.com/function3d/bambufy/blob/master/MACHINE_GCODE.md#change-filament-g-code-no-poop-orca)
-- Go to `Printer settings` > `Multimaterial` and check `purge in prime tower`
+## [Multicolor printing nopoop (Orca)](https://github.com/function3d/bambufy/blob/master/MACHINE_GCODE.md#orca-slicer-change-filament-g-code-unified-poop-and-nopoop)
 
 ## Pull request yours issues
 Let's do what Flashforge didn't want to do
