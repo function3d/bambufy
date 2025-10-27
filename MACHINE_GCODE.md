@@ -144,12 +144,17 @@ If you have created your profile without using the 3MF I provided, then take the
     - Filament load time: 23
     - Filament unload time: 23
   - Extruder
-    - Retraction whe switching material length: 2
+    - Retraction when switching material length: 2
     - Extra length on restart: 0
 - Material setting
   - Multimaterial
     - Minimal purge on prime tower: 15
+   
 ##  Orca slicer: Change filament G-code, unified: poop and nopoop
+With this unified gcode for filament change, you only need to enable or disable this option to purge in the tower(nopoop) or in the form of poops
+
+<img width="618" height="419" alt="image" src="https://github.com/user-attachments/assets/9554da95-0ee1-4b77-a690-e9f084397978" />
+
 ```
 {if old_filament_temp < new_filament_temp}
   M104 S[new_filament_temp]
