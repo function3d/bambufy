@@ -108,6 +108,12 @@ def parse_feedrates(text: str) -> str:
     values = (float(v) for v in text[start + len("; filament_max_volumetric_speed ="):end].split(","))
     return ",".join(str(round(v / 2 * 60)) for v in values)
 
+def parse_change_filament_gcode_version(text: str) -> str:
+    """Extract version from change_filament_gcode"""
+    match = re.search(r";\s*Bambufy:\s*v*([\d.]+)", text)
+    version = match.group(1) if match else '1.2.2'
+    return version
+
 def extract_bambu_metadata(text: str) -> str:
     """Extract Bambu slicer-specific metadata and build the end G-code block."""
     def get_line_value(key: str) -> str:
@@ -180,7 +186,8 @@ def main():
     first_layer = extract_first_layer(gcode)
     exclude = get_exclude_object_define(first_layer)
     bambu_metadata = extract_bambu_metadata(gcode) if slicer == "bambu" else ""
-
+    version = parse_change_filament_gcode_version(gcode)
+    
     # _IFS_COLORS header
     ifs_colors = (
         f'_IFS_COLORS START=1 '
@@ -188,6 +195,7 @@ def main():
         f'E_FEEDRATES={feedrates} '
         f'COLORS={",".join(c[1:] for c in colors)} '
         f'TOOLS={",".join(tools)} '
+        f'VERSION={version} '
         f'EXCLUDE="{exclude}"\n'
     )
     print(ifs_colors)
