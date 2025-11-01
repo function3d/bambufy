@@ -51,8 +51,8 @@
 
 ## [Multicolor printing nopoop (Orca)](https://github.com/function3d/bambufy/blob/master/MACHINE_GCODE.md#orca-slicer-change-filament-g-code-unified-poop-and-nopoop)
 
-## Pull request yours issues
-Let's do what Flashforge didn't want to do
+## Pull requests and issues are welcome!
+Let's do what Flashforge didn't want to do!
 
 ## Results
 <img width="812" alt="image" src="https://github.com/user-attachments/assets/f6812bbf-ffd2-45d0-85fb-2e95d7d04b9b" />
