@@ -187,7 +187,7 @@ def main():
     exclude = get_exclude_object_define(first_layer)
     bambu_metadata = extract_bambu_metadata(gcode) if slicer == "bambu" else ""
     version = parse_change_filament_gcode_version(gcode)
-    
+
     # _IFS_COLORS header
     ifs_colors = (
         f'_IFS_COLORS START=1 '
