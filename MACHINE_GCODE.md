@@ -53,7 +53,7 @@ G1 E{(flush_length_1 - 23.7) * 0.04} F{old_filament_e_feedrate/2}
 G1 E{(flush_length_1 - 23.7) * 0.21} F{new_filament_e_feedrate}
 G1 E{(flush_length_1 - 23.7) * 0.04} F{new_filament_e_feedrate/2}
 G1 E{(flush_length_1 - 23.7) * 0.21} F{new_filament_e_feedrate}
-M106 P1 S{fan_max_speed[next_extruder]*0.4}
+M106 P1 S{fan_max_speed[next_extruder]*0.5}
 G1 E{(flush_length_1 - 23.7) * 0.04} F{new_filament_e_feedrate/2}
 G1 E{(flush_length_1 - 23.7) * 0.21} F{new_filament_e_feedrate}
 {else}
@@ -77,7 +77,7 @@ G1 E{flush_length_2 * 0.04} F{new_filament_e_feedrate/2}
 G1 E{flush_length_2 * 0.21} F{new_filament_e_feedrate}
 G1 E{flush_length_2 * 0.04} F{new_filament_e_feedrate/2}
 G1 E{flush_length_2 * 0.21} F{new_filament_e_feedrate}
-M106 P1 S{fan_max_speed[next_extruder]*0.4}
+M106 P1 S{fan_max_speed[next_extruder]*0.5}
 G1 E{flush_length_2 * 0.04} F{new_filament_e_feedrate/2}
 G1 E{flush_length_2 * 0.21} F{new_filament_e_feedrate}
 ; FLUSH_END
@@ -97,7 +97,7 @@ G1 E{flush_length_3 * 0.04} F{new_filament_e_feedrate/2}
 G1 E{flush_length_3 * 0.21} F{new_filament_e_feedrate}
 G1 E{flush_length_3 * 0.04} F{new_filament_e_feedrate/2}
 G1 E{flush_length_3 * 0.21} F{new_filament_e_feedrate}
-M106 P1 S{fan_max_speed[next_extruder]*0.4}
+M106 P1 S{fan_max_speed[next_extruder]*0.5}
 G1 E{flush_length_3 * 0.04} F{new_filament_e_feedrate/2}
 G1 E{flush_length_3 * 0.21} F{new_filament_e_feedrate}
 ; FLUSH_END
@@ -117,7 +117,7 @@ G1 E{flush_length_4 * 0.04} F{new_filament_e_feedrate/2}
 G1 E{flush_length_4 * 0.21} F{new_filament_e_feedrate}
 G1 E{flush_length_4 * 0.04} F{new_filament_e_feedrate/2}
 G1 E{flush_length_4 * 0.21} F{new_filament_e_feedrate}
-M106 P1 S{fan_max_speed[next_extruder]*0.4}
+M106 P1 S{fan_max_speed[next_extruder]*0.5}
 G1 E{flush_length_4 * 0.04} F{new_filament_e_feedrate/2}
 G1 E{flush_length_4 * 0.21} F{new_filament_e_feedrate}
 ; FLUSH_END
@@ -185,7 +185,7 @@ G1 E{(flush_length_1 - 23.7) * 0.04} F{old_filament_e_feedrate/2}
 G1 E{(flush_length_1 - 23.7) * 0.21} F{new_filament_e_feedrate}
 G1 E{(flush_length_1 - 23.7) * 0.04} F{new_filament_e_feedrate/2}
 G1 E{(flush_length_1 - 23.7) * 0.21} F{new_filament_e_feedrate}
-M106 P1 S{fan_max_speed[next_extruder]*0.4}
+M106 P1 S{fan_max_speed[next_extruder]*0.5}
 G1 E{(flush_length_1 - 23.7) * 0.04} F{new_filament_e_feedrate/2}
 G1 E{(flush_length_1 - 23.7) * 0.21} F{new_filament_e_feedrate}
 {else}
@@ -210,7 +210,7 @@ G1 E{(flush_length - 23.7) * 0.04} F{old_filament_e_feedrate/2}
 G1 E{(flush_length - 23.7) * 0.21} F{new_filament_e_feedrate}
 G1 E{(flush_length - 23.7) * 0.04} F{new_filament_e_feedrate/2}
 G1 E{(flush_length - 23.7) * 0.21} F{new_filament_e_feedrate}
-M106 P1 S{fan_max_speed[next_extruder]*0.4}
+M106 P1 S{fan_max_speed[next_extruder]*0.5}
 G1 E{(flush_length - 23.7) * 0.04} F{new_filament_e_feedrate/2}
 G1 E{(flush_length - 23.7) * 0.21} F{new_filament_e_feedrate}
 {else}
@@ -236,7 +236,7 @@ G1 E{flush_length_2 * 0.04} F{new_filament_e_feedrate/2}
 G1 E{flush_length_2 * 0.21} F{new_filament_e_feedrate}
 G1 E{flush_length_2 * 0.04} F{new_filament_e_feedrate/2}
 G1 E{flush_length_2 * 0.21} F{new_filament_e_feedrate}
-M106 P1 S{fan_max_speed[next_extruder]*0.4}
+M106 P1 S{fan_max_speed[next_extruder]*0.5}
 G1 E{flush_length_2 * 0.04} F{new_filament_e_feedrate/2}
 G1 E{flush_length_2 * 0.21} F{new_filament_e_feedrate}
 ; FLUSH_END
@@ -256,7 +256,7 @@ G1 E{flush_length_3 * 0.04} F{new_filament_e_feedrate/2}
 G1 E{flush_length_3 * 0.21} F{new_filament_e_feedrate}
 G1 E{flush_length_3 * 0.04} F{new_filament_e_feedrate/2}
 G1 E{flush_length_3 * 0.21} F{new_filament_e_feedrate}
-M106 P1 S{fan_max_speed[next_extruder]*0.4}
+M106 P1 S{fan_max_speed[next_extruder]*0.5}
 G1 E{flush_length_3 * 0.04} F{new_filament_e_feedrate/2}
 G1 E{flush_length_3 * 0.21} F{new_filament_e_feedrate}
 ; FLUSH_END
@@ -276,7 +276,7 @@ G1 E{flush_length_4 * 0.04} F{new_filament_e_feedrate/2}
 G1 E{flush_length_4 * 0.21} F{new_filament_e_feedrate}
 G1 E{flush_length_4 * 0.04} F{new_filament_e_feedrate/2}
 G1 E{flush_length_4 * 0.21} F{new_filament_e_feedrate}
-M106 P1 S{fan_max_speed[next_extruder]*0.4}
+M106 P1 S{fan_max_speed[next_extruder]*0.5}
 G1 E{flush_length_4 * 0.04} F{new_filament_e_feedrate/2}
 G1 E{flush_length_4 * 0.21} F{new_filament_e_feedrate}
 ; FLUSH_END
