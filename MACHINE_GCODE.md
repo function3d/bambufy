@@ -33,6 +33,8 @@ SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
 ##  Bambu Studio: Change filament G-code
 
 ```
+; Machine: AD5X
+; Bambufy: v1.2.2
 {if old_filament_temp < new_filament_temp}
 M104 S[new_filament_temp]
 {endif}
@@ -156,6 +158,8 @@ With this unified gcode for filament change, you only need to enable or disable 
 <img width="618" height="419" alt="image" src="https://github.com/user-attachments/assets/9554da95-0ee1-4b77-a690-e9f084397978" />
 
 ```
+; Machine: AD5X
+; Bambufy: v1.2.2
 {if old_filament_temp < new_filament_temp}
 M104 S[new_filament_temp]
 {endif}
