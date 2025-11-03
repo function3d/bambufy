@@ -106,7 +106,7 @@ def parse_feedrates(text: str) -> str:
         return ""
     end = text.find("\n", start)
     values = (float(v) for v in text[start + len("; filament_max_volumetric_speed ="):end].split(","))
-    return ",".join(str(round(v / 2 * 60)) for v in values)
+    return ",".join(str(round(v / 4 * 3 * 60)) for v in values)
 
 def parse_change_filament_gcode_version(text: str) -> str:
     """Extract version from change_filament_gcode"""
