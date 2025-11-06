@@ -36,16 +36,13 @@ def find_metadata_line(text: str, key: str) -> str:
     return text[start:end].strip()
 
 def extract_first_layer(text: str) -> str:
-    """Return first layer gcode"""
-    start = text.find("\n;AFTER_LAYER_CHANGE")
-    if start == -1:
-        return ""
-
-    end = text.find("\n;AFTER_LAYER_CHANGE", start+1)
-    if end == -1:
-        return ""
-
-    return text[start:end]
+    """Return concatenated G-code for all first layers"""
+    layer_height = find_metadata_line(text, "; initial_layer_print_height").split("=")[-1].strip()
+    pattern = rf"\n;AFTER_LAYER_CHANGE\n;{re.escape(layer_height)}(.*?)\n;AFTER_LAYER_CHANGE"
+    first_layers = []
+    for layer in re.finditer(pattern, text, re.MULTILINE | re.DOTALL):
+        first_layers.append(layer.group(1).strip())
+    return "\n".join(first_layers)
 
 def get_exclude_object_define(gcode: str) -> Optional[str]:
     """bounding box first layer"""
