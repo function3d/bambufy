@@ -193,15 +193,18 @@ def main():
         f'COLORS={",".join(c[1:] for c in colors)} '
         f'TOOLS={",".join(tools)} '
         f'VERSION={version} '
-        f'EXCLUDE="{exclude}"\n'
+        f'EXCLUDE="{exclude}"'
     )
-    print(ifs_colors)
+    print(ifs_colors + "\n")
 
     try:
+        lines = gcode.splitlines(keepends=True)
+        if lines and lines[0].startswith("; MD5:"):
+            lines.pop(0)
+            gcode = "".join(lines)
         new_gcode = "; " +  ifs_colors + "\n" + gcode + "\n" + bambu_metadata
-        if from_slicer:
-            md5 = hashlib.md5(new_gcode.encode("utf-8")).hexdigest()
-            new_gcode = f"; MD5:{md5}\n" + new_gcode
+        md5 = hashlib.md5(new_gcode.encode("utf-8")).hexdigest()
+        new_gcode = f"; MD5:{md5}\n" + new_gcode
         with open(file_path, "w", encoding="utf-8") as f:
             f.write(new_gcode)
     except OSError as e:
@@ -209,7 +212,7 @@ def main():
 
     # Append to printer if not called from slicer
     if not from_slicer:
-        write_to_file(PRINTER_PATH, ifs_colors)
+        write_to_file(PRINTER_PATH, ifs_colors + "\n")
 
 if __name__ == "__main__":
     main()
