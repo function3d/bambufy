@@ -182,7 +182,7 @@ def main():
     feedrates = parse_feedrates(gcode)
     first_layer = extract_first_layer(gcode)
     exclude = get_exclude_object_define(first_layer)
-    bambu_metadata = extract_bambu_metadata(gcode) if slicer == "bambu" else ""
+    bambu_metadata = ("\n" + extract_bambu_metadata(gcode)) if slicer == "bambu" else ""
     version = parse_change_filament_gcode_version(gcode)
 
     # _IFS_COLORS header
@@ -202,11 +202,13 @@ def main():
         if lines and lines[0].startswith("; MD5:"):
             lines.pop(0)
             gcode = "".join(lines)
-        new_gcode = "; " +  ifs_colors + "\n" + gcode + "\n" + bambu_metadata
-        md5 = hashlib.md5(new_gcode.encode("utf-8")).hexdigest()
-        new_gcode = f"; MD5:{md5}\n" + new_gcode
-        with open(file_path, "w", encoding="utf-8") as f:
-            f.write(new_gcode)
+        new_gcode_str = "; " + ifs_colors + "\n" + gcode + bambu_metadata
+        new_gcode_bytes = new_gcode_str.encode("utf-8")
+        md5_hash = hashlib.md5(new_gcode_bytes).hexdigest()
+        md5_line = b"; MD5:" + md5_hash.encode("ascii") + b"\n"
+        final_gcode = md5_line + new_gcode_bytes
+        with open(file_path, "wb") as f:
+            f.write(final_gcode)
     except OSError as e:
         print(f"Error when writing in {file_path}: {e}")
 
