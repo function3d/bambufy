@@ -5,7 +5,8 @@ python extract.py ../en/bambufy.cfg
 
 for lang in es fr de it pt cs ru tr; do
   echo "   → $lang"
-  msgmerge -U $lang.po base.pot
+  msgmerge --no-fuzzy-matching --backup=none -U $lang.po base.pot
+  msgattrib --no-obsolete $lang.po -o $lang.po
 done
 
 echo "✅ Done. Now translate the empty entries in Poedit."
