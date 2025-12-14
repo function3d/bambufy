@@ -2,9 +2,10 @@
    - Compatible with Bambu Studio, better management of the prime tower
    ([3MF](https://github.com/function3d/bambufy/releases/download/v1.1.0/ArticulatedCuteTurtle_Multicolor4Color_BambuStudio.3mf))
    - Compatible with Orca slicer ([3MF](https://github.com/function3d/bambufy/releases/download/v1.1.0/ArticulatedCuteTurtle_Multicolor4Color_Orca.3mf))
+   - Compatible with Prusaslicer (experimental) - need https://github.com/pantata/prusaslicer-settings-flashforge-AD5X
    - Purge sequences fully controlled by the slicer (same behavior as
    Bambu Lab printers)
-   - Accurate time and material usage estimates
+   - Accurate time and material usage estimates (Bambu Studio)
    - 24 mm retraction before filament cut on every color change (saves ~7
    meters of filament across 300 color changes)
    - Reduced purge multiplier (≈ 0.7) possible without color mixing in
@@ -13,7 +14,7 @@
    effectively reduce filament waste
    - **Material-to-waste ratio rarely exceeds 50%, even on 4-color prints** (0.2mm layer height, weight print > 70g)
    - **Mainsail displays true colors directly from the slicer**
-   - **45 seconds color change time**
+   - **45 seconds color change time (with prime tower)**
    - Bed leveling before print (Level On/Off)
    - External spool printing (IFS On/Off)
    - Backup printing mode – up to 4 kg of uninterrupted printing (Backup
@@ -25,6 +26,12 @@
    - Detection of jams, breaks and filament runout
    - Improved routine for automatic print recovery after power outages or
    errors
+
+**Changes from the original version:**
+- localization (cs, de, en, es, fr, it, pt, ru, tr)
+- Prusaslicer support
+- added Telegram notifications
+- printer modification moved to its own file. If you want to use it, add [include plugins/bambufy/printer_modification.cfg] to user.cfg
 
 ## Bambu Studio
 <img width="812" width="1436" height="799" alt="image" src="https://github.com/user-attachments/assets/1d6a9e77-8b35-4d04-96d4-d92022a3500b" />
@@ -41,8 +48,16 @@
 - Change the native display to **Guppyscreen** running the `DISPLAY_OFF` command
 - Change web ui to **Mainsail** running the `WEB` command
 - Run `ENABLE_PLUGIN name=bambufy` command from the console.
+
+## Bambu Studio
 - Use this [3MF](https://github.com/function3d/bambufy/releases/download/v1.1.0/ArticulatedCuteTurtle_Multicolor4Color_BambuStudio.3mf) with Bambu Studio (from there you can save settings such as user profiles)
+
+## Orcaslicer
 - Use this [3MF](https://github.com/function3d/bambufy/releases/download/v1.1.0/ArticulatedCuteTurtle_Multicolor4Color_Orca.3mf) with Orca slicer.
+
+## Prusaslicer
+- Import config bundle from [prusaslicer-settings-bundle](https://github.com/pantata/prusaslicer-settings-flashforge-AD5X)
+
 
 ## How to uninstall
 - Run the `DISABLE_PLUGIN name=bambufy` command from the console.
@@ -50,6 +65,7 @@
 - (Optional) Go back to Fluidd `WEB`
 
 ## [Multicolor printing nopoop (Orca)](https://github.com/function3d/bambufy/blob/master/MACHINE_GCODE.md#orca-slicer-change-filament-g-code-unified-poop-and-nopoop)
+## [Multicolor printing nopoop (Prusaslicer)](https://github.com/pantata/bambufy/blob/master/MACHINE_GCODE.md#prusaslicer-change-filament-g-code)
 
 ## Pull requests and issues are welcome!
 Let's do what Flashforge didn't want to do!

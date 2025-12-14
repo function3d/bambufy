@@ -311,3 +311,80 @@ M204 S[default_acceleration]
 ```
 PAUSE
 ```
+
+##  Prusaslicer: Change filament G-code
+```
+; *********************************
+; AD5X Change Filament G-code START
+
+{if previous_extruder != -1}
+  {if temperature[previous_extruder] < temperature[next_extruder]}
+    M104 S[temperature[next_extruder]]
+  {endif}
+{endif}
+
+{if wipe_tower || filament_minimal_purge_on_wipe_tower[next_extruder] <= 0}
+  {if previous_extruder != -1 }
+    _NOPOOP
+  {endif}
+  G1 Z{layer_z + 3.0} F1200
+  T[next_extruder]
+  G1 Z{layer_z} F1200
+{else}
+  {if previous_extruder != -1}
+    G1 Z{layer_z + 3.0} F1200
+    T[next_extruder]
+    {if next_extruder < 255}
+      ;jdeme do kose    
+      _GOTO_TRASH
+      ; FLUSH_START
+      M106 P1 S{255/100.0*max_fan_speed[next_extruder]*0.4}
+      ; --- flush 1 ---
+      {if wiping_volumes_matrix[next_extruder] + wiping_volumes_matrix[previous_extruder] > 0}
+          G1 E{0.237 * (wiping_volumes_matrix[next_extruder] + wiping_volumes_matrix[previous_extruder]) / (3.14159265359 * (filament_diameter[next_extruder]/2)*(filament_diameter[next_extruder]/2))} F{0.8 * (filament_max_volumetric_speed[next_extruder]*60 / (3.14159265359*(filament_diameter[next_extruder]/2)*(filament_diameter[next_extruder]/2)))}
+          G1 E{0.04 * (wiping_volumes_matrix[next_extruder] + wiping_volumes_matrix[previous_extruder]) / (3.14159265359 * (filament_diameter[next_extruder]/2)*(filament_diameter[next_extruder]/2))} F{0.4 * (filament_max_volumetric_speed[next_extruder]*60 / (3.14159265359*(filament_diameter[next_extruder]/2)*(filament_diameter[next_extruder]/2)))}
+          G1 E{0.21 * (wiping_volumes_matrix[next_extruder] + wiping_volumes_matrix[previous_extruder]) / (3.14159265359 * (filament_diameter[next_extruder]/2)*(filament_diameter[next_extruder]/2))} F{0.8 * (filament_max_volumetric_speed[next_extruder]*60 / (3.14159265359*(filament_diameter[next_extruder]/2)*(filament_diameter[next_extruder]/2)))}
+          G1 E{0.04 * (wiping_volumes_matrix[next_extruder] + wiping_volumes_matrix[previous_extruder]) / (3.14159265359 * (filament_diameter[next_extruder]/2)*(filament_diameter[next_extruder]/2))} F{0.4 * (filament_max_volumetric_speed[next_extruder]*60 / (3.14159265359*(filament_diameter[next_extruder]/2)*(filament_diameter[next_extruder]/2)))}
+          G1 E{0.21 * (wiping_volumes_matrix[next_extruder] + wiping_volumes_matrix[previous_extruder]) / (3.14159265359 * (filament_diameter[next_extruder]/2)*(filament_diameter[next_extruder]/2))} F{1.0 * (filament_max_volumetric_speed[next_extruder]*60 / (3.14159265359*(filament_diameter[next_extruder]/2)*(filament_diameter[next_extruder]/2)))}
+          G1 E{0.04 * (wiping_volumes_matrix[next_extruder] + wiping_volumes_matrix[previous_extruder]) / (3.14159265359 * (filament_diameter[next_extruder]/2)*(filament_diameter[next_extruder]/2))} F{0.5 * (filament_max_volumetric_speed[next_extruder]*60 / (3.14159265359*(filament_diameter[next_extruder]/2)*(filament_diameter[next_extruder]/2)))}
+          G1 E{0.21 * (wiping_volumes_matrix[next_extruder] + wiping_volumes_matrix[previous_extruder]) / (3.14159265359 * (filament_diameter[next_extruder]/2)*(filament_diameter[next_extruder]/2))} F{1.2 * (filament_max_volumetric_speed[next_extruder]*60 / (3.14159265359*(filament_diameter[next_extruder]/2)*(filament_diameter[next_extruder]/2)))}
+          G1 E-0.2 F3000
+          G1 E0.2 F3000
+          G1 E{0.21 * (wiping_volumes_matrix[next_extruder] + wiping_volumes_matrix[previous_extruder]) / (3.14159265359 * (filament_diameter[next_extruder]/2)*(filament_diameter[next_extruder]/2))} F{1.4 * (filament_max_volumetric_speed[next_extruder]*60 / (3.14159265359*(filament_diameter[next_extruder]/2)*(filament_diameter[next_extruder]/2)))}
+          G1 E-0.2 F3000
+          G1 E0.2 F3000
+      {endif}
+      ; FLUSH_END
+      ; --- WIPE po flush 1 ---
+      {if (wiping_volumes_matrix[next_extruder] + wiping_volumes_matrix[previous_extruder]) > 0}
+          M106 P1 S255 
+          G4 P800      
+          M106 P1 S0
+          {if is_nil(filament_retract_length_toolchange[next_extruder])} 
+            G1 E-[filament_retract_length[next_extruder]] F[filament_retract_speed[next_extruder]]
+            _SBROS_TRASH
+            G1 E[filament_retract_length[next_extruder]] F[filament_retract_speed[next_extruder]]          
+          {else}
+            G1 E-[filament_retract_length_toolchange[next_extruder]] F[filament_retract_speed[next_extruder]]
+            _SBROS_TRASH
+            G1 E[filament_retract_length_toolchange[next_extruder]] F[filament_retract_speed[next_extruder]]
+          {endif}
+          _CLEAR_REZINA
+      {endif}            
+      {if previous_extruder != -1 }
+        G1 Y220
+      {endif}
+    {endif}
+    G1 Z{layer_z} F1200
+  {else}
+    ;prvni extruder
+    T[next_extruder]
+  {endif}  
+{endif}
+
+;teplotu na aktualni extruder
+M104 S[temperature[next_extruder]]
+
+; AD5X Change Filament G-code END
+; *********************************
+```
