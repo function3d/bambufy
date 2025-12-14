@@ -27,9 +27,6 @@ msgstr "Einfügefaden erkannt"
 msgid "Auto insert: {port} ..."
 msgstr "Automatische Einführung: {port} ..."
 
-msgid "action:prompt_end"
-msgstr "action:prompt_end"
-
 msgid "Poop {i}/20"
 msgstr "Spülen {i}/20"
 
@@ -64,34 +61,8 @@ msgstr ""
 msgid "action:prompt_begin Type of Port {port}"
 msgstr "action:prompt_begin Port-Typ {port}"
 
-msgid "action:prompt_button_group_start"
-msgstr "action:prompt_button_group_start"
-
-msgid ""
-"action:prompt_button {type}|_IFS_COLORS_PORT_TYPE_DIALOG PORT={port} "
-"TYPE={type}|primary"
-msgstr ""
-"action:prompt_button {type}|_IFS_COLORS_PORT_TYPE_DIALOG PORT={port} "
-"TYPE={type}|primary"
-
-msgid ""
-"action:prompt_button {type}|_IFS_COLORS_PORT_TYPE_DIALOG PORT={port} "
-"TYPE={type}"
-msgstr ""
-"action:prompt_button {type}|_IFS_COLORS_PORT_TYPE_DIALOG PORT={port} "
-"TYPE={type}"
-
-msgid "action:prompt_button_group_end"
-msgstr "action:prompt_button_group_end"
-
 msgid "action:prompt_footer_button Close|_IFS_COLORS"
 msgstr "action:prompt_footer_button Schließen|_IFS_COLORS"
-
-msgid "action:prompt_show"
-msgstr "action:prompt_show"
-
-msgid "{msg}"
-msgstr "{msg}"
 
 msgid "action:prompt_begin Color to Port"
 msgstr "action:prompt_begin Farbe zu Port"
@@ -122,21 +93,6 @@ msgid "action:prompt_button BACKUP:OFF|_IFS_COLORS_BACKUP BACKUP=1"
 msgstr "action:prompt_button SICHERUNG:AUS|_IFS_COLORS_BACKUP BACKUP=1"
 
 msgid ""
-"action:prompt_button P{port}:{ifs_types[port-1]}|_IFS_COLORS_TYPE PORT={port}"
-msgstr ""
-"action:prompt_button P{port}:{ifs_types[port-1]}|_IFS_COLORS_TYPE PORT={port}"
-
-msgid "action:prompt_button P{port}:—"
-msgstr "action:prompt_button P{port}:—"
-
-msgid ""
-"action:prompt_button C{tool|int + 1}:{types[tool|int]}||ifs-color-slot "
-"warning|{colors[tool|int]}"
-msgstr ""
-"action:prompt_button C{tool|int + 1}:{types[tool|int]}||ifs-color-slot "
-"warning|{colors[tool|int]}"
-
-msgid ""
 "action:prompt_button P{port}|_IFS_COLORS_NOTIFICATION MSG='Incorrect "
 "filament type.'"
 msgstr ""
@@ -149,13 +105,6 @@ msgid ""
 msgstr ""
 "action:prompt_button P{port}|_IFS_COLORS_NOTIFICATION MSG='IFS-Port P{port} "
 "leer.'"
-
-msgid "action:prompt_button >P{port}|||{colors[tool|int]}"
-msgstr "action:prompt_button >P{port}|||{colors[tool|int]}"
-
-msgid "action:prompt_button P{port}|_IFS_COLORS_ASSIGN TOOL={tool} PORT={port}"
-msgstr ""
-"action:prompt_button P{port}|_IFS_COLORS_ASSIGN TOOL={tool} PORT={port}"
 
 msgid ""
 "action:prompt_text Update 'Filament change gcode' to v{ifs.min_version} or "
@@ -185,20 +134,6 @@ msgstr ""
 "action:prompt_footer_button Drucken|_IFS_COLORS_NOTIFICATION MSG='Drucken "
 "erst möglich, wenn allen Farben ein Port zugewiesen wurde.'|error"
 
-msgid ""
-"{variable|lower|replace('_', ' ')|title} : {printer['gcode_macro _IFS_VARS']"
-"[variable|lower]}"
-msgstr ""
-"{variable|lower|replace('_', ' ')|title} : {printer['gcode_macro _IFS_VARS']"
-"[variable|lower]}"
-
-msgid ""
-"{params.VARIABLE|lower|replace('_', ' ')|title} : {printer['gcode_macro "
-"_IFS_VARS'][params.VARIABLE|lower]}"
-msgstr ""
-"{params.VARIABLE|lower|replace('_', ' ')|title} : {printer['gcode_macro "
-"_IFS_VARS'][params.VARIABLE|lower]}"
-
 msgid "action:prompt_begin Warning"
 msgstr "action:prompt_begin Warnung"
 
@@ -217,9 +152,6 @@ msgid ""
 msgstr ""
 "action:prompt_footer_button Bambufy deaktivieren|DISABLE_PLUGIN name=bambufy|"
 "info"
-
-msgid "{var}: {printer.save_variables.variables['ifs_'+var]}"
-msgstr "{var}: {printer.save_variables.variables['ifs_'+var]}"
 
 msgid "Loading filament {port}"
 msgstr "Lade Filament {port}"
@@ -279,18 +211,6 @@ msgstr ""
 
 msgid "Heating the nozzle to {extruder_temp} degrees"
 msgstr "Düse wird auf {extruder_temp} °C aufgeheizt"
-
-msgid "Bambufy - {title}: {msg}"
-msgstr "Bambufy – {title}: {msg}"
-
-msgid "action:prompt_begin Bambufy - {title}"
-msgstr "action:prompt_begin Bambufy – {title}"
-
-msgid "action:prompt_text {msg}"
-msgstr "action:prompt_text {msg}"
-
-msgid "action:prompt_text {tip}"
-msgstr "action:prompt_text {tip}"
 
 msgid "action:prompt_footer_button HIDE FUTURE MESSAGES|_INFO_DIALOG_HIDE"
 msgstr ""
