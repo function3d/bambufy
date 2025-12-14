@@ -1,0 +1,360 @@
+msgid ""
+msgstr ""
+"Language: cs\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+msgid "Backup"
+msgstr "Záloha"
+
+msgid ""
+"Run out filament (Head) ({ifs.extruder_port|string}), backup, loading {port} "
+"and continuing with printing..."
+msgstr ""
+"Konec filamentu (hlava) ({ifs.extruder_port|string}), záloha, načítá se "
+"{port}, tisk pokračuje..."
+
+msgid ""
+"Filament run out in the IFS ({port|string}), we continue printing until it "
+"runs out in the extruder or there is a filament change"
+msgstr ""
+"Konec filamentu v IFS ({port|string}), tisk pokračuje, dokud filament "
+"nedojde v extrudéru nebo nedojde ke změně filamentu"
+
+msgid "Insert filament detected"
+msgstr "Zjištěn vkládací filament"
+
+msgid "Auto insert: {port} ..."
+msgstr "Automatické vložení: {port} ..."
+
+msgid "action:prompt_end"
+msgstr "action:prompt_end"
+
+msgid "Poop {i}/20"
+msgstr "Čištění {i}/20"
+
+msgid ""
+"The filament in the IFS ({consume}) has run out. The remaining filament has "
+"been used until it was no longer possible, but now it must be expelled "
+"through the waste chute in order to load the next one requested by the print."
+msgstr ""
+"Filament v IFS ({consume}) došel. Zbývající filament byl využit, dokud to "
+"bylo možné, ale nyní musí být vysunut odpadním žlabem, aby bylo možné načíst "
+"další požadovaný tiskem."
+
+msgid "Checking filaments"
+msgstr "Kontrola filamentů"
+
+msgid "Checking the status of the filaments in the IFS ports ..."
+msgstr "Kontrola stavu filamentů v portech IFS..."
+
+msgid ""
+"One of the filaments was just activating the sensor, retract 45mm all of "
+"them ..."
+msgstr "Jeden z filamentů právě aktivoval senzor, všechny zataženy o 45 mm..."
+
+msgid ""
+"One of the filaments is gripped by the extruder so we extrude {flush_length|"
+"string}mm to determine which one it is ..."
+msgstr ""
+"Jeden filament je uchopen extrudérem, extrudujeme {flush_length|string} mm "
+"pro jeho identifikaci..."
+
+msgid "action:prompt_begin Type of Port {port}"
+msgstr "action:prompt_begin Typ portu {port}"
+
+msgid "action:prompt_button_group_start"
+msgstr "action:prompt_button_group_start"
+
+msgid ""
+"action:prompt_button {type}|_IFS_COLORS_PORT_TYPE_DIALOG PORT={port} "
+"TYPE={type}|primary"
+msgstr ""
+"action:prompt_button {type}|_IFS_COLORS_PORT_TYPE_DIALOG PORT={port} "
+"TYPE={type}|primary"
+
+msgid ""
+"action:prompt_button {type}|_IFS_COLORS_PORT_TYPE_DIALOG PORT={port} "
+"TYPE={type}"
+msgstr ""
+"action:prompt_button {type}|_IFS_COLORS_PORT_TYPE_DIALOG PORT={port} "
+"TYPE={type}"
+
+msgid "action:prompt_button_group_end"
+msgstr "action:prompt_button_group_end"
+
+msgid "action:prompt_footer_button Close|_IFS_COLORS"
+msgstr "action:prompt_footer_button Zavřít|_IFS_COLORS"
+
+msgid "action:prompt_show"
+msgstr "action:prompt_show"
+
+msgid "{msg}"
+msgstr "{msg}"
+
+msgid "action:prompt_begin Color to Port"
+msgstr "action:prompt_begin Barva → Port"
+
+msgid "action:prompt_button LEVELING:ON|_IFS_COLORS_KAMP KAMP=0"
+msgstr "action:prompt_button NIVELACE:ZAP|_IFS_COLORS_KAMP KAMP=0"
+
+msgid "action:prompt_button LEVELING:OFF|_IFS_COLORS_KAMP KAMP=1"
+msgstr "action:prompt_button NIVELACE:VYP|_IFS_COLORS_KAMP KAMP=1"
+
+msgid ""
+"action:prompt_button IFS:ON|_IFS_COLORS_NOTIFICATION TITLE='IFS' MSG='This "
+"is a multicolor printing, IFS cannot be disabled.'"
+msgstr ""
+"action:prompt_button IFS:ZAP|_IFS_COLORS_NOTIFICATION TITLE='IFS' MSG='Jedná "
+"se o vícebarevný tisk, IFS nelze vypnout.'"
+
+msgid "action:prompt_button IFS:ON|_IFS_COLORS_IFS EXTERNAL=0"
+msgstr "action:prompt_button IFS:ZAP|_IFS_COLORS_IFS EXTERNAL=0"
+
+msgid "action:prompt_button IFS:OFF|_IFS_COLORS_IFS EXTERNAL=1"
+msgstr "action:prompt_button IFS:VYP|_IFS_COLORS_IFS EXTERNAL=1"
+
+msgid "action:prompt_button BACKUP:ON|_IFS_COLORS_BACKUP BACKUP=0"
+msgstr "action:prompt_button ZÁLOHA:ZAP|_IFS_COLORS_BACKUP BACKUP=0"
+
+msgid "action:prompt_button BACKUP:OFF|_IFS_COLORS_BACKUP BACKUP=1"
+msgstr "action:prompt_button ZÁLOHA:VYP|_IFS_COLORS_BACKUP BACKUP=1"
+
+msgid ""
+"action:prompt_button P{port}:{ifs_types[port-1]}|_IFS_COLORS_TYPE PORT={port}"
+msgstr ""
+"action:prompt_button P{port}:{ifs_types[port-1]}|_IFS_COLORS_TYPE PORT={port}"
+
+msgid "action:prompt_button P{port}:—"
+msgstr "action:prompt_button P{port}:—"
+
+msgid ""
+"action:prompt_button C{tool|int + 1}:{types[tool|int]}||ifs-color-slot "
+"warning|{colors[tool|int]}"
+msgstr ""
+"action:prompt_button C{tool|int + 1}:{types[tool|int]}||ifs-color-slot "
+"warning|{colors[tool|int]}"
+
+msgid ""
+"action:prompt_button P{port}|_IFS_COLORS_NOTIFICATION MSG='Incorrect "
+"filament type.'"
+msgstr ""
+"action:prompt_button P{port}|_IFS_COLORS_NOTIFICATION MSG='Nesprávný typ "
+"filamentu.'"
+
+msgid ""
+"action:prompt_button P{port}|_IFS_COLORS_NOTIFICATION MSG='IFS port P{port} "
+"empty.'"
+msgstr ""
+"action:prompt_button P{port}|_IFS_COLORS_NOTIFICATION MSG='Port IFS P{port} "
+"prázdný.'"
+
+msgid "action:prompt_button >P{port}|||{colors[tool|int]}"
+msgstr "action:prompt_button >P{port}|||{colors[tool|int]}"
+
+msgid "action:prompt_button P{port}|_IFS_COLORS_ASSIGN TOOL={tool} PORT={port}"
+msgstr ""
+"action:prompt_button P{port}|_IFS_COLORS_ASSIGN TOOL={tool} PORT={port}"
+
+msgid ""
+"action:prompt_text Update 'Filament change gcode' to v{ifs.min_version} or "
+"higher"
+msgstr ""
+"action:prompt_text Aktualizujte 'gcode pro výměnu filamentu' na v{ifs."
+"min_version} nebo novější"
+
+#, fuzzy
+msgid ""
+"Update 'Filament change gcode' to v{ifs.min_version} or higher https://"
+"github.com/function3d/bambufy/blob/master/MACHINE_GCODE.md"
+msgstr ""
+"Aktualizujte 'gcode pro výměnu filamentu' na v{ifs.min_version} nebo "
+"novější: https://github.com/function3d/bambufy/blob/master/MACHINE_GCODE.md  "
+
+msgid "action:prompt_footer_button Cancel|_IFS_COLORS_CANCEL"
+msgstr "action:prompt_footer_button Zrušit|_IFS_COLORS_CANCEL"
+
+msgid "action:prompt_footer_button Print|_IFS_COLORS_PRINT|primary"
+msgstr "action:prompt_footer_button Tisk|_IFS_COLORS_PRINT|primary"
+
+msgid ""
+"action:prompt_footer_button Print|_IFS_COLORS_NOTIFICATION MSG='It is not "
+"possible to print until all colors have been assigned.'|error"
+msgstr ""
+"action:prompt_footer_button Tisk|_IFS_COLORS_NOTIFICATION MSG='Tisk není "
+"možný, dokud nejsou všechny barvy přiřazeny.'|error"
+
+msgid ""
+"{variable|lower|replace('_', ' ')|title} : {printer['gcode_macro _IFS_VARS']"
+"[variable|lower]}"
+msgstr ""
+"{variable|lower|replace('_', ' ')|title} : {printer['gcode_macro _IFS_VARS']"
+"[variable|lower]}"
+
+msgid ""
+"{params.VARIABLE|lower|replace('_', ' ')|title} : {printer['gcode_macro "
+"_IFS_VARS'][params.VARIABLE|lower]}"
+msgstr ""
+"{params.VARIABLE|lower|replace('_', ' ')|title} : {printer['gcode_macro "
+"_IFS_VARS'][params.VARIABLE|lower]}"
+
+msgid "action:prompt_begin Warning"
+msgstr "action:prompt_begin Varování"
+
+msgid ""
+"action:prompt_text Bambufy does not work with the native screen, it requires "
+"Guppy Screen (DISPLAY_OFF)"
+msgstr ""
+"action:prompt_text Bambufy nefunguje s nativní obrazovkou, vyžaduje Guppy "
+"Screen (DISPLAY_OFF)"
+
+msgid "action:prompt_footer_button Enable Guppy Screen|_DISPLAY_OFF|info"
+msgstr "action:prompt_footer_button Povolit Guppy Screen|_DISPLAY_OFF|info"
+
+msgid ""
+"action:prompt_footer_button Disable Bambufy|DISABLE_PLUGIN name=bambufy|info"
+msgstr ""
+"action:prompt_footer_button Zakázat Bambufy|DISABLE_PLUGIN name=bambufy|info"
+
+msgid "{var}: {printer.save_variables.variables['ifs_'+var]}"
+msgstr "{var}: {printer.save_variables.variables['ifs_'+var]}"
+
+msgid "Loading filament {port}"
+msgstr "Načítání filamentu {port}"
+
+msgid "Cutting the filament"
+msgstr "Řezání filamentu"
+
+msgid "Cut X={x_cut} Y={y_cut}"
+msgstr "Řez X={x_cut} Y={y_cut}"
+
+msgid "Unloading filament {extruder_port}"
+msgstr "Vysouvání filamentu {extruder_port}"
+
+msgid "Timeout ignored because printer state == paused."
+msgstr "Časový limit ignorován, protože tiskárna je pozastavena."
+
+msgid "Pause during printing"
+msgstr "Pozastavení během tisku"
+
+msgid "Pause during loading"
+msgstr "Pozastavení během zavádění"
+
+msgid "Pause"
+msgstr "Pozastavit"
+
+msgid "Jam detected loading filament ({ifs.extruder_port|string}), pausing..."
+msgstr ""
+"Zaseknutí při zavádění filamentu ({ifs.extruder_port|string}), pozastavuje "
+"se..."
+
+msgid "Jam detected (Motion) ({ifs.extruder_port|string}), pausing..."
+msgstr "Zaseknutí (pohyb) ({ifs.extruder_port|string}), pozastavuje se..."
+
+msgid ""
+"Run out filament (Head) ({ifs.extruder_port|string}), no backup alternative "
+"has been found, pausing..."
+msgstr ""
+"Konec filamentu (hlava) ({ifs.extruder_port|string}), žádná záložní možnost "
+"nenalezena, pozastaveno..."
+
+msgid "Run out filament (Head) ({ifs.extruder_port|string}), pausing..."
+msgstr "Konec filamentu (hlava) ({ifs.extruder_port|string}), pozastaveno..."
+
+msgid ""
+"Broken filament in the IFS tube (Head) ({ifs.extruder_port|string}), "
+"pausing..."
+msgstr ""
+"Poškozený filament v trubce IFS (hlava) ({ifs.extruder_port|string}), "
+"pozastaveno..."
+
+msgid ""
+"IFS Port ({ifs.extruder_port|string}) empty, please insert filament, "
+"pausing..."
+msgstr ""
+"Port IFS ({ifs.extruder_port|string}) prázdný, vložte filament, "
+"pozastaveno..."
+
+msgid "Heating the nozzle to {extruder_temp} degrees"
+msgstr "Ohřev trysky na {extruder_temp} °C"
+
+msgid "Bambufy - {title}: {msg}"
+msgstr "Bambufy – {title}: {msg}"
+
+msgid "action:prompt_begin Bambufy - {title}"
+msgstr "action:prompt_begin Bambufy – {title}"
+
+msgid "action:prompt_text {msg}"
+msgstr "action:prompt_text {msg}"
+
+msgid "action:prompt_text {tip}"
+msgstr "action:prompt_text {tip}"
+
+msgid "action:prompt_footer_button HIDE FUTURE MESSAGES|_INFO_DIALOG_HIDE"
+msgstr "action:prompt_footer_button SKRÝT BUDOUCÍ ZPRÁVY|_INFO_DIALOG_HIDE"
+
+msgid "action:prompt_footer_button CLOSE|{close_action}"
+msgstr "action:prompt_footer_button ZAVŘÍT|{close_action}"
+
+msgid "The information dialogs will be displayed"
+msgstr "Informační dialogy budou zobrazeny"
+
+msgid "The information dialogs have been hidden"
+msgstr "Informační dialogy byly skryty"
+
+msgid "Start print {extruder_temp}/{bed_temp} ..."
+msgstr "Spustit tisk {extruder_temp}/{bed_temp} ..."
+
+msgid "Poop"
+msgstr "Propláchnout"
+
+msgid "Pooping the previous color/material from the hotend ..."
+msgstr "Proplachování předchozí barvy/materiálu z hotendu..."
+
+msgid "Leveling"
+msgstr "Nivelace"
+
+msgid "Nozzle cleaning ..."
+msgstr "Čištění trysky..."
+
+msgid "Bed leveling (KAMP) ..."
+msgstr "Nivelace podložky (KAMP)..."
+
+msgid "Go to trash"
+msgstr "Jít k odpadu"
+
+msgid "Trash Y={client.custom_park_y}"
+msgstr "Odpad Y={client.custom_park_y}"
+
+msgid "Cleaning the nozzle on rubber"
+msgstr "Čištění trysky na gumě"
+
+msgid "action:prompt_begin Wait"
+msgstr "action:prompt_begin Čekejte"
+
+msgid "action:prompt_text Checking MD5 '{filename}' ..."
+msgstr "action:prompt_text Kontrola MD5 '{filename}'..."
+
+msgid "Started MD5 check {filename}"
+msgstr "Kontrola MD5 {filename} zahájena"
+
+msgid "action:prompt_text Processing '{filename}' ..."
+msgstr "action:prompt_text Zpracování '{filename}'..."
+
+msgid "action:prompt_begin Error"
+msgstr "action:prompt_begin Chyba"
+
+msgid "action:prompt_text MD5 check failed. Print canceled."
+msgstr "action:prompt_text Kontrola MD5 selhala. Tisk zrušen."
+
+msgid ""
+"Loading filament at {extruder_temp} for {extrude_len}mm at {speed/60} mm/s"
+msgstr ""
+"Načítání filamentu při {extruder_temp} °C po {extrude_len} mm rychlostí "
+"{speed/60} mm/s"
+
+msgid ""
+"Unloading filament at {extruder_temp} for {extrude_len}mm at {speed/60} mm/s"
+msgstr ""
+"Vysouvání filamentu při {extruder_temp} °C po {extrude_len} mm rychlostí "
+"{speed/60} mm/s"

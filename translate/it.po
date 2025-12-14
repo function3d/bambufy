@@ -1,0 +1,362 @@
+msgid ""
+msgstr ""
+"Language: it\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Backup"
+msgstr "Backup"
+
+msgid ""
+"Run out filament (Head) ({ifs.extruder_port|string}), backup, loading {port} "
+"and continuing with printing..."
+msgstr ""
+"Esaurimento filamento (testina) ({ifs.extruder_port|string}), backup, "
+"caricamento di {port} e ripresa della stampa..."
+
+msgid ""
+"Filament run out in the IFS ({port|string}), we continue printing until it "
+"runs out in the extruder or there is a filament change"
+msgstr ""
+"Filamento esaurito nell’IFS ({port|string}), stampa prosegue fino a "
+"esaurimento nell’estrusore o cambio filamento"
+
+msgid "Insert filament detected"
+msgstr "Filamento di inserimento rilevato"
+
+msgid "Auto insert: {port} ..."
+msgstr "Inserimento automatico: {port} ..."
+
+msgid "action:prompt_end"
+msgstr "action:prompt_end"
+
+msgid "Poop {i}/20"
+msgstr "Pulizia {i}/20"
+
+msgid ""
+"The filament in the IFS ({consume}) has run out. The remaining filament has "
+"been used until it was no longer possible, but now it must be expelled "
+"through the waste chute in order to load the next one requested by the print."
+msgstr ""
+"Il filamento nell’IFS ({consume}) è esaurito. Il residuo è stato utilizzato "
+"finché possibile, ma ora va espulso tramite la canaletta di scarto per "
+"caricare il successivo richiesto dalla stampa."
+
+msgid "Checking filaments"
+msgstr "Controllo filamenti"
+
+msgid "Checking the status of the filaments in the IFS ports ..."
+msgstr "Verifica stato filamenti nelle porte IFS..."
+
+msgid ""
+"One of the filaments was just activating the sensor, retract 45mm all of "
+"them ..."
+msgstr "Un filamento ha appena attivato il sensore, retrai 45 mm su tutti..."
+
+msgid ""
+"One of the filaments is gripped by the extruder so we extrude {flush_length|"
+"string}mm to determine which one it is ..."
+msgstr ""
+"Un filamento è afferrato dall’estrusore, estrudi {flush_length|string} mm "
+"per identificarlo..."
+
+msgid "action:prompt_begin Type of Port {port}"
+msgstr "action:prompt_begin Tipo porta {port}"
+
+msgid "action:prompt_button_group_start"
+msgstr "action:prompt_button_group_start"
+
+msgid ""
+"action:prompt_button {type}|_IFS_COLORS_PORT_TYPE_DIALOG PORT={port} "
+"TYPE={type}|primary"
+msgstr ""
+"action:prompt_button {type}|_IFS_COLORS_PORT_TYPE_DIALOG PORT={port} "
+"TYPE={type}|primary"
+
+msgid ""
+"action:prompt_button {type}|_IFS_COLORS_PORT_TYPE_DIALOG PORT={port} "
+"TYPE={type}"
+msgstr ""
+"action:prompt_button {type}|_IFS_COLORS_PORT_TYPE_DIALOG PORT={port} "
+"TYPE={type}"
+
+msgid "action:prompt_button_group_end"
+msgstr "action:prompt_button_group_end"
+
+msgid "action:prompt_footer_button Close|_IFS_COLORS"
+msgstr "action:prompt_footer_button Chiudi|_IFS_COLORS"
+
+msgid "action:prompt_show"
+msgstr "action:prompt_show"
+
+msgid "{msg}"
+msgstr "{msg}"
+
+msgid "action:prompt_begin Color to Port"
+msgstr "action:prompt_begin Colore → Porta"
+
+msgid "action:prompt_button LEVELING:ON|_IFS_COLORS_KAMP KAMP=0"
+msgstr "action:prompt_button LIV.:ATT|_IFS_COLORS_KAMP KAMP=0"
+
+msgid "action:prompt_button LEVELING:OFF|_IFS_COLORS_KAMP KAMP=1"
+msgstr "action:prompt_button LIV.:DIS|_IFS_COLORS_KAMP KAMP=1"
+
+msgid ""
+"action:prompt_button IFS:ON|_IFS_COLORS_NOTIFICATION TITLE='IFS' MSG='This "
+"is a multicolor printing, IFS cannot be disabled.'"
+msgstr ""
+"action:prompt_button IFS:ATT|_IFS_COLORS_NOTIFICATION TITLE='IFS' "
+"MSG='Stampa multicolore: IFS non può essere disattivato.'"
+
+msgid "action:prompt_button IFS:ON|_IFS_COLORS_IFS EXTERNAL=0"
+msgstr "action:prompt_button IFS:ATT|_IFS_COLORS_IFS EXTERNAL=0"
+
+msgid "action:prompt_button IFS:OFF|_IFS_COLORS_IFS EXTERNAL=1"
+msgstr "action:prompt_button IFS:DIS|_IFS_COLORS_IFS EXTERNAL=1"
+
+msgid "action:prompt_button BACKUP:ON|_IFS_COLORS_BACKUP BACKUP=0"
+msgstr "action:prompt_button BACKUP:ATT|_IFS_COLORS_BACKUP BACKUP=0"
+
+msgid "action:prompt_button BACKUP:OFF|_IFS_COLORS_BACKUP BACKUP=1"
+msgstr "action:prompt_button BACKUP:DIS|_IFS_COLORS_BACKUP BACKUP=1"
+
+msgid ""
+"action:prompt_button P{port}:{ifs_types[port-1]}|_IFS_COLORS_TYPE PORT={port}"
+msgstr ""
+"action:prompt_button P{port}:{ifs_types[port-1]}|_IFS_COLORS_TYPE PORT={port}"
+
+msgid "action:prompt_button P{port}:—"
+msgstr "action:prompt_button P{port}:—"
+
+msgid ""
+"action:prompt_button C{tool|int + 1}:{types[tool|int]}||ifs-color-slot "
+"warning|{colors[tool|int]}"
+msgstr ""
+"action:prompt_button C{tool|int + 1}:{types[tool|int]}||ifs-color-slot "
+"warning|{colors[tool|int]}"
+
+msgid ""
+"action:prompt_button P{port}|_IFS_COLORS_NOTIFICATION MSG='Incorrect "
+"filament type.'"
+msgstr ""
+"action:prompt_button P{port}|_IFS_COLORS_NOTIFICATION MSG='Tipo di filamento "
+"errato.'"
+
+msgid ""
+"action:prompt_button P{port}|_IFS_COLORS_NOTIFICATION MSG='IFS port P{port} "
+"empty.'"
+msgstr ""
+"action:prompt_button P{port}|_IFS_COLORS_NOTIFICATION MSG='Porta IFS P{port} "
+"vuota.'"
+
+msgid "action:prompt_button >P{port}|||{colors[tool|int]}"
+msgstr "action:prompt_button >P{port}|||{colors[tool|int]}"
+
+msgid "action:prompt_button P{port}|_IFS_COLORS_ASSIGN TOOL={tool} PORT={port}"
+msgstr ""
+"action:prompt_button P{port}|_IFS_COLORS_ASSIGN TOOL={tool} PORT={port}"
+
+msgid ""
+"action:prompt_text Update 'Filament change gcode' to v{ifs.min_version} or "
+"higher"
+msgstr ""
+"action:prompt_text Aggiorna il 'gcode cambio filamento' alla v{ifs."
+"min_version} o superiore"
+
+#, fuzzy
+msgid ""
+"Update 'Filament change gcode' to v{ifs.min_version} or higher https://"
+"github.com/function3d/bambufy/blob/master/MACHINE_GCODE.md"
+msgstr ""
+"Aggiorna il 'gcode cambio filamento' alla v{ifs.min_version} o superiore: "
+"https://github.com/function3d/bambufy/blob/master/MACHINE_GCODE.md  "
+
+msgid "action:prompt_footer_button Cancel|_IFS_COLORS_CANCEL"
+msgstr "action:prompt_footer_button Annulla|_IFS_COLORS_CANCEL"
+
+msgid "action:prompt_footer_button Print|_IFS_COLORS_PRINT|primary"
+msgstr "action:prompt_footer_button Stampa|_IFS_COLORS_PRINT|primary"
+
+msgid ""
+"action:prompt_footer_button Print|_IFS_COLORS_NOTIFICATION MSG='It is not "
+"possible to print until all colors have been assigned.'|error"
+msgstr ""
+"action:prompt_footer_button Stampa|_IFS_COLORS_NOTIFICATION MSG='Impossibile "
+"stampare finché non sono assegnati tutti i colori.'|error"
+
+msgid ""
+"{variable|lower|replace('_', ' ')|title} : {printer['gcode_macro _IFS_VARS']"
+"[variable|lower]}"
+msgstr ""
+"{variable|lower|replace('_', ' ')|title} : {printer['gcode_macro _IFS_VARS']"
+"[variable|lower]}"
+
+msgid ""
+"{params.VARIABLE|lower|replace('_', ' ')|title} : {printer['gcode_macro "
+"_IFS_VARS'][params.VARIABLE|lower]}"
+msgstr ""
+"{params.VARIABLE|lower|replace('_', ' ')|title} : {printer['gcode_macro "
+"_IFS_VARS'][params.VARIABLE|lower]}"
+
+msgid "action:prompt_begin Warning"
+msgstr "action:prompt_begin Avviso"
+
+msgid ""
+"action:prompt_text Bambufy does not work with the native screen, it requires "
+"Guppy Screen (DISPLAY_OFF)"
+msgstr ""
+"action:prompt_text Bambufy non funziona con lo schermo nativo, richiede "
+"Guppy Screen (DISPLAY_OFF)"
+
+msgid "action:prompt_footer_button Enable Guppy Screen|_DISPLAY_OFF|info"
+msgstr "action:prompt_footer_button Abilita Guppy Screen|_DISPLAY_OFF|info"
+
+msgid ""
+"action:prompt_footer_button Disable Bambufy|DISABLE_PLUGIN name=bambufy|info"
+msgstr ""
+"action:prompt_footer_button Disabilita Bambufy|DISABLE_PLUGIN name=bambufy|"
+"info"
+
+msgid "{var}: {printer.save_variables.variables['ifs_'+var]}"
+msgstr "{var}: {printer.save_variables.variables['ifs_'+var]}"
+
+msgid "Loading filament {port}"
+msgstr "Caricamento filamento {port}"
+
+msgid "Cutting the filament"
+msgstr "Taglio del filamento"
+
+msgid "Cut X={x_cut} Y={y_cut}"
+msgstr "Taglio X={x_cut} Y={y_cut}"
+
+msgid "Unloading filament {extruder_port}"
+msgstr "Scaricamento filamento {extruder_port}"
+
+msgid "Timeout ignored because printer state == paused."
+msgstr "Timeout ignorato perché lo stato della stampante è 'in pausa'."
+
+msgid "Pause during printing"
+msgstr "Pausa durante la stampa"
+
+msgid "Pause during loading"
+msgstr "Pausa durante il caricamento"
+
+msgid "Pause"
+msgstr "Pausa"
+
+msgid "Jam detected loading filament ({ifs.extruder_port|string}), pausing..."
+msgstr ""
+"Inceppamento rilevato durante il caricamento ({ifs.extruder_port|string}), "
+"in pausa..."
+
+msgid "Jam detected (Motion) ({ifs.extruder_port|string}), pausing..."
+msgstr ""
+"Inceppamento rilevato (movimento) ({ifs.extruder_port|string}), in pausa..."
+
+msgid ""
+"Run out filament (Head) ({ifs.extruder_port|string}), no backup alternative "
+"has been found, pausing..."
+msgstr ""
+"Esaurimento filamento (testina) ({ifs.extruder_port|string}), nessun backup "
+"disponibile, in pausa..."
+
+msgid "Run out filament (Head) ({ifs.extruder_port|string}), pausing..."
+msgstr ""
+"Esaurimento filamento (testina) ({ifs.extruder_port|string}), in pausa..."
+
+msgid ""
+"Broken filament in the IFS tube (Head) ({ifs.extruder_port|string}), "
+"pausing..."
+msgstr ""
+"Filamento rotto nel tubo IFS (testina) ({ifs.extruder_port|string}), in "
+"pausa..."
+
+msgid ""
+"IFS Port ({ifs.extruder_port|string}) empty, please insert filament, "
+"pausing..."
+msgstr ""
+"Porta IFS ({ifs.extruder_port|string}) vuota, inserire filamento, in pausa..."
+
+msgid "Heating the nozzle to {extruder_temp} degrees"
+msgstr "Riscaldamento ugello a {extruder_temp} °C"
+
+msgid "Bambufy - {title}: {msg}"
+msgstr "Bambufy – {title}: {msg}"
+
+msgid "action:prompt_begin Bambufy - {title}"
+msgstr "action:prompt_begin Bambufy – {title}"
+
+msgid "action:prompt_text {msg}"
+msgstr "action:prompt_text {msg}"
+
+msgid "action:prompt_text {tip}"
+msgstr "action:prompt_text {tip}"
+
+msgid "action:prompt_footer_button HIDE FUTURE MESSAGES|_INFO_DIALOG_HIDE"
+msgstr "action:prompt_footer_button NASCONDI MESSAGGI FUTURI|_INFO_DIALOG_HIDE"
+
+msgid "action:prompt_footer_button CLOSE|{close_action}"
+msgstr "action:prompt_footer_button CHIUDI|{close_action}"
+
+msgid "The information dialogs will be displayed"
+msgstr "Le finestre informative saranno visualizzate"
+
+msgid "The information dialogs have been hidden"
+msgstr "Le finestre informative sono state nascoste"
+
+msgid "Start print {extruder_temp}/{bed_temp} ..."
+msgstr "Avvia stampa {extruder_temp}/{bed_temp} ..."
+
+msgid "Poop"
+msgstr "Pulisci"
+
+msgid "Pooping the previous color/material from the hotend ..."
+msgstr "Pulizia del colore/materiale precedente dall’hotend..."
+
+msgid "Leveling"
+msgstr "Livellamento"
+
+msgid "Nozzle cleaning ..."
+msgstr "Pulizia ugello..."
+
+msgid "Bed leveling (KAMP) ..."
+msgstr "Livellamento piatto (KAMP)..."
+
+msgid "Go to trash"
+msgstr "Vai al cestino"
+
+msgid "Trash Y={client.custom_park_y}"
+msgstr "Cestino Y={client.custom_park_y}"
+
+msgid "Cleaning the nozzle on rubber"
+msgstr "Pulizia ugello su gomma"
+
+msgid "action:prompt_begin Wait"
+msgstr "action:prompt_begin Attendere"
+
+msgid "action:prompt_text Checking MD5 '{filename}' ..."
+msgstr "action:prompt_text Controllo MD5 di '{filename}'..."
+
+msgid "Started MD5 check {filename}"
+msgstr "Controllo MD5 di {filename} avviato"
+
+msgid "action:prompt_text Processing '{filename}' ..."
+msgstr "action:prompt_text Elaborazione di '{filename}'..."
+
+msgid "action:prompt_begin Error"
+msgstr "action:prompt_begin Errore"
+
+msgid "action:prompt_text MD5 check failed. Print canceled."
+msgstr "action:prompt_text Controllo MD5 fallito. Stampa annullata."
+
+msgid ""
+"Loading filament at {extruder_temp} for {extrude_len}mm at {speed/60} mm/s"
+msgstr ""
+"Caricamento filamento a {extruder_temp} °C per {extrude_len} mm a {speed/60} "
+"mm/s"
+
+msgid ""
+"Unloading filament at {extruder_temp} for {extrude_len}mm at {speed/60} mm/s"
+msgstr ""
+"Scaricamento filamento a {extruder_temp} °C per {extrude_len} mm a "
+"{speed/60} mm/s"
