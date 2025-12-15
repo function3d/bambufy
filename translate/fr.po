@@ -222,8 +222,8 @@ msgstr "Chauffage de la buse à {extruder_temp} °C"
 msgid "action:prompt_footer_button HIDE FUTURE MESSAGES|_INFO_DIALOG_HIDE"
 msgstr "action:prompt_footer_button MASQUER MSG FUTURS|_INFO_DIALOG_HIDE"
 
-msgid "action:prompt_footer_button CLOSE|{close_action}"
-msgstr "action:prompt_footer_button FERMER|{close_action}"
+msgid "action:prompt_footer_button CLOSE|{close_action}|primary"
+msgstr "action:prompt_footer_button FERMER|{close_action}|primary"
 
 msgid "The information dialogs will be displayed"
 msgstr "Les boîtes de dialogue seront affichées"
