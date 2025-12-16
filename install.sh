@@ -19,3 +19,11 @@ awk '
 }
 { print }
 ' "$FILE" > "$FILE.tmp" && mv "$FILE.tmp" "$FILE"
+
+WEB="fluidd"; grep -q "^CLIENT=mainsail" /opt/config/mod_data/web.conf && WEB="mainsail"
+
+if grep -q "^[[:space:]]*web[[:space:]]*=" "$FILE"; then
+    sed -i "s|^[[:space:]]*web[[:space:]]*=.*|web = '$WEB'|" "$FILE"
+else
+    echo "web = '$WEB'" >> "$FILE"
+fi
