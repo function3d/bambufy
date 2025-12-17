@@ -12,6 +12,10 @@ awk '
   print
   next
 }
+/^ifs_motion_sensor/ {
+  print
+  next
+}
 /^ifs_/ {
   sub(/^ifs_/, "bambufy_")
   print
