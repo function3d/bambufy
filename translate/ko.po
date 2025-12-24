@@ -1,0 +1,323 @@
+msgid ""
+msgstr ""
+"Language: ko\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Backup"
+msgstr "백업"
+
+msgid ""
+"Run out filament (Head) ({ifs.extruder_port|string}), backup, loading {port} "
+"and continuing with printing..."
+msgstr ""
+"필라멘트 소진(헤드)({ifs.extruder_port|string}) 백업 중 {port} 로딩 후 인쇄 "
+"계속..."
+
+msgid ""
+"Filament run out in the IFS ({port|string}), we continue printing until it "
+"runs out in the extruder or there is a filament change"
+msgstr ""
+"IFS 내 필라멘트 소진({port|string}) 압출기에서 소진되거나 필라멘트 교체 시까"
+"지 인쇄 계속"
+
+msgid "Insert filament detected"
+msgstr "삽입 필라멘트 감지됨"
+
+msgid "Auto insert: {port} ..."
+msgstr "자동 삽입: {port} ..."
+
+msgid "Poop {i}/20"
+msgstr "플러싱 {i}/20"
+
+msgid ""
+"The filament in the IFS ({consume}) has run out. The remaining filament has "
+"been used until it was no longer possible, but now it must be expelled "
+"through the waste chute in order to load the next one requested by the print."
+msgstr ""
+"IFS 내 필라멘트({consume})가 소진되었습니다 남은 필라멘트는 더 이상 사용 불가"
+"능할 때까지 사용되었으며 이제 폐기 채널을 통해 배출하고 인쇄가 요청한 다음 필"
+"라멘트를 로드해야 합니다"
+
+msgid "Checking filaments"
+msgstr "필라멘트 확인 중"
+
+msgid "Checking the status of the filaments in the IFS ports ..."
+msgstr "IFS 포트 내 필라멘트 상태 확인 중..."
+
+msgid ""
+"One of the filaments was just activating the sensor, retract 45mm all of "
+"them ..."
+msgstr "필라멘트 중 하나가 센서를 방금 활성화했습니다 전부 45mm 후진 중..."
+
+msgid ""
+"One of the filaments is gripped by the extruder so we extrude {flush_length|"
+"string}mm to determine which one it is ..."
+msgstr ""
+"필라멘트 중 하나가 압출기에 걸려 있습니다 식별을 위해 {flush_length|string}"
+"mm 압출 중..."
+
+msgid "action:prompt_begin Filament type in Port {port}"
+msgstr "action:prompt_begin 포트 {port}의 필라멘트 유형"
+
+msgid "action:prompt_footer_button Close|_IFS_COLORS|primary"
+msgstr "action:prompt_footer_button 닫기|_IFS_COLORS|primary"
+
+msgid "action:prompt_begin Color to Port"
+msgstr "action:prompt_begin 색상 → 포트"
+
+msgid "action:prompt_button LEVELING:ON|_IFS_COLORS_KAMP KAMP=0"
+msgstr "action:prompt_button 레벨링:켜기|_IFS_COLORS_KAMP KAMP=0"
+
+msgid "action:prompt_button LEVELING:OFF|_IFS_COLORS_KAMP KAMP=1"
+msgstr "action:prompt_button 레벨링:끄기|_IFS_COLORS_KAMP KAMP=1"
+
+msgid ""
+"action:prompt_button IFS:ON|_IFS_COLORS_NOTIFICATION TITLE='IFS' MSG='This "
+"is a multicolor printing, IFS cannot be disabled.'"
+msgstr ""
+"action:prompt_button IFS:켜기|_IFS_COLORS_NOTIFICATION TITLE='IFS' MSG='다색 "
+"인쇄 중입니다 IFS를 비활성화할 수 없습니다.'"
+
+msgid "action:prompt_button IFS:OFF|_IFS_COLORS_IFS EXTERNAL=0"
+msgstr "action:prompt_button IFS:끄기|_IFS_COLORS_IFS EXTERNAL=0"
+
+msgid "action:prompt_button IFS:ON|_IFS_COLORS_IFS EXTERNAL=1"
+msgstr "action:prompt_button IFS:켜기|_IFS_COLORS_IFS EXTERNAL=1"
+
+msgid ""
+"action:prompt_button BACKUP:OFF|_IFS_COLORS_NOTIFICATION TITLE='Backup' "
+"MSG='This is a multicolor printing, BACKUP cannot be enabled.'"
+msgstr ""
+"action:prompt_button 백업:끄기|_IFS_COLORS_NOTIFICATION TITLE='백업' MSG='다"
+"색 인쇄 중입니다 백업을 활성화할 수 없습니다.'"
+
+msgid ""
+"action:prompt_button BACKUP:OFF|_IFS_COLORS_NOTIFICATION TITLE='Backup' "
+"MSG='The BACKUP function is only possible with IFS enabled.'"
+msgstr ""
+"action:prompt_button 백업:끄기|_IFS_COLORS_NOTIFICATION TITLE='백업' MSG='백"
+"업 기능은 IFS가 활성화된 경우에만 사용 가능합니다.'"
+
+msgid "action:prompt_button BACKUP:ON|_IFS_COLORS_BACKUP BACKUP=0"
+msgstr "action:prompt_button 백업:켜기|_IFS_COLORS_BACKUP BACKUP=0"
+
+msgid "action:prompt_button BACKUP:OFF|_IFS_COLORS_BACKUP BACKUP=1"
+msgstr "action:prompt_button 백업:끄기|_IFS_COLORS_BACKUP BACKUP=1"
+
+msgid ""
+"action:prompt_button P{port}:--|_IFS_COLORS_NOTIFICATION TITLE='Error' "
+"MSG='IFS port P{port} empty.'"
+msgstr ""
+"action:prompt_button P{port}:--|_IFS_COLORS_NOTIFICATION TITLE='오류' "
+"MSG='IFS 포트 P{port} 비어 있음.'"
+
+msgid ""
+"action:prompt_button P{port}|_IFS_COLORS_NOTIFICATION TITLE='Error' "
+"MSG='Incorrect filament type.'"
+msgstr ""
+"action:prompt_button P{port}|_IFS_COLORS_NOTIFICATION TITLE='오류' MSG='필라"
+"멘트 유형 불일치.'"
+
+msgid ""
+"action:prompt_button P{port}|_IFS_COLORS_NOTIFICATION TITLE='Error' MSG='IFS "
+"port P{port} empty.'"
+msgstr ""
+"action:prompt_button P{port}|_IFS_COLORS_NOTIFICATION TITLE='오류' MSG='IFS "
+"포트 P{port} 비어 있음.'"
+
+msgid ""
+"action:prompt_text Update 'Filament change gcode' to v{ifs.min_version} or "
+"higher"
+msgstr ""
+"action:prompt_text '필라멘트 교체 G코드'를 v{ifs.min_version} 이상으로 업데이"
+"트하세요"
+
+#, fuzzy
+msgid ""
+"Update 'Filament change gcode' to v{ifs.min_version} or higher https://"
+"github.com/function3d/bambufy/blob/master/MACHINE_GCODE.md"
+msgstr ""
+"'필라멘트 교체 G코드'를 v{ifs.min_version} 이상으로 업데이트하세요 https://"
+"github.com/function3d/bambufy/blob/master/MACHINE_GCODE.md  "
+
+msgid "action:prompt_footer_button Cancel|_IFS_COLORS_CANCEL"
+msgstr "action:prompt_footer_button 취소|_IFS_COLORS_CANCEL"
+
+msgid "action:prompt_footer_button Print|_IFS_COLORS_PRINT|primary"
+msgstr "action:prompt_footer_button 인쇄|_IFS_COLORS_PRINT|primary"
+
+#, fuzzy
+msgid ""
+"action:prompt_footer_button Print|_IFS_COLORS_NOTIFICATION TITLE='Error' "
+"MSG='Update Filament change gcode to v{ifs.min_version} or higher https://"
+"github.com/function3d/bambufy/blob/master/MACHINE_GCODE.md'|error"
+msgstr ""
+"action:prompt_footer_button 인쇄|_IFS_COLORS_NOTIFICATION TITLE='오류' "
+"MSG='필라멘트 교체 G코드를 v{ifs.min_version} 이상으로 업데이트하세요 "
+"https://github.com/function3d/bambufy/blob/master/MACHINE_GCODE.md  '|error"
+
+msgid ""
+"action:prompt_footer_button Print|_IFS_COLORS_NOTIFICATION TITLE='Error' "
+"MSG='It is not possible to print until all colors have been assigned.'|error"
+msgstr ""
+"action:prompt_footer_button 인쇄|_IFS_COLORS_NOTIFICATION TITLE='오류' "
+"MSG='모든 색상에 포트가 할당될 때까지 인쇄할 수 없습니다.'|error"
+
+msgid ""
+"action:prompt_button Select for C{tool|int + 1}:{types[tool|int]}|||"
+"{colors[tool|int]}"
+msgstr ""
+"action:prompt_button C{tool|int + 1}:{types[tool|int]}에 할당|||{colors[tool|"
+"int]}"
+
+msgid ""
+"action:prompt_button P{port}:{ifs_types[port-1]}|_IFS_COLORS_NOTIFICATION "
+"TITLE='Error' MSG='Incorrect filament type.'"
+msgstr ""
+"action:prompt_button P{port}:{ifs_types[port-1]}|_IFS_COLORS_NOTIFICATION "
+"TITLE='오류' MSG='필라멘트 유형 불일치.'"
+
+msgid "Reinstalling bambufy..."
+msgstr "Bambufy 재설치 중…"
+
+msgid "action:prompt_begin Warning"
+msgstr "action:prompt_begin 경고"
+
+msgid ""
+"action:prompt_text Bambufy does not work with the native screen, it requires "
+"Guppy Screen (DISPLAY_OFF)"
+msgstr ""
+"action:prompt_text Bambufy는 기본 화면과 호환되지 않습니다 Guppy "
+"Screen(DISPLAY_OFF) 필요"
+
+msgid "action:prompt_footer_button Enable Guppy Screen|_DISPLAY_OFF|info"
+msgstr "action:prompt_footer_button Guppy Screen 활성화|_DISPLAY_OFF|info"
+
+msgid ""
+"action:prompt_footer_button Disable Bambufy|DISABLE_PLUGIN name=bambufy|info"
+msgstr ""
+"action:prompt_footer_button Bambufy 비활성화|DISABLE_PLUGIN name=bambufy|info"
+
+msgid "Loading filament {port}"
+msgstr "필라멘트 {port} 로딩 중"
+
+msgid "Cutting the filament"
+msgstr "필라멘트 절단 중"
+
+msgid "Cut X={x_cut} Y={y_cut}"
+msgstr "절단 X={x_cut} Y={y_cut}"
+
+msgid "Unloading filament {extruder_port}"
+msgstr "필라멘트 {extruder_port} 언로딩 중"
+
+msgid "Timeout ignored because printer state == paused."
+msgstr "프린터 상태가 일시 정지됨으로 타임아웃 무시됨"
+
+msgid "Pause during printing"
+msgstr "인쇄 중 일시 정지"
+
+msgid "Pause during loading"
+msgstr "로딩 중 일시 정지"
+
+msgid "Pause"
+msgstr "일시 정지"
+
+msgid "Jam detected loading filament ({ifs.extruder_port|string}), pausing..."
+msgstr "필라멘트 로딩 중 장전 감지({ifs.extruder_port|string}) 일시 정지 중..."
+
+msgid "Jam detected (Motion) ({ifs.extruder_port|string}), pausing..."
+msgstr "이동 중 장전 감지({ifs.extruder_port|string}) 일시 정지 중..."
+
+msgid ""
+"Run out filament (Head) ({ifs.extruder_port|string}), no backup alternative "
+"has been found, pausing..."
+msgstr ""
+"필라멘트 소진(헤드)({ifs.extruder_port|string}) 백업 대안 없음 일시 정지 "
+"중..."
+
+msgid "Run out filament (Head) ({ifs.extruder_port|string}), pausing..."
+msgstr "필라멘트 소진(헤드)({ifs.extruder_port|string}) 일시 정지 중..."
+
+msgid ""
+"Broken filament in the IFS tube (Head) ({ifs.extruder_port|string}), "
+"pausing..."
+msgstr ""
+"IFS 튜브 내 필라멘트 파손(헤드)({ifs.extruder_port|string}) 일시 정지 중..."
+
+msgid ""
+"IFS Port ({ifs.extruder_port|string}) empty, please insert filament, "
+"pausing..."
+msgstr ""
+"IFS 포트({ifs.extruder_port|string}) 비어 있음 필라멘트 삽입 후 일시 정지 "
+"중..."
+
+msgid "Heating the nozzle to {extruder_temp} degrees"
+msgstr "노즐 {extruder_temp}℃로 가열 중"
+
+msgid "action:prompt_footer_button HIDE FUTURE MESSAGES|_INFO_DIALOG_HIDE"
+msgstr "action:prompt_footer_button 이후 메시지 숨기기|_INFO_DIALOG_HIDE"
+
+msgid "action:prompt_footer_button CLOSE|{close_action}|primary"
+msgstr "action:prompt_footer_button 닫기|{close_action}|primary"
+
+msgid "The information dialogs will be displayed"
+msgstr "정보 대화상자가 표시됩니다"
+
+msgid "The information dialogs have been hidden"
+msgstr "정보 대화상자가 숨겨졌습니다"
+
+msgid "Start print {extruder_temp}/{bed_temp} ..."
+msgstr "인쇄 시작 {extruder_temp}/{bed_temp} ..."
+
+msgid "Poop"
+msgstr "플러싱"
+
+msgid "Pooping the previous color/material from the hotend ..."
+msgstr "핫엔드에서 이전 색상/재료 플러싱 중..."
+
+msgid "Leveling"
+msgstr "레벨링"
+
+msgid "Nozzle cleaning ..."
+msgstr "노즐 청소 중..."
+
+msgid "Bed leveling (KAMP) ..."
+msgstr "베드 레벨링(KAMP) 중..."
+
+msgid "Go to trash"
+msgstr "폐기 위치로 이동"
+
+msgid "Trash Y={client.custom_park_y}"
+msgstr "폐기 Y={client.custom_park_y}"
+
+msgid "Cleaning the nozzle on rubber"
+msgstr "고무 패드에서 노즐 청소 중"
+
+msgid "action:prompt_begin Wait"
+msgstr "action:prompt_begin 잠시 기다려 주세요"
+
+msgid "action:prompt_text Checking MD5 '{filename}' ..."
+msgstr "action:prompt_text MD5 확인 중 '{filename}' ..."
+
+msgid "Started MD5 check {filename}"
+msgstr "MD5 확인 시작 {filename}"
+
+msgid "action:prompt_text Processing '{filename}' ..."
+msgstr "action:prompt_text 처리 중 '{filename}' ..."
+
+msgid "action:prompt_begin Error"
+msgstr "action:prompt_begin 오류"
+
+msgid "action:prompt_text MD5 check failed. Print canceled."
+msgstr "action:prompt_text MD5 확인 실패 인쇄 취소됨"
+
+msgid ""
+"Loading filament at {extruder_temp} for {extrude_len}mm at {speed/60} mm/s"
+msgstr ""
+"{extruder_temp}℃에서 {extrude_len}mm {speed/60} mm/s로 필라멘트 로딩 중"
+
+msgid ""
+"Unloading filament at {extruder_temp} for {extrude_len}mm at {speed/60} mm/s"
+msgstr ""
+"{extruder_temp}℃에서 {extrude_len}mm {speed/60} mm/s로 필라멘트 언로딩 중"
