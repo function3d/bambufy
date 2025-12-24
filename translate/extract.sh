@@ -3,9 +3,9 @@ set -e
 
 python extract.py ../en/bambufy.cfg
 
-for lang in es fr de it pt cs ru tr; do
+for lang in es fr de it pt cs ru tr ja ko zh; do
   echo "   → $lang"
-  msgmerge --no-fuzzy-matching --backup=none -U $lang.po base.pot
+  msgmerge --backup=none -U $lang.po base.pot
   msgattrib --no-obsolete $lang.po -o $lang.po
 done
 

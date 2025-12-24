@@ -29,17 +29,30 @@ def extract_msg_strings(filepath):
         "action:prompt_button P{port}|_IFS_COLORS_ASSIGN TOOL={tool} PORT={port}",
         "{variable|lower|replace('_', ' ')|title} : {printer['gcode_macro _IFS_VARS'][variable|lower]}",
         "{params.VARIABLE|lower|replace('_', ' ')|title} : {printer['gcode_macro _IFS_VARS'][params.VARIABLE|lower]}",
-        "{var}: {printer.save_variables.variables['ifs_'+var]}",
+        "{var}: {printer.save_variables.variables['bambufy_'+var]}",
         "Bambufy - {title}: {msg}",
         "{msg}",
         "action:prompt_begin Bambufy - {title}",
         "action:prompt_text {msg}",
-        "action:prompt_text {tip}"
+        "action:prompt_text {tip}",
+        "action:prompt_begin C{tool + 1}",
+        "action:prompt_button P{port}:{ifs_types[port-1]}|_IFS_COLORS_ASSIGN TOOL={tool} PORT={port}",
+        "action:prompt_button P{port}:{ifs_types[port-1]}|_IFS_COLORS",
+        "action:prompt_button P{port}|_IFS_COLORS",
+        "action:prompt_button C{tool|int + 1}:{types[tool|int]}>P{ifs.tools[tool|int]}|_IFS_COLORS_PORTS TOOL={tool}|ifs-color-slot warning|{colors[tool|int]}",
+        "action:prompt_button C{tool|int + 1}:{types[tool|int]}|_IFS_COLORS_PORTS TOOL={tool}|ifs-color-slot warning|{colors[tool|int]}",
+        "action:prompt_button C{tool|int + 1}>P{ifs.tools[tool|int]}|_IFS_COLORS_PORTS TOOL={tool}|ifs-color-slot warning|{colors[tool|int]}",
+        "{ifs_types[port-1]}",
+        "{types[tool|int]}",
+        "Z-Offset (KAMP): {ns.offsets.z}",
+        "Z-Offset: {ns.offsets.z}",
+        "Z-Offset (KAMP): {offsets.z}",
+        "Z-Offset: {offsets.z}"
     )
 
     filtered = [
         s for s in matches
-        if not any(s.startswith(prefix) for prefix in NO_TRANSLATE_PREFIXES)
+        if s not in NO_TRANSLATE_PREFIXES
     ]
 
     return list(dict.fromkeys(filtered))  # elimina duplicados, mantiene orden
@@ -62,4 +75,4 @@ if __name__ == "__main__":
             f.write(f'msgid "{escaped}"\n')
             f.write(f'msgstr ""\n\n')
 
-    print(f"✅ {len(strings)} unique messages extracted → {pot_path}")
+    print(f"✅ {len(strings)} unique messages extracted")
