@@ -141,22 +141,17 @@ PAUSE
 ```
 
 ## Orca slicer
-If you have created your profile without using the 3MF I provided, then take these settings into account in addition to these Machines gcode:
-- Printer settings > Multimaterial > Filament load time: 23
-- Printer settings > Multimaterial > Filament unload time: 23
-- Printer settings > Extruder > Retraction when switching material length: 2
-- Printer settings > Extruder > Extra length on restart: 0
-- Material setting > Multimaterial > Minimal purge on prime tower: 15
-- Process > Multimaterial > Prime tower > Prime volume: 15
-
-Poop
-- Printer settings > Multematerial > Wipe tower type: Type1
-
-Nopoop
-- Printer settings > Multematerial > Wipe tower type: Type2
-- Printer settings > Multematerial > Purge in prime tower: Actived
-
-
+If you create your own profile, keep these settings in mind:
+  - (Poop Mode) Printer settings > Multimaterial > Wipe tower type: Type1
+  - (Nopoop Mode) Printer settings > Multimaterial > Wipe tower type: Type2
+  - (Nopoop Mode) Printer settings > Multimaterial > Purge in prime tower: Actived
+  - Printer settings > Multimaterial > Filament load time: 23
+  - Printer settings > Multimaterial > Filament unload time: 23
+  - Printer settings > Extruder > Retraction when switching material length: 2
+  - Printer settings > Extruder > Extra length on restart: 0
+  - Material setting > Multimaterial > Minimal purge on prime tower: 15
+  - Process > Multimaterial > Prime tower > Prime volume: 15
+  
 #### Machine start G-code
 
 ```
