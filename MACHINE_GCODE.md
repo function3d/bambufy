@@ -1,6 +1,7 @@
 # Machine G-code for Bambu Studio and Orca slicer
 
-## Bambu Studio: Machine start G-code
+## Bambu Studio
+#### Machine start G-code
 
 ```
 START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] TOOL={initial_no_support_extruder}
@@ -8,20 +9,13 @@ T{initial_no_support_extruder}
 SET_PRINT_STATS_INFO TOTAL_LAYER=[total_layer_count]
 ```
 
-## Orca slicer: Machine start G-code
-
-```
-START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] TOOL={initial_no_support_extruder}
-SET_PRINT_STATS_INFO TOTAL_LAYER=[total_layer_count]
-```
-
-## Machine end G-code
+#### Machine end G-code
 
 ```
 END_PRINT
 ```
 
-## Layer change G-code
+#### Layer change G-code
 
 ```
 ;AFTER_LAYER_CHANGE
@@ -30,7 +24,7 @@ SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
 ; layer num/total_layer_count: {layer_num+1}/[total_layer_count]
 ```
 
-##  Bambu Studio: Change filament G-code
+####  Change filament G-code
 
 ```
 ; Machine: AD5X
@@ -139,23 +133,53 @@ M204 S[initial_layer_acceleration]
 M204 S[default_acceleration]
 {endif}
 ```
+
+## Pause G-code
+
+```
+PAUSE
+```
+
 ## Orca slicer
 If you have created your profile without using the 3MF I provided, then take these settings into account in addition to these Machines gcode:
-- Printer settings
-  - Multimaterial
-    - Filament load time: 23
-    - Filament unload time: 23
-  - Extruder
-    - Retraction when switching material length: 2
-    - Extra length on restart: 0
-- Material setting
-  - Multimaterial
-    - Minimal purge on prime tower: 15
-   
-##  Orca slicer: Change filament G-code, unified: poop and nopoop
-With this unified gcode for filament change, you only need to enable or disable this option to purge in the tower(nopoop) or in the form of poops
+- Printer settings > Multimaterial > Filament load time: 23
+- Printer settings > Multimaterial > Filament unload time: 23
+- Printer settings > Extruder > Retraction when switching material length: 2
+- Printer settings > Extruder > Extra length on restart: 0
+- Material setting > Multimaterial > Minimal purge on prime tower: 15
+- Process > Multimaterial > Prime tower > Prime volume: 15
 
-<img width="618" height="419" alt="image" src="https://github.com/user-attachments/assets/9554da95-0ee1-4b77-a690-e9f084397978" />
+Poop
+- Printer settings > Multematerial > Wipe tower type: Type1
+
+Nopoop
+- Printer settings > Multematerial > Wipe tower type: Type2
+- Printer settings > Multematerial > Purge in prime tower: Actived
+
+
+#### Machine start G-code
+
+```
+START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] TOOL={initial_no_support_extruder}
+SET_PRINT_STATS_INFO TOTAL_LAYER=[total_layer_count]
+```
+
+#### Machine end G-code
+
+```
+END_PRINT
+```
+
+#### Layer change G-code
+
+```
+;AFTER_LAYER_CHANGE
+;[layer_z]
+SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
+; layer num/total_layer_count: {layer_num+1}/[total_layer_count]
+```
+
+####  Change filament G-code
 
 ```
 ; Machine: AD5X
