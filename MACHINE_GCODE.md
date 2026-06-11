@@ -134,7 +134,7 @@ M204 S[default_acceleration]
 {endif}
 ```
 
-## Pause G-code
+#### Pause G-code
 
 ```
 PAUSE
@@ -330,7 +330,7 @@ M204 S[default_acceleration]
 {endif}
 ```
 
-## Pause G-code
+#### Pause G-code
 
 ```
 PAUSE
