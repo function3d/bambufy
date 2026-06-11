@@ -97,8 +97,8 @@ msgstr "IFS 포트 P{port} 비어 있음"
 msgid "Incorrect filament type"
 msgstr "필라멘트 유형 불일치"
 
-msgid "Update 'Filament change gcode' to v{ifs.min_version} or higher"
-msgstr "'필라멘트 교체 G코드'를 v{ifs.min_version} 이상으로 업데이트하세요"
+msgid "Update Filament change gcode to v{ifs.min_version} or higher"
+msgstr "필라멘트 교체 G코드를 v{ifs.min_version} 이상으로 업데이트하세요"
 
 msgid "Print"
 msgstr "인쇄"

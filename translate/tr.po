@@ -97,9 +97,9 @@ msgstr "IFS portu P{port} boş"
 msgid "Incorrect filament type"
 msgstr "Geçersiz filaman türü"
 
-msgid "Update 'Filament change gcode' to v{ifs.min_version} or higher"
+msgid "Update Filament change gcode to v{ifs.min_version} or higher"
 msgstr ""
-"'Filaman değiştirme gcode' kodunu v{ifs.min_version} veya üstüne güncelleyin"
+"Filaman değiştirme gcode kodunu v{ifs.min_version} veya üstüne güncelleyin"
 
 msgid "Print"
 msgstr "Yazdır"

@@ -97,7 +97,7 @@ msgstr "IFSポートP{port}が空です"
 msgid "Incorrect filament type"
 msgstr "フィラメント種別が一致しません"
 
-msgid "Update 'Filament change gcode' to v{ifs.min_version} or higher"
+msgid "Update Filament change gcode to v{ifs.min_version} or higher"
 msgstr "「フィラメント交換Gコード」をv{ifs.min_version}以上に更新してください"
 
 msgid "Print"

@@ -92,7 +92,7 @@ msgstr "IFS 端口 P{port} 为空"
 msgid "Incorrect filament type"
 msgstr "耗材类型不匹配"
 
-msgid "Update 'Filament change gcode' to v{ifs.min_version} or higher"
+msgid "Update Filament change gcode to v{ifs.min_version} or higher"
 msgstr "请将「换料 G 代码」更新至 v{ifs.min_version} 或更高版本"
 
 msgid "Print"

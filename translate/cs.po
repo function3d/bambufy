@@ -97,9 +97,9 @@ msgstr "Port IFS P{port} prázdný"
 msgid "Incorrect filament type"
 msgstr "Nesprávný typ filamentu"
 
-msgid "Update 'Filament change gcode' to v{ifs.min_version} or higher"
+msgid "Update Filament change gcode to v{ifs.min_version} or higher"
 msgstr ""
-"Aktualizujte 'gcode pro výměnu filamentu' na v{ifs.min_version} nebo novější"
+"Aktualizujte gcode pro výměnu filamentu na v{ifs.min_version} nebo novější"
 
 msgid "Print"
 msgstr "Tisk"

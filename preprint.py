@@ -173,6 +173,9 @@ def main():
                     filament_used_g = f"; filament used [g] = {total_filament_weight}"
                     total_filament_used_g = f"; total filament used [g] = {sum(float(x) for x in total_filament_weight.split(','))}"
 
+    if version is None:
+        version = '1.2.2'
+    
     tools = sorted(tools)
     feedrates = ",".join(str(round(float(v) / 4 * 3 * 60)) for v in feedrates)
     exclude = get_exclude_object_define(first_layer)

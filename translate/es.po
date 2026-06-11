@@ -98,9 +98,9 @@ msgstr "Puerto IFS P{port} vacío"
 msgid "Incorrect filament type"
 msgstr "Tipo de filamento no compatible"
 
-msgid "Update 'Filament change gcode' to v{ifs.min_version} or higher"
+msgid "Update Filament change gcode to v{ifs.min_version} or higher"
 msgstr ""
-"Actualice el 'gcode de cambio de filamento' a v{ifs.min_version} o superior"
+"Actualice el gcode de cambio de filamento a v{ifs.min_version} o superior"
 
 msgid "Print"
 msgstr "Imprimir"

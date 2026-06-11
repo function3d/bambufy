@@ -98,8 +98,8 @@ msgstr "Порт IFS P{port} пуст"
 msgid "Incorrect filament type"
 msgstr "Неверный тип филамента"
 
-msgid "Update 'Filament change gcode' to v{ifs.min_version} or higher"
-msgstr "Обновите 'gcode смены филамента' до v{ifs.min_version} или выше"
+msgid "Update Filament change gcode to v{ifs.min_version} or higher"
+msgstr "Обновите gcode смены филамента до v{ifs.min_version} или выше"
 
 msgid "Print"
 msgstr "Печать"
