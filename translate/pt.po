@@ -32,8 +32,8 @@ msgstr ""
 msgid "Insert filament detected"
 msgstr "Filamento de inserção detectado"
 
-msgid "Auto insert: {port}"
-msgstr "Inserção automática: {port}"
+msgid "Auto insert"
+msgstr "Inserção automática"
 
 msgid "Poop {i}/20"
 msgstr "Purga {i}/20"
@@ -64,38 +64,29 @@ msgstr ""
 "Um filamento está preso no extrusor. Extrudir {flush_length|string} mm para "
 "identificá-lo"
 
-msgid "Select for P{port}"
-msgstr "Selecionar para P{port}"
+msgid "Select for"
+msgstr "Selecionar para"
 
 msgid "Close"
 msgstr "Fechar"
 
-msgid "Color to Port"
-msgstr "Cor → Porta"
+msgid "Colors (slicer filaments)"
+msgstr "Cores (filamentos do fatiador)"
 
 msgid "IFS Ports"
 msgstr "Portas IFS"
 
-msgid "LEVELING"
-msgstr "NIVELAMENTO"
+msgid "Spools (physical filaments)"
+msgstr "Carretéis (filamentos físicos)"
+
+msgid "Print options"
+msgstr "pções de impressão"
 
 msgid "This is a multicolor printing, IFS cannot be disabled"
 msgstr "Esta é uma impressão multicolor. O IFS não pode ser desativado"
 
-msgid "BACKUP"
-msgstr "BACKUP"
-
 msgid "The BACKUP function is only possible with IFS enabled"
 msgstr "A função BACKUP só é possível com o IFS ativado"
-
-msgid "Error"
-msgstr "Erro"
-
-msgid "IFS port P{port} empty"
-msgstr "Porta IFS P{port} vazia"
-
-msgid "Incorrect filament type"
-msgstr "Tipo de filamento incorreto"
 
 msgid "Update Filament change gcode to v{ifs.min_version} or higher"
 msgstr ""
@@ -104,11 +95,20 @@ msgstr ""
 msgid "Print"
 msgstr "Imprimir"
 
+msgid "Error"
+msgstr "Erro"
+
 msgid "It is not possible to print until all colors have been assigned"
 msgstr "Não é possível imprimir até que todas as cores sejam atribuídas"
 
-msgid "Select port for"
-msgstr "Selecionar porta para"
+msgid "Color to Port"
+msgstr "Cor → Porta"
+
+msgid "Incorrect filament type"
+msgstr "Tipo de filamento incorreto"
+
+msgid "IFS port P{port} empty"
+msgstr "Porta IFS P{port} vazia"
 
 msgid "Reinstalling bambufy"
 msgstr "Reinstalando Bambufy"
@@ -262,8 +262,12 @@ msgstr ""
 "{speed/60} mm/s"
 
 msgid ""
-"Please manually clean the nozzle while it is heating up then press continue"
-msgstr "Limpe manualmente o bico enquanto aquece e depois pressione continuar"
+"Please manually clean the nozzle while it is heating up then press CONTINUE"
+msgstr "Limpe manualmente o bico enquanto aquece e depois pressione CONTINUAR"
 
 msgid "Bed screws"
 msgstr "Parafusos da mesa"
+
+msgid ""
+"Please manually clean the nozzle while it is heating up then press continue"
+msgstr "Limpe manualmente o bico enquanto aquece e depois pressione continuar"

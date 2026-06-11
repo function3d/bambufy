@@ -32,8 +32,8 @@ msgstr ""
 msgid "Insert filament detected"
 msgstr "Filament d’insertion détecté"
 
-msgid "Auto insert: {port}"
-msgstr "Insertion auto : {port}"
+msgid "Auto insert"
+msgstr "Insertion auto"
 
 msgid "Poop {i}/20"
 msgstr "Purge {i}/20"
@@ -64,38 +64,29 @@ msgstr ""
 "Un filament est coincé dans l’extrudeuse, extrusion de {flush_length|string} "
 "mm pour l’identifier"
 
-msgid "Select for P{port}"
-msgstr "Sélectionner pour P{port}"
+msgid "Select for"
+msgstr "Sélectionner pour"
 
 msgid "Close"
 msgstr "Fermer"
 
-msgid "Color to Port"
-msgstr "Couleur vers port"
+msgid "Colors (slicer filaments)"
+msgstr "Couleurs (filaments du trancheur)"
 
 msgid "IFS Ports"
 msgstr "Ports IFS"
 
-msgid "LEVELING"
-msgstr "NIVELAGE"
+msgid "Spools (physical filaments)"
+msgstr "Bobines (filaments physiques)"
+
+msgid "Print options"
+msgstr "Options d'impression"
 
 msgid "This is a multicolor printing, IFS cannot be disabled"
 msgstr "Impression multicolore : IFS ne peut pas être désactivé"
 
-msgid "BACKUP"
-msgstr "SAUVEGARDE"
-
 msgid "The BACKUP function is only possible with IFS enabled"
 msgstr "La fonction SAUVEGARDE n’est possible qu’avec l’IFS activé"
-
-msgid "Error"
-msgstr "Erreur"
-
-msgid "IFS port P{port} empty"
-msgstr "Port IFS P{port} vide"
-
-msgid "Incorrect filament type"
-msgstr "Type de filament incompatible"
 
 msgid "Update Filament change gcode to v{ifs.min_version} or higher"
 msgstr ""
@@ -105,12 +96,21 @@ msgstr ""
 msgid "Print"
 msgstr "Imprimer"
 
+msgid "Error"
+msgstr "Erreur"
+
 msgid "It is not possible to print until all colors have been assigned"
 msgstr ""
 "Impossible d’imprimer tant que toutes les couleurs ne sont pas attribuées"
 
-msgid "Select port for"
-msgstr "Sélectionner le port pour"
+msgid "Color to Port"
+msgstr "Couleur vers port"
+
+msgid "Incorrect filament type"
+msgstr "Type de filament incompatible"
+
+msgid "IFS port P{port} empty"
+msgstr "Port IFS P{port} vide"
 
 msgid "Reinstalling bambufy"
 msgstr "Réinstallation de Bambufy"
@@ -257,10 +257,16 @@ msgstr ""
 "Déchargement à {extruder_temp} °C sur {extrude_len} mm à {speed/60} mm/s"
 
 msgid ""
-"Please manually clean the nozzle while it is heating up then press continue"
+"Please manually clean the nozzle while it is heating up then press CONTINUE"
 msgstr ""
 "Nettoyez manuellement la buse pendant le chauffage, puis appuyez sur "
 "Continuer"
 
 msgid "Bed screws"
 msgstr "Vis de plateau"
+
+msgid ""
+"Please manually clean the nozzle while it is heating up then press continue"
+msgstr ""
+"Nettoyez manuellement la buse pendant le chauffage, puis appuyez sur "
+"Continuer"

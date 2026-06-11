@@ -33,8 +33,8 @@ msgstr ""
 msgid "Insert filament detected"
 msgstr "Обнаружен вставляемый филамент"
 
-msgid "Auto insert: {port}"
-msgstr "Автоматическая вставка: {port}"
+msgid "Auto insert"
+msgstr "Автоматическая вставка"
 
 msgid "Poop {i}/20"
 msgstr "Продувка {i}/20"
@@ -65,38 +65,29 @@ msgstr ""
 "Один филамент захвачен экструдером. Экструзия {flush_length|string} мм для "
 "его идентификации"
 
-msgid "Select for P{port}"
-msgstr "Выбрать для P{port}"
+msgid "Select for"
+msgstr "Выбрать для"
 
 msgid "Close"
 msgstr "Закрыть"
 
-msgid "Color to Port"
-msgstr "Цвет → Порт"
+msgid "Colors (slicer filaments)"
+msgstr "Цвета (филаменты слайсера)"
 
 msgid "IFS Ports"
 msgstr "Порты IFS"
 
-msgid "LEVELING"
-msgstr "ВЫРАВНИВАНИЕ"
+msgid "Spools (physical filaments)"
+msgstr "Катушки (физические филаменты)"
+
+msgid "Print options"
+msgstr "Параметры печати"
 
 msgid "This is a multicolor printing, IFS cannot be disabled"
 msgstr "Это многоцветная печать. IFS нельзя отключить"
 
-msgid "BACKUP"
-msgstr "РЕЗЕРВ"
-
 msgid "The BACKUP function is only possible with IFS enabled"
 msgstr "Функция РЕЗЕРВ возможна только при включенном IFS"
-
-msgid "Error"
-msgstr "Ошибка"
-
-msgid "IFS port P{port} empty"
-msgstr "Порт IFS P{port} пуст"
-
-msgid "Incorrect filament type"
-msgstr "Неверный тип филамента"
 
 msgid "Update Filament change gcode to v{ifs.min_version} or higher"
 msgstr "Обновите gcode смены филамента до v{ifs.min_version} или выше"
@@ -104,11 +95,20 @@ msgstr "Обновите gcode смены филамента до v{ifs.min_vers
 msgid "Print"
 msgstr "Печать"
 
+msgid "Error"
+msgstr "Ошибка"
+
 msgid "It is not possible to print until all colors have been assigned"
 msgstr "Печать невозможна, пока не назначены все цвета"
 
-msgid "Select port for"
-msgstr "Выбрать порт для"
+msgid "Color to Port"
+msgstr "Цвет → Порт"
+
+msgid "Incorrect filament type"
+msgstr "Неверный тип филамента"
+
+msgid "IFS port P{port} empty"
+msgstr "Порт IFS P{port} пуст"
 
 msgid "Reinstalling bambufy"
 msgstr "Переустановка Bambufy"
@@ -257,8 +257,14 @@ msgstr ""
 "{speed/60} мм/с"
 
 msgid ""
-"Please manually clean the nozzle while it is heating up then press continue"
-msgstr "Во время нагрева вручную очистите сопло, затем нажмите продолжить"
+"Please manually clean the nozzle while it is heating up then press CONTINUE"
+msgstr ""
+"Пожалуйста, очистите сопло вручную во время его нагрева, а затем нажмите "
+"ПРОДОЛЖИТЬ"
 
 msgid "Bed screws"
 msgstr "Винты стола"
+
+msgid ""
+"Please manually clean the nozzle while it is heating up then press continue"
+msgstr "Во время нагрева вручную очистите сопло, затем нажмите продолжить"

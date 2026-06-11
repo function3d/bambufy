@@ -32,8 +32,8 @@ msgstr ""
 msgid "Insert filament detected"
 msgstr "Takılan filaman algılandı"
 
-msgid "Auto insert: {port}"
-msgstr "Otomatik takma: {port}"
+msgid "Auto insert"
+msgstr "Otomatik takma"
 
 msgid "Poop {i}/20"
 msgstr "Temizleme {i}/20"
@@ -64,38 +64,29 @@ msgstr ""
 "Filamanlardan biri ekstrüder tarafından tutuldu. Hangisi olduğunu belirlemek "
 "için {flush_length|string} mm itiliyor"
 
-msgid "Select for P{port}"
-msgstr "P{port} için seç"
+msgid "Select for"
+msgstr "Şunun için seçin"
 
 msgid "Close"
 msgstr "Kapat"
 
-msgid "Color to Port"
-msgstr "Renk → Port"
+msgid "Colors (slicer filaments)"
+msgstr "Renkler (dilimleyici filamentleri)"
 
 msgid "IFS Ports"
 msgstr "IFS Portlar"
 
-msgid "LEVELING"
-msgstr "HİZALAMA"
+msgid "Spools (physical filaments)"
+msgstr "Makaralar (fiziksel filamentler)"
+
+msgid "Print options"
+msgstr "Yazdırma seçenekleri"
 
 msgid "This is a multicolor printing, IFS cannot be disabled"
 msgstr "Bu çok renkli bir baskıdır. IFS devre dışı bırakılamaz"
 
-msgid "BACKUP"
-msgstr "YEDEK"
-
 msgid "The BACKUP function is only possible with IFS enabled"
 msgstr "YEDEK işlevi, yalnızca IFS etkinleştirildiğinde mümkündür"
-
-msgid "Error"
-msgstr "Hata"
-
-msgid "IFS port P{port} empty"
-msgstr "IFS portu P{port} boş"
-
-msgid "Incorrect filament type"
-msgstr "Geçersiz filaman türü"
 
 msgid "Update Filament change gcode to v{ifs.min_version} or higher"
 msgstr ""
@@ -104,11 +95,20 @@ msgstr ""
 msgid "Print"
 msgstr "Yazdır"
 
+msgid "Error"
+msgstr "Hata"
+
 msgid "It is not possible to print until all colors have been assigned"
 msgstr "Tüm renklere port atanmadan yazdırılamaz"
 
-msgid "Select port for"
-msgstr "Şunun için port seçin"
+msgid "Color to Port"
+msgstr "Renk → Port"
+
+msgid "Incorrect filament type"
+msgstr "Geçersiz filaman türü"
+
+msgid "IFS port P{port} empty"
+msgstr "IFS portu P{port} boş"
 
 msgid "Reinstalling bambufy"
 msgstr "Bambufy yeniden yükleniyor"
@@ -263,8 +263,13 @@ msgstr ""
 "boşaltılıyor"
 
 msgid ""
-"Please manually clean the nozzle while it is heating up then press continue"
-msgstr "Isınırken nozülü manuel olarak temizleyin, ardından devam tuşuna basın"
+"Please manually clean the nozzle while it is heating up then press CONTINUE"
+msgstr ""
+"Isınma sırasında nozulu elle temizleyin, ardından DEVAM düğmesine basın"
 
 msgid "Bed screws"
 msgstr "Yatak vidaları"
+
+msgid ""
+"Please manually clean the nozzle while it is heating up then press continue"
+msgstr "Isınırken nozülü manuel olarak temizleyin, ardından devam tuşuna basın"

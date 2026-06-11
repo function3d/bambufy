@@ -32,8 +32,8 @@ msgstr ""
 msgid "Insert filament detected"
 msgstr "Zjištěn vkládací filament"
 
-msgid "Auto insert: {port}"
-msgstr "Automatické vložení: {port}"
+msgid "Auto insert"
+msgstr "Automatické vložení"
 
 msgid "Poop {i}/20"
 msgstr "Čištění {i}/20"
@@ -64,38 +64,29 @@ msgstr ""
 "Jeden filament je uchopen extrudérem. Extrudujeme {flush_length|string} mm "
 "pro jeho identifikaci"
 
-msgid "Select for P{port}"
-msgstr "Vybrat pro P{port}"
+msgid "Select for"
+msgstr "Vybrat pro"
 
 msgid "Close"
 msgstr "Zavřít"
 
-msgid "Color to Port"
-msgstr "Barva → Port"
+msgid "Colors (slicer filaments)"
+msgstr "Barvy (filamenty sliceru)"
 
 msgid "IFS Ports"
 msgstr "Porty IFS"
 
-msgid "LEVELING"
-msgstr "NIVELACE"
+msgid "Spools (physical filaments)"
+msgstr "Cívky (fyzické filamenty)"
+
+msgid "Print options"
+msgstr "Možnosti tisku"
 
 msgid "This is a multicolor printing, IFS cannot be disabled"
 msgstr "Jedná se o vícebarevný tisk. IFS nelze vypnout"
 
-msgid "BACKUP"
-msgstr "ZÁLOHA"
-
 msgid "The BACKUP function is only possible with IFS enabled"
 msgstr "Funkce ZÁLOHA je možná pouze při zapnutém IFS"
-
-msgid "Error"
-msgstr "Chyba"
-
-msgid "IFS port P{port} empty"
-msgstr "Port IFS P{port} prázdný"
-
-msgid "Incorrect filament type"
-msgstr "Nesprávný typ filamentu"
 
 msgid "Update Filament change gcode to v{ifs.min_version} or higher"
 msgstr ""
@@ -104,11 +95,20 @@ msgstr ""
 msgid "Print"
 msgstr "Tisk"
 
+msgid "Error"
+msgstr "Chyba"
+
 msgid "It is not possible to print until all colors have been assigned"
 msgstr "Tisk není možný, dokud nejsou všechny barvy přiřazeny"
 
-msgid "Select port for"
-msgstr "Vybrat port pro"
+msgid "Color to Port"
+msgstr "Barva → Port"
+
+msgid "Incorrect filament type"
+msgstr "Nesprávný typ filamentu"
+
+msgid "IFS port P{port} empty"
+msgstr "Port IFS P{port} prázdný"
 
 msgid "Reinstalling bambufy"
 msgstr "Přeinstalace Bambufy"
@@ -260,8 +260,12 @@ msgstr ""
 "{speed/60} mm/s"
 
 msgid ""
-"Please manually clean the nozzle while it is heating up then press continue"
-msgstr "Během ohřevu ručně vyčistěte trysku a poté stiskněte pokračovat"
+"Please manually clean the nozzle while it is heating up then press CONTINUE"
+msgstr "Během ohřevu ručně vyčistěte trysku a poté stiskněte POKRAČOVAT"
 
 msgid "Bed screws"
 msgstr "Šrouby podložky"
+
+msgid ""
+"Please manually clean the nozzle while it is heating up then press continue"
+msgstr "Během ohřevu ručně vyčistěte trysku a poté stiskněte pokračovat"

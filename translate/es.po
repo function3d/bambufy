@@ -32,8 +32,8 @@ msgstr ""
 msgid "Insert filament detected"
 msgstr "Filamento de inserción detectado"
 
-msgid "Auto insert: {port}"
-msgstr "Inserción automática: {port}"
+msgid "Auto insert"
+msgstr "Inserción automática"
 
 msgid "Poop {i}/20"
 msgstr "Purga {i}/20"
@@ -65,38 +65,29 @@ msgstr ""
 "Uno de los filamentos está sujetado por el extrusor, extruyendo "
 "{flush_length|string} mm para identificar cuál es"
 
-msgid "Select for P{port}"
-msgstr "Seleccionar para P{port}"
+msgid "Select for"
+msgstr "Seleccionar para"
 
 msgid "Close"
 msgstr "Cerrar"
 
-msgid "Color to Port"
-msgstr "Color a puerto"
+msgid "Colors (slicer filaments)"
+msgstr "Colores (filamentos del laminador)"
 
 msgid "IFS Ports"
 msgstr "Puertos IFS"
 
-msgid "LEVELING"
-msgstr "NIVELACIÓN"
+msgid "Spools (physical filaments)"
+msgstr "Bobinas (filamentos físicos)"
+
+msgid "Print options"
+msgstr "Opciones de impresión"
 
 msgid "This is a multicolor printing, IFS cannot be disabled"
 msgstr "Esta es una impresión multicolor, IFS no se puede desactivar"
 
-msgid "BACKUP"
-msgstr "RESPALDO"
-
 msgid "The BACKUP function is only possible with IFS enabled"
 msgstr "La función de respaldo solo es posible con IFS activado"
-
-msgid "Error"
-msgstr "Error"
-
-msgid "IFS port P{port} empty"
-msgstr "Puerto IFS P{port} vacío"
-
-msgid "Incorrect filament type"
-msgstr "Tipo de filamento no compatible"
 
 msgid "Update Filament change gcode to v{ifs.min_version} or higher"
 msgstr ""
@@ -105,11 +96,20 @@ msgstr ""
 msgid "Print"
 msgstr "Imprimir"
 
+msgid "Error"
+msgstr "Error"
+
 msgid "It is not possible to print until all colors have been assigned"
 msgstr "No es posible imprimir hasta que se hayan asignado todos los colores"
 
-msgid "Select port for"
-msgstr "Seleccionar puerto para"
+msgid "Color to Port"
+msgstr "Color a puerto"
+
+msgid "Incorrect filament type"
+msgstr "Tipo de filamento no compatible"
+
+msgid "IFS port P{port} empty"
+msgstr "Puerto IFS P{port} vacío"
 
 msgid "Reinstalling bambufy"
 msgstr "Reinstalando Bambufy"
@@ -262,9 +262,14 @@ msgstr ""
 "{speed/60} mm/s"
 
 msgid ""
-"Please manually clean the nozzle while it is heating up then press continue"
+"Please manually clean the nozzle while it is heating up then press CONTINUE"
 msgstr ""
-"Limpie manualmente la boquilla mientras se calienta y luego pulse continuar"
+"Limpie manualmente la boquilla mientras se calienta y luego pulse CONTINUAR"
 
 msgid "Bed screws"
 msgstr "Tornillos de cama"
+
+msgid ""
+"Please manually clean the nozzle while it is heating up then press continue"
+msgstr ""
+"Limpie manualmente la boquilla mientras se calienta y luego pulse continuar"
