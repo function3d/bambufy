@@ -147,8 +147,7 @@ If you create your own profile, keep these settings in mind:
   - (Nopoop Mode) Printer settings > Multimaterial > Purge in prime tower: Actived
   - Printer settings > Multimaterial > Filament load time: 23
   - Printer settings > Multimaterial > Filament unload time: 23
-  - Printer settings > Extruder > Retraction when switching material length: 2
-  - Printer settings > Extruder > Extra length on restart: 0
+  - Printer settings > Extruder > Retraction when switching material length: 6
   - Material setting > Multimaterial > Minimal purge on prime tower: 15
   - Process > Multimaterial > Prime tower > Prime volume: 15
   
