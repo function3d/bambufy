@@ -99,7 +99,7 @@ cat > "/opt/config/.theme/custom.css" << 'EOF'
 }
 EOF
 
-VERSION=1
+VERSION=2
 #Version control for reinstallation if necessary.
 if grep -q "^[[:space:]]*bambufy_version[[:space:]]*=" "$VARS"; then
     sed -i "s|^[[:space:]]*bambufy_version[[:space:]]*=.*|bambufy_version = $VERSION|" "$VARS"
@@ -109,3 +109,5 @@ fi
 
 #uninstall g28_tenz: bambufy already include g28_tenz
 sed -i "/plugins\/g28_tenz\//d" /opt/config/mod_data/plugins.cfg
+
+echo "FIRMWARE_RESTART" >/tmp/printer
