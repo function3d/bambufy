@@ -53,8 +53,8 @@ _**Tip**: Hide the console panel in the dashboard to speed up dialog loading (Ma
 - (Optional) Change web ui to **Mainsail** running the `WEB` command
 - Run `ENABLE_EXTRA_PLUGINS` command to enable the external plugin repository.
 - Run `ENABLE_PLUGIN name=bambufy` command.
-- Use this [3MF](https://github.com/function3d/bambufy/releases/download/v1.1.0/ArticulatedCuteTurtle_Multicolor4Color_BambuStudio.3mf) for Bambu Studio
-- Use this [3MF](https://github.com/function3d/bambufy/releases/download/v1.1.0/ArticulatedCuteTurtle_Multicolor4Color_Orca.3mf) for Orca slicer.
+- Use this [3MF](https://github.com/function3d/bambufy/releases/download/v1.1.0/Bunny+v3+-+Multicolor_bambu.3mf) for Bambu Studio
+- Use this [3MF](https://github.com/function3d/bambufy/releases/download/v1.1.0/Bunny+v3+-+Multicolor_orca.3mf) for Orca slicer.
 
 ## How to uninstall
 - Run the `DISABLE_PLUGIN name=bambufy` command.
