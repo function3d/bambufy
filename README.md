@@ -55,6 +55,7 @@ _**Tip**: Hide the console panel in the dashboard to speed up dialog loading (Ma
 - Run `ENABLE_PLUGIN name=bambufy` command.
 - Use this [3MF](https://github.com/function3d/bambufy/releases/download/v1.1.0/Bunny+v3+-+Multicolor_bambu.3mf) for Bambu Studio
 - Use this [3MF](https://github.com/function3d/bambufy/releases/download/v1.1.0/Bunny+v3+-+Multicolor_orca.3mf) for Orca slicer.
+- Use these [machine G-codes](https://github.com/function3d/bambufy/blob/master/MACHINE_GCODE.md) and instructions if you're going to create your own profile from scratch.
 
 ## How to uninstall
 - Run the `DISABLE_PLUGIN name=bambufy` command.
