@@ -1,53 +1,74 @@
-# Bambufy AD5X
- - Совместим с Bambu Studio, улучшенное управление башней подачи ([3MF](https://github.com/function3d/bambufy/releases/download/v1.1.0/ArticulatedCuteTurtle_Multicolor4Color_BambuStudio.3mf))
- - Совместим с Orca slicer ([3MF](https://github.com/function3d/bambufy/releases/download/v1.1.0/ArticulatedCuteTurtle_Multicolor4Color_Orca.3mf))
- - Последовательности очистки полностью контролируются слайсером (такое же поведение, как у принтеров Bambu Lab)
- - Точные оценки времени печати и расхода материала
- - Ретракт 24 мм перед обрезкой нити при каждой смене цвета (экономия ~7 метров нити на 300 сменах цвета)
- - Возможность снижения множителя продувки (≈ 0.7) без смешивания цветов в большинстве печатей
- - `Flush into object infill`, `flush into object supports` и `flush into object` эффективно снижают расход нити
- - **Соотношение материала к отходам редко превышает 50 % даже при 4-цветной печати** (высота слоя 0.2 мм, масса модели > 70 г)
- - **Mainsail отображает истинные цвета непосредственно из слайсера**
- - **Время смены цвета — 45 секунд**
- - Автоматическая калибровка стола перед печатью (Level On/Off)
- - Печать с внешней катушки (IFS On/Off)
- - Режим резервной печати — до 4 кг непрерывной печати (Backup On/Off)
- - Автоматический переход при опустошении внешней катушки: оставшаяся нить в экструдере используется до следующей смены цвета
- - Определение состояния нити при запуске печати для идентификации активной нити в экструдере
- - Обнаружение засоров, обрывов и окончания нити
- - Улучшенная процедура автоматического восстановления печати после отключений питания или ошибок
+# Плагин Bambufy Zmod для AD5X
+   - Совместим со слайсерами Bambu Studio и Orca Slicer.
+   - Последовательности очистки полностью контролируются слайсером.
+   - Точная оценка времени и расхода материала.
+   - Ретракт 24 мм перед обрезкой филамента (экономит ~7 метров филамента за 300 смен цвета).
+   - Уменьшенный множитель очистки (~0.7 для Bambu Studio, 1.0 для Orca Slicer).
+   - Функции `Flush into object infill` (Сбрасывать в заполнение), `flush into object supports` (Сбрасывать в поддержки) и `flush into object` (Сбрасывать в модель)
+   эффективно снижают расход филамента.
+   - **Соотношение материала к отходам редко превышает 50% даже при 4-цветной печати** (высота слоя 0.2 мм, вес модели > 70 г).
+   - **Mainsail/Fluidd отображает реальные цвета напрямую из слайсера**.
+   - **Время смены цвета — 45 секунд**.
+   - Автоматическое резервирование при окончании филамента в IFS: оставшийся филамент в
+   печатающей головке используется до следующей смены цвета.
+   - Определение состояния филамента при `print_start` для идентификации активного
+   филамента в экструдере.
+   - Обнаружение замятий, обрывов и окончания филамента.
+   - Улучшенный алгоритм автоматического восстановления печати после отключений электроэнергии или
+   ошибок.
 
-## Bambu Studio
-<img width="812" width="1436" height="799" alt="image" src="https://github.com/user-attachments/assets/1d6a9e77-8b35-4d04-96d4-d92022a3500b" />
+## Диалоговое окно Mainsail/Fluidd
+<img width="398" height="375" alt="image" src="https://github.com/user-attachments/assets/11e08a4e-b11b-421b-a2ec-32e09e0db8c9" />
+<img height="514" alt="image" src="https://github.com/user-attachments/assets/223d3e88-01b5-4ebe-8d47-b995c702f5ce" />
 
-## Объёмы продувки (Flush volumes)
-<img width="812" width="1307" height="810" alt="image" src="https://github.com/user-attachments/assets/fea280f2-809d-4bae-a744-4a4c36465881" />
+#### REMAP (MAP)
+Автоматически сопоставляет цвета из слайсера с ближайшими физическими цветами катушек AMS при открытии этого окна. Используйте эту кнопку, чтобы в любое время повторно запустить процесс автоматического подбора цветов.
 
-## Mainsail
-<img width="812" width="1059" height="810" alt="image" src="https://github.com/user-attachments/assets/bf80b66f-46e2-4b48-af52-d6f44f5accc8" />
+#### LEVEL
+Если включено, автоматически выполняет сканирование сетки стола для выравнивания, сфокусированное только на фактической области печати непосредственно перед её началом.
 
-## Установка
+#### IFS
+Если включено, для печати используется AMS. Если выключено, филамент остается загруженным в хотэнде между последовательными печатями.
 
-- Установите [zmod](https://github.com/ghzserg/zmod) согласно [инструкции](https://github.com/ghzserg/zmod/wiki/Setup_en#installing-the-mod)
+#### BACKUP
+Если включено, совпадающие филаменты действуют как резервные. Если один заканчивается, система автоматически переключается на первый доступный резервный (от 1 до 4). Вы можете пополнять использованные резервные катушки во время печати или паузы.
+
+#### INFO
+Если включено, отображает на экране сведения о событиях, предоставляя либо описания проблем при возникновении ошибок, либо информацию о статусе во время активных процессов.
+
+
+_**Совет**: Скройте панель консоли на информационной панели, чтобы ускорить загрузку диалогового окна (Mainsail)._
+
+
+## Диалоговое окно сопоставления цветов
+<img width="428" height="312" alt="image" src="https://github.com/user-attachments/assets/976a3563-1a86-454e-88d7-7d9f99689064" />
+
+## Диалоговое окно выбора типа/цвета физической катушки
+<img width="436" height="312" alt="image" src="https://github.com/user-attachments/assets/689235ba-02ee-43b5-a8fa-c4ed840c1369" />
+
+## Как установить
+
+- Установите [zmod](https://github.com/ghzserg/zmod), следуя [инструкциям](https://github.com/ghzserg/zmod/wiki/Setup_en#installing-the-mod)
 - Переключите родной дисплей на **Guppyscreen**, выполнив команду `DISPLAY_OFF`
-- Переключите веб-интерфейс на **Mainsail**, выполнив команду `WEB`
-- Выполните в консоли команду `ENABLE_PLUGIN name=bambufy`
-- Используйте этот [3MF](https://github.com/function3d/bambufy/releases/download/v1.1.0/ArticulatedCuteTurtle_Multicolor4Color_BambuStudio.3mf) в Bambu Studio (оттуда можно сохранять настройки, такие как пользовательские профили)
-- Используйте этот [3MF](https://github.com/function3d/bambufy/releases/download/v1.1.0/ArticulatedCuteTurtle_Multicolor4Color_Orca.3mf) в Orca Slicer.
+- (Опционально) Переключите веб-интерфейс на **Mainsail**, выполнив команду `WEB`
+- Выполните команду `ENABLE_EXTRA_PLUGINS`, чтобы включить внешний репозиторий плагинов.
+- Выполните команду `ENABLE_PLUGIN name=bambufy`.
+- Используйте этот [3MF](https://github.com/function3d/bambufy/releases/download/v1.1.0/ArticulatedCuteTurtle_Multicolor4Color_BambuStudio.3mf) для Bambu Studio
+- Используйте этот [3MF](https://github.com/function3d/bambufy/releases/download/v1.1.0/ArticulatedCuteTurtle_Multicolor4Color_Orca.3mf) для Orca Slicer.
 
-## Удаление
-- Выполните в консоли команду `DISABLE_PLUGIN name=bambufy`
-- (Опционально) Верните родной экран командой `DISPLAY_ON`
-- (Опционально) Верните Fluidd командой `WEB`
+## Как удалить
+- Выполните команду `DISABLE_PLUGIN name=bambufy`.
+- (Опционально) Вернитесь к стандартному экрану, выполнив команду `DISPLAY_ON`.
+- (Опционально) Вернитесь к Fluidd, выполнив команду `WEB`.
 
-## [Многоцветная печать nopoop (Orca)](https://github.com/function3d/bambufy/blob/master/MACHINE_GCODE.md#orca-slicer-change-filament-g-code-unified-poop-and-nopoop)
+## Многоцветная печать nopoop
+[Orca Slicer](https://github.com/function3d/bambufy/blob/master/MACHINE_GCODE.md#orca-slicer)
 
-## Сообщайте об ошибках и предлагайте улучшения
-Сделаем то, что Flashforge не захотел делать
+## Pull requests и issues приветствуются!
 
 ## Результаты
-<img width="812" alt="image" src="https://github.com/user-attachments/assets/f6812bbf-ffd2-45d0-85fb-2e95d7d04b9b" />
-<img width="812" alt="image" src="https://github.com/user-attachments/assets/8ad8ce59-6f45-44ef-88ec-be9ecdcfb7f0" />
+<img width="412" alt="image" src="https://github.com/user-attachments/assets/f6812bbf-ffd2-45d0-85fb-2e95d7d04b9b" />
+<img width="342" alt="image" src="https://github.com/user-attachments/assets/8ad8ce59-6f45-44ef-88ec-be9ecdcfb7f0" />
 
 ## Благодарности
-Сергей (ghzserg) — [zmod](https://github.com/ghzserg/zmod)
+Сергей (ghzserg) [zmod](https://github.com/ghzserg/zmod)
