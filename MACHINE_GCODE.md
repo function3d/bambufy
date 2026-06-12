@@ -177,7 +177,8 @@ SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
 
 ```
 ; Machine: AD5X
-; Bambufy: v1.2.3
+; Bambufy: v1.3.0
+; OrcaSlicer
 {if old_filament_temp < new_filament_temp}
 M104 S[new_filament_temp]
 {endif}
@@ -219,7 +220,7 @@ G1 E{flush_length_1} F{old_filament_e_feedrate}
 M106 P1 S0
 G1 E-[new_retract_length_toolchange] F1800
 _SBROS_TRASH
-G1 E[new_retract_length_toolchange] F1800
+G1 E{new_retract_length_toolchange-0.5} F1800
 {endif}
 {endif}
 {if flush_length > 1 && flush_length_1 == 0}
@@ -244,7 +245,7 @@ G1 E{flush_length} F{old_filament_e_feedrate}
 M106 P1 S0
 G1 E-[new_retract_length_toolchange] F1800
 _SBROS_TRASH
-G1 E[new_retract_length_toolchange] F1800
+G1 E{new_retract_length_toolchange-0.5} F1800
 {endif}
 {endif}
 
@@ -268,7 +269,7 @@ G1 E{flush_length_2 * 0.21} F{new_filament_e_feedrate}
 M106 P1 S0
 G1 E-[new_retract_length_toolchange] F1800
 _SBROS_TRASH
-G1 E[new_retract_length_toolchange] F1800
+G1 E{new_retract_length_toolchange-0.5} F1800
 {endif}
 {if flush_length_3 > 1}
 ; FLUSH_START
@@ -288,7 +289,7 @@ G1 E{flush_length_3 * 0.21} F{new_filament_e_feedrate}
 M106 P1 S0
 G1 E-[new_retract_length_toolchange] F1800
 _SBROS_TRASH
-G1 E[new_retract_length_toolchange] F1800
+G1 E{new_retract_length_toolchange-0.5} F1800
 {endif}
 {if flush_length_4 > 1}
 ; FLUSH_START
