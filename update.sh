@@ -26,3 +26,5 @@ if grep -q "^[[:space:]]*bambufy_mesh[[:space:]]*=" "$VARS"; then
 else
     echo "bambufy_mesh = 0" >> "$VARS"
 fi
+
+echo "FIRMWARE_RESTART" >/tmp/printer
