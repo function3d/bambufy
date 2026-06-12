@@ -101,8 +101,14 @@ msgstr "Ошибка"
 msgid "It is not possible to print until all colors have been assigned"
 msgstr "Печать невозможна, пока не назначены все цвета"
 
-msgid "Color to Port"
-msgstr "Цвет → Порт"
+msgid "Select"
+msgstr "Выбрать"
+
+msgid "Current selection"
+msgstr "Текущий выбор"
+
+msgid "Select another"
+msgstr "Выбрать другой"
 
 msgid "Incorrect filament type"
 msgstr "Неверный тип филамента"

@@ -95,8 +95,15 @@ msgstr "错误"
 msgid "It is not possible to print until all colors have been assigned"
 msgstr "所有颜色均分配端口后方可打印"
 
-msgid "Color to Port"
-msgstr "颜色 → 端口"
+#, fuzzy
+msgid "Select"
+msgstr "选择"
+
+msgid "Current selection"
+msgstr "当前选择"
+
+msgid "Select another"
+msgstr "选择其他"
 
 msgid "Incorrect filament type"
 msgstr "耗材类型不匹配"

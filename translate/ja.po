@@ -100,8 +100,14 @@ msgstr "エラー"
 msgid "It is not possible to print until all colors have been assigned"
 msgstr "全ての色にポートが割り当てられるまで印刷できません"
 
-msgid "Color to Port"
-msgstr "色→ポート"
+msgid "Select"
+msgstr "選択"
+
+msgid "Current selection"
+msgstr "現在選択されている項目"
+
+msgid "Select another"
+msgstr "別の項目を選択"
 
 msgid "Incorrect filament type"
 msgstr "フィラメント種別が一致しません"

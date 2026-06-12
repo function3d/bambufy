@@ -65,7 +65,7 @@ msgstr ""
 "mm 압출 중"
 
 msgid "Select for"
-msgstr "선택:"
+msgstr "선택"
 
 msgid "Close"
 msgstr "닫기"
@@ -100,8 +100,14 @@ msgstr "오류"
 msgid "It is not possible to print until all colors have been assigned"
 msgstr "모든 색상에 포트가 할당될 때까지 인쇄할 수 없습니다"
 
-msgid "Color to Port"
-msgstr "색상 → 포트"
+msgid "Select"
+msgstr "선택"
+
+msgid "Current selection"
+msgstr "현재 선택 항목"
+
+msgid "Select another"
+msgstr "다른 항목 선택"
 
 msgid "Incorrect filament type"
 msgstr "필라멘트 유형 불일치"

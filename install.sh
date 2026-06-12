@@ -81,13 +81,13 @@ awk '
 #update custom.css
 cat > "/opt/config/.theme/custom.css" << 'EOF'
 .v-dialog .bambufy-button{
-  width: 80px !important;
+  width: 76px !important;
   padding: 0 8px !important;
   margin: 3px !important;
 }
 .v-dialog .bambufy-color{
-  width: 40px !important;
-  min-width: 40px !important;
+  width: 31px !important;
+  min-width: 31px !important;
   padding: 0 8px !important;
   margin: 3px !important;
 }

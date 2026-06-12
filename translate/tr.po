@@ -101,8 +101,14 @@ msgstr "Hata"
 msgid "It is not possible to print until all colors have been assigned"
 msgstr "Tüm renklere port atanmadan yazdırılamaz"
 
-msgid "Color to Port"
-msgstr "Renk → Port"
+msgid "Select"
+msgstr "Seç"
+
+msgid "Current selection"
+msgstr "Şu anki seçim"
+
+msgid "Select another"
+msgstr "Başka bir seçenek seç"
 
 msgid "Incorrect filament type"
 msgstr "Geçersiz filaman türü"

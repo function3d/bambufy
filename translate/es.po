@@ -102,8 +102,14 @@ msgstr "Error"
 msgid "It is not possible to print until all colors have been assigned"
 msgstr "No es posible imprimir hasta que se hayan asignado todos los colores"
 
-msgid "Color to Port"
-msgstr "Color a puerto"
+msgid "Select"
+msgstr "Seleccione"
+
+msgid "Current selection"
+msgstr "Selección actual"
+
+msgid "Select another"
+msgstr "Seleccione otro"
 
 msgid "Incorrect filament type"
 msgstr "Tipo de filamento no compatible"

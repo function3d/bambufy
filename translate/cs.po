@@ -101,8 +101,14 @@ msgstr "Chyba"
 msgid "It is not possible to print until all colors have been assigned"
 msgstr "Tisk není možný, dokud nejsou všechny barvy přiřazeny"
 
-msgid "Color to Port"
-msgstr "Barva → Port"
+msgid "Select"
+msgstr "Wybierz"
+
+msgid "Current selection"
+msgstr "Aktualny wybór"
+
+msgid "Select another"
+msgstr "Wybierz inny"
 
 msgid "Incorrect filament type"
 msgstr "Nesprávný typ filamentu"

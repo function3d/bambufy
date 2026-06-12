@@ -9,6 +9,8 @@ if [ "$1" = "test" ] && [ -f "$JSON_FILE" ]; then
     exit
 fi
 
+echo "_ZRESTORE_INFO" > "$TMP_PRINTER"
+
 if [ -f "$JSON_FILE" ]; then
   read X Y Z E <<EOF
 $(grep '"position":[^]]*' "$JSON_FILE" | sed -E 's/.*\[(.*)\].*/\1/' | tr ',' ' ')
@@ -33,6 +35,9 @@ EOF
   echo "ZEXCLUDE FILENAME=\"$(basename "$FILE_PATH")\"" >> "$TMP_PRINTER"
 
   PREFIX_TEXT=$(dd if="$FILE_PATH" bs=1 count="$FILE_POS" 2>/dev/null)
+
+  echo "RESPOND TYPE=command MSG=action:prompt_end" >> "$TMP_PRINTER"
+
   LAST_START_LINE=$(printf "%s" "$PREFIX_TEXT" | grep "^EXCLUDE_OBJECT_START" | tail -n 1)
   if [ -n "$LAST_START_LINE" ]; then
     echo "$LAST_START_LINE" >> "$TMP_PRINTER"

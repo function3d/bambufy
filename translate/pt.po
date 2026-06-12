@@ -80,7 +80,7 @@ msgid "Spools (physical filaments)"
 msgstr "Carretéis (filamentos físicos)"
 
 msgid "Print options"
-msgstr "pções de impressão"
+msgstr "Pções de impressão"
 
 msgid "This is a multicolor printing, IFS cannot be disabled"
 msgstr "Esta é uma impressão multicolor. O IFS não pode ser desativado"
@@ -101,8 +101,14 @@ msgstr "Erro"
 msgid "It is not possible to print until all colors have been assigned"
 msgstr "Não é possível imprimir até que todas as cores sejam atribuídas"
 
-msgid "Color to Port"
-msgstr "Cor → Porta"
+msgid "Select"
+msgstr "Selecionar"
+
+msgid "Current selection"
+msgstr "Seleção atual"
+
+msgid "Select another"
+msgstr "Selecionar outra"
 
 msgid "Incorrect filament type"
 msgstr "Tipo de filamento incorreto"
