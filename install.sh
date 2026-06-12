@@ -35,6 +35,12 @@ else
     echo "web = '$WEB'" >> "$VARS"
 fi
 
+if grep -q "^[[:space:]]*bambufy_mesh[[:space:]]*=" "$VARS"; then
+    sed -i "s|^[[:space:]]*bambufy_mesh[[:space:]]*=.*|bambufy_mesh = 0|" "$VARS"
+else
+    echo "bambufy_mesh = 0" >> "$VARS"
+fi
+
 #display_off_timeout = 10 (variables.cfg)
 if grep -qE '^[[:space:]]*display_off_timeout[[:space:]]*=' "$VARS" 2>/dev/null; then
     sed -i 's/^[[:space:]]*display_off_timeout[[:space:]]*=.*/display_off_timeout = 10/' "$VARS"
@@ -72,33 +78,24 @@ awk '
   { print }
 ' ${CONF} > /tmp/tmp && mv /tmp/tmp $CONF
 
-#uninstall g28_tenz: bambufy already include g28_tenz
-sed -i "/plugins\/g28_tenz\//d" /opt/config/mod_data/plugins.cfg
-
 #update custom.css
 cat > "/opt/config/.theme/custom.css" << 'EOF'
-.bambufy-color-slot,.bambufy-color-port, .bambufy-color-type, .bambufy-color-option{
-  padding: 0 10px !important;  
+.v-dialog .bambufy-button{
+  width: 80px !important;
+  padding: 0 8px !important;
+  margin: 3px !important;
 }
-.v-dialog .col{
-  padding:5px !important;
+.v-dialog .bambufy-color{
+  width: 40px !important;
+  min-width: 40px !important;
+  padding: 0 8px !important;
+  margin: 3px !important;
 }
-.v-dialog .mx-2{
-  margin:0 !important;
-}
-.v-dialog .v-btn{
-  min-width: 67px !important;
-  padding: 0 6px !important;
-}
-.v-dialog .bambufy-color-list{
-  min-width: 41px !important;
-}
-.bambufy-color-type,.bambufy-color-slot{
-  max-width: 67px;
-  font-size: 13px !important;
-}
-.bambufy-fluidd-color-slot{
-  font-size: 13px !important;
+.v-dialog .bambufy-type{
+  width: 54px !important;
+  min-width: 54px !important;
+  padding: 0 8px !important;
+  margin: 3px !important;
 }
 EOF
 
@@ -109,3 +106,6 @@ if grep -q "^[[:space:]]*bambufy_version[[:space:]]*=" "$VARS"; then
 else
     echo "bambufy_version = $VERSION" >> "$VARS"
 fi
+
+#uninstall g28_tenz: bambufy already include g28_tenz
+sed -i "/plugins\/g28_tenz\//d" /opt/config/mod_data/plugins.cfg
