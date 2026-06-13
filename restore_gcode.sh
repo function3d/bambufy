@@ -9,9 +9,8 @@ if [ "$1" = "test" ] && [ -f "$JSON_FILE" ]; then
     exit
 fi
 
-echo "_ZRESTORE_INFO" > "$TMP_PRINTER"
-
 if [ -f "$JSON_FILE" ]; then
+  echo "_ZRESTORE_INFO" > "$TMP_PRINTER"
   read X Y Z E <<EOF
 $(grep '"position":[^]]*' "$JSON_FILE" | sed -E 's/.*\[(.*)\].*/\1/' | tr ',' ' ')
 EOF
