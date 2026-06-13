@@ -177,7 +177,7 @@ SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
 
 ```
 ; Machine: AD5X
-; Bambufy: v1.3.0
+; Bambufy: v1.3.1
 ; OrcaSlicer
 {if old_filament_temp < new_filament_temp}
 M104 S[new_filament_temp]
@@ -208,7 +208,7 @@ G1 E{(flush_length_1 - 23.7) * 0.04} F{old_filament_e_feedrate/2}
 G1 E{(flush_length_1 - 23.7) * 0.21} F{new_filament_e_feedrate}
 G1 E{(flush_length_1 - 23.7) * 0.04} F{new_filament_e_feedrate/2}
 G1 E{(flush_length_1 - 23.7) * 0.21} F{new_filament_e_feedrate}
-M106 P1 S{255/100.0*fan_max_speed[next_extruder]*0.4}
+_M106 FAN_MAX_SPEED={fan_max_speed[next_extruder]}
 G1 E{(flush_length_1 - 23.7) * 0.04} F{new_filament_e_feedrate/2}
 G1 E{(flush_length_1 - 23.7) * 0.21} F{new_filament_e_feedrate}
 {else}
@@ -217,7 +217,7 @@ G1 E{flush_length_1} F{old_filament_e_feedrate}
 ; FLUSH_END
 {if flush_length_1 > 45 && flush_length_2 > 1}
 ; WIPE
-M106 P1 S0
+M106 S0
 G1 E-[new_retract_length_toolchange] F1800
 _SBROS_TRASH
 G1 E{new_retract_length_toolchange} F1800
@@ -233,7 +233,7 @@ G1 E{(flush_length - 23.7) * 0.04} F{old_filament_e_feedrate/2}
 G1 E{(flush_length - 23.7) * 0.21} F{new_filament_e_feedrate}
 G1 E{(flush_length - 23.7) * 0.04} F{new_filament_e_feedrate/2}
 G1 E{(flush_length - 23.7) * 0.21} F{new_filament_e_feedrate}
-M106 P1 S{255/100.0*fan_max_speed[next_extruder]*0.4}
+_M106 FAN_MAX_SPEED={fan_max_speed[next_extruder]}
 G1 E{(flush_length - 23.7) * 0.04} F{new_filament_e_feedrate/2}
 G1 E{(flush_length - 23.7) * 0.21} F{new_filament_e_feedrate}
 {else}
@@ -242,7 +242,7 @@ G1 E{flush_length} F{old_filament_e_feedrate}
 ; FLUSH_END
 {if flush_length > 45 && flush_length_2 > 1}
 ; WIPE
-M106 P1 S0
+M106 S0
 G1 E-[new_retract_length_toolchange] F1800
 _SBROS_TRASH
 G1 E{new_retract_length_toolchange} F1800
@@ -259,14 +259,14 @@ G1 E{flush_length_2 * 0.04} F{new_filament_e_feedrate/2}
 G1 E{flush_length_2 * 0.21} F{new_filament_e_feedrate}
 G1 E{flush_length_2 * 0.04} F{new_filament_e_feedrate/2}
 G1 E{flush_length_2 * 0.21} F{new_filament_e_feedrate}
-M106 P1 S{255/100.0*fan_max_speed[next_extruder]*0.4}
+_M106 FAN_MAX_SPEED={fan_max_speed[next_extruder]}
 G1 E{flush_length_2 * 0.04} F{new_filament_e_feedrate/2}
 G1 E{flush_length_2 * 0.21} F{new_filament_e_feedrate}
 ; FLUSH_END
 {endif}
 {if flush_length_2 > 45 && flush_length_3 > 1}
 ; WIPE
-M106 P1 S0
+M106 S0
 G1 E-[new_retract_length_toolchange] F1800
 _SBROS_TRASH
 G1 E{new_retract_length_toolchange} F1800
@@ -279,14 +279,14 @@ G1 E{flush_length_3 * 0.04} F{new_filament_e_feedrate/2}
 G1 E{flush_length_3 * 0.21} F{new_filament_e_feedrate}
 G1 E{flush_length_3 * 0.04} F{new_filament_e_feedrate/2}
 G1 E{flush_length_3 * 0.21} F{new_filament_e_feedrate}
-M106 P1 S{255/100.0*fan_max_speed[next_extruder]*0.4}
+_M106 FAN_MAX_SPEED={fan_max_speed[next_extruder]}
 G1 E{flush_length_3 * 0.04} F{new_filament_e_feedrate/2}
 G1 E{flush_length_3 * 0.21} F{new_filament_e_feedrate}
 ; FLUSH_END
 {endif}
 {if flush_length_3 > 45 && flush_length_4 > 1}
 ; WIPE
-M106 P1 S0
+M106 S0
 G1 E-[new_retract_length_toolchange] F1800
 _SBROS_TRASH
 G1 E{new_retract_length_toolchange} F1800
@@ -299,14 +299,14 @@ G1 E{flush_length_4 * 0.04} F{new_filament_e_feedrate/2}
 G1 E{flush_length_4 * 0.21} F{new_filament_e_feedrate}
 G1 E{flush_length_4 * 0.04} F{new_filament_e_feedrate/2}
 G1 E{flush_length_4 * 0.21} F{new_filament_e_feedrate}
-M106 P1 S{255/100.0*fan_max_speed[next_extruder]*0.4}
+_M106 FAN_MAX_SPEED={fan_max_speed[next_extruder]}
 G1 E{flush_length_4 * 0.04} F{new_filament_e_feedrate/2}
 G1 E{flush_length_4 * 0.21} F{new_filament_e_feedrate}
 ; FLUSH_END
 {endif}
 {if flush_length > 0}
 ; WIPE
-M106 P1 S0
+M106 S0
 G1 E-{new_retract_length_toolchange+0.5} F1800
 _SBROS_TRASH
 {endif}
