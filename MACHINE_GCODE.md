@@ -220,7 +220,7 @@ G1 E{flush_length_1} F{old_filament_e_feedrate}
 M106 P1 S0
 G1 E-[new_retract_length_toolchange] F1800
 _SBROS_TRASH
-G1 E{new_retract_length_toolchange-0.5} F1800
+G1 E{new_retract_length_toolchange} F1800
 {endif}
 {endif}
 {if flush_length > 1 && flush_length_1 == 0}
@@ -245,7 +245,7 @@ G1 E{flush_length} F{old_filament_e_feedrate}
 M106 P1 S0
 G1 E-[new_retract_length_toolchange] F1800
 _SBROS_TRASH
-G1 E{new_retract_length_toolchange-0.5} F1800
+G1 E{new_retract_length_toolchange} F1800
 {endif}
 {endif}
 
@@ -269,7 +269,7 @@ G1 E{flush_length_2 * 0.21} F{new_filament_e_feedrate}
 M106 P1 S0
 G1 E-[new_retract_length_toolchange] F1800
 _SBROS_TRASH
-G1 E{new_retract_length_toolchange-0.5} F1800
+G1 E{new_retract_length_toolchange} F1800
 {endif}
 {if flush_length_3 > 1}
 ; FLUSH_START
@@ -289,7 +289,7 @@ G1 E{flush_length_3 * 0.21} F{new_filament_e_feedrate}
 M106 P1 S0
 G1 E-[new_retract_length_toolchange] F1800
 _SBROS_TRASH
-G1 E{new_retract_length_toolchange-0.5} F1800
+G1 E{new_retract_length_toolchange} F1800
 {endif}
 {if flush_length_4 > 1}
 ; FLUSH_START
@@ -307,7 +307,7 @@ G1 E{flush_length_4 * 0.21} F{new_filament_e_feedrate}
 {if flush_length > 0}
 ; WIPE
 M106 P1 S0
-G1 E-[new_retract_length_toolchange] F1800
+G1 E-{new_retract_length_toolchange+0.5} F1800
 _SBROS_TRASH
 {endif}
 {if toolchange_count > 1}
