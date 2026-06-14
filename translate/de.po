@@ -280,3 +280,9 @@ msgid ""
 msgstr ""
 "Reinigen Sie die Düse manuell während des Aufheizens und drücken Sie dann "
 "Weiter"
+
+msgid "Restoring..."
+msgstr ""
+
+msgid "Please wait, this process may take a while"
+msgstr ""

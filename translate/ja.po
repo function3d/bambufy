@@ -273,3 +273,9 @@ msgstr "ベッドネジ"
 msgid ""
 "Please manually clean the nozzle while it is heating up then press continue"
 msgstr "加熱中にノズルを手動で清掃し、その後「続ける」を押してください"
+
+msgid "Restoring..."
+msgstr ""
+
+msgid "Please wait, this process may take a while"
+msgstr ""

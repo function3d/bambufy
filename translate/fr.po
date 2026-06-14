@@ -276,3 +276,9 @@ msgid ""
 msgstr ""
 "Nettoyez manuellement la buse pendant le chauffage, puis appuyez sur "
 "Continuer"
+
+msgid "Restoring..."
+msgstr ""
+
+msgid "Please wait, this process may take a while"
+msgstr ""

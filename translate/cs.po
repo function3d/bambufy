@@ -275,3 +275,9 @@ msgstr "Šrouby podložky"
 msgid ""
 "Please manually clean the nozzle while it is heating up then press continue"
 msgstr "Během ohřevu ručně vyčistěte trysku a poté stiskněte pokračovat"
+
+msgid "Restoring..."
+msgstr ""
+
+msgid "Please wait, this process may take a while"
+msgstr ""

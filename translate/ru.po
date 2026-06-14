@@ -274,3 +274,9 @@ msgstr "Винты стола"
 msgid ""
 "Please manually clean the nozzle while it is heating up then press continue"
 msgstr "Во время нагрева вручную очистите сопло, затем нажмите продолжить"
+
+msgid "Restoring..."
+msgstr ""
+
+msgid "Please wait, this process may take a while"
+msgstr ""

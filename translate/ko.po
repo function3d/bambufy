@@ -268,3 +268,9 @@ msgstr "베드 나사"
 msgid ""
 "Please manually clean the nozzle while it is heating up then press continue"
 msgstr "가열 중 노즐을 수동으로 청소한 후 계속을 누르세요"
+
+msgid "Restoring..."
+msgstr ""
+
+msgid "Please wait, this process may take a while"
+msgstr ""

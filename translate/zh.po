@@ -259,3 +259,9 @@ msgstr "床面螺丝"
 msgid ""
 "Please manually clean the nozzle while it is heating up then press continue"
 msgstr "请在加热过程中手动清洁喷嘴 然后按继续"
+
+msgid "Restoring..."
+msgstr ""
+
+msgid "Please wait, this process may take a while"
+msgstr ""

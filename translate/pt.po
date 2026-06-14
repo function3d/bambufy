@@ -277,3 +277,9 @@ msgstr "Parafusos da mesa"
 msgid ""
 "Please manually clean the nozzle while it is heating up then press continue"
 msgstr "Limpe manualmente o bico enquanto aquece e depois pressione continuar"
+
+msgid "Restoring..."
+msgstr ""
+
+msgid "Please wait, this process may take a while"
+msgstr ""

@@ -279,3 +279,9 @@ msgid ""
 "Please manually clean the nozzle while it is heating up then press continue"
 msgstr ""
 "Limpie manualmente la boquilla mientras se calienta y luego pulse continuar"
+
+msgid "Restoring..."
+msgstr ""
+
+msgid "Please wait, this process may take a while"
+msgstr ""
