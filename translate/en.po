@@ -8,8 +8,8 @@ msgid "Backup"
 msgstr ""
 
 msgid ""
-"Run out filament (Head) ({ifs.extruder_port|string}), backup, loading {port}"
-" and continuing with printing"
+"Run out filament (Head) ({ifs.extruder_port|string}), backup, loading {port} "
+"and continuing with printing"
 msgstr ""
 
 msgid ""
@@ -39,13 +39,12 @@ msgid "Checking the status of the filaments in the IFS ports"
 msgstr ""
 
 msgid ""
-"One of the filaments was just activating the sensor, retract 45mm all of "
-"them"
+"One of the filaments was just activating the sensor, retract 45mm all of them"
 msgstr ""
 
 msgid ""
-"One of the filaments is gripped by the extruder so we extrude "
-"{flush_length|string}mm to determine which one it is"
+"One of the filaments is gripped by the extruder so we extrude {flush_length|"
+"string}mm to determine which one it is"
 msgstr ""
 
 msgid "Select for"
