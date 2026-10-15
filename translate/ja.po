@@ -1,3 +1,4 @@
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
@@ -16,21 +17,19 @@ msgid "Backup"
 msgstr "バックアップ"
 
 msgid ""
-"Run out filament (Head) ({ifs.extruder_port|string}), backup, loading {port} "
-"and continuing with printing"
+"Run out filament (Head) ({ifs.extruder_port|string}), backup, loading {port}"
+" and continuing with printing"
 msgstr ""
-"フィラメント切れ（ヘッド）({ifs.extruder_port|string}) バックアップ中 {port}"
-"をロードして印刷を続行"
+"フィラメント切れ（ヘッド）({ifs.extruder_port|string}) 予備フィラメントに切り替えています "
+"{port}をロードして印刷を続行します"
 
 msgid ""
 "Filament run out in the IFS ({port|string}), we continue printing until it "
 "runs out in the extruder or there is a filament change"
-msgstr ""
-"IFS内のフィラメント切れ({port|string}) 押出機で切れたりフィラメント交換がある"
-"まで印刷を継続"
+msgstr "IFS内のフィラメントが切れました({port|string}) エクストルーダーで使い切るかフィラメント交換があるまで印刷を継続します"
 
 msgid "Insert filament detected"
-msgstr "挿入用フィラメントを検出"
+msgstr "フィラメントの挿入を検出しました"
 
 msgid "Auto insert"
 msgstr "自動挿入"
@@ -43,41 +42,51 @@ msgid ""
 "been used until it was no longer possible, but now it must be expelled "
 "through the waste chute in order to load the next one requested by the print"
 msgstr ""
-"IFS内のフィラメント({consume})が切れました 残りは使用不能になるまで使用されま"
-"したが 廃棄シュートから排出して印刷が要求する次のフィラメントをロードする必要"
-"があります"
+"IFS内のフィラメント({consume})が切れました 残りは使用不能になるまで使用されましたが "
+"パージシュートから排出して印刷に必要な次のフィラメントをロードする必要があります"
 
 msgid "Checking filaments"
-msgstr "フィラメントを確認中"
+msgstr "フィラメントを確認中です"
 
 msgid "Checking the status of the filaments in the IFS ports"
 msgstr "IFSポート内のフィラメント状態を確認中"
 
 msgid ""
-"One of the filaments was just activating the sensor, retract 45mm all of them"
-msgstr "フィラメントの一つがセンサーを起動しました 全てを45mm巻き取り中"
+"One of the filaments was just activating the sensor, retract 45mm all of "
+"them"
+msgstr "いずれかのフィラメントがセンサーを作動させました 全てを45mm引き戻しています"
 
 msgid ""
-"One of the filaments is gripped by the extruder so we extrude {flush_length|"
-"string}mm to determine which one it is"
-msgstr ""
-"フィラメントの一つが押出機に引っかかっています 識別のため{flush_length|"
-"string}mm押出中"
+"One of the filaments is gripped by the extruder so we extrude "
+"{flush_length|string}mm to determine which one it is"
+msgstr "いずれかのフィラメントをエクストルーダーが保持しています 識別のため{flush_length|string}mm押し出しています"
 
 msgid "Select for"
-msgstr "選択する"
+msgstr "選択してください"
 
 msgid "Close"
 msgstr "閉じる"
+
+msgid "Loading"
+msgstr "ロード中です"
+
+msgid "Please try again in 10 seconds"
+msgstr "10秒後にもう一度お試しください"
 
 msgid "Colors (slicer filaments)"
 msgstr "色（スライサーフィラメント）"
 
 msgid "IFS Ports"
-msgstr "IFS ポート"
+msgstr "IFSポート"
 
 msgid "Spools (physical filaments)"
 msgstr "スプール（物理フィラメント）"
+
+msgid "Error"
+msgstr "エラー"
+
+msgid "IFS port P{port} empty"
+msgstr "IFSポートP{port}が空です"
 
 msgid "Print options"
 msgstr "印刷オプション"
@@ -86,16 +95,13 @@ msgid "This is a multicolor printing, IFS cannot be disabled"
 msgstr "マルチカラー印刷中です IFSを無効にできません"
 
 msgid "The BACKUP function is only possible with IFS enabled"
-msgstr "バックアップ機能はIFS有効時のみ利用可能です"
+msgstr "予備フィラメント機能はIFS有効時のみ利用可能です"
 
 msgid "Update Filament change gcode to v{ifs.min_version} or higher"
 msgstr "「フィラメント交換Gコード」をv{ifs.min_version}以上に更新してください"
 
 msgid "Print"
 msgstr "印刷"
-
-msgid "Error"
-msgstr "エラー"
 
 msgid "It is not possible to print until all colors have been assigned"
 msgstr "全ての色にポートが割り当てられるまで印刷できません"
@@ -104,19 +110,16 @@ msgid "Select"
 msgstr "選択"
 
 msgid "Current selection"
-msgstr "現在選択されている項目"
+msgstr "現在の選択"
 
 msgid "Select another"
-msgstr "別の項目を選択"
+msgstr "別の項目を選択してください"
 
 msgid "Incorrect filament type"
 msgstr "フィラメント種別が一致しません"
 
-msgid "IFS port P{port} empty"
-msgstr "IFSポートP{port}が空です"
-
 msgid "Reinstalling bambufy"
-msgstr "Bambufyを再インストール中"
+msgstr "Bambufyを再インストールしています"
 
 msgid "Warning"
 msgstr "警告"
@@ -138,65 +141,62 @@ msgstr "ベッドレベリング"
 msgid ""
 "The current bed mesh (auto) is no longer valid or does not exist. Press BED "
 "CALIBRATE to continue"
-msgstr ""
-"現在のベッドメッシュ(自動)は無効または存在しません。続行するにはBED CALIBRATE"
-"を押してください"
+msgstr "現在のベッドメッシュ(自動)は無効または存在しません。続行するにはBED CALIBRATEを押してください"
 
 msgid "Loading filament"
-msgstr "フィラメントをロード中"
+msgstr "フィラメントをロード中です"
 
 msgid "Cutting the filament"
 msgstr "フィラメントを切断中"
 
 msgid "Unloading filament"
-msgstr "フィラメントをアンロード中"
+msgstr "フィラメントをアンロード中です"
 
 msgid "Timeout ignored because printer state is paused"
-msgstr "プリンター状態が一時停止のためタイムアウトを無視"
+msgstr "プリンターが一時停止中のためタイムアウトを無視しました"
 
 msgid "Pause during printing"
-msgstr "印刷中に一時停止"
+msgstr "印刷中に一時停止しています"
 
 msgid "Pause during loading"
-msgstr "ロード中に一時停止"
+msgstr "ロード中に一時停止しています"
 
 msgid "Pause"
 msgstr "一時停止"
 
 msgid "Jam detected loading filament ({ifs.extruder_port|string}), pausing"
-msgstr ""
-"フィラメントロード中に詰まり検出({ifs.extruder_port|string}) 一時停止中"
+msgstr "フィラメントロード中に詰まり検出({ifs.extruder_port|string}) 一時停止しています"
 
 msgid "Jam detected (Motion) ({ifs.extruder_port|string}), pausing"
-msgstr "動作中に詰まり検出({ifs.extruder_port|string}) 一時停止中"
+msgstr "動作中に詰まり検出({ifs.extruder_port|string}) 一時停止しています"
 
 msgid ""
 "Run out filament (Head) ({ifs.extruder_port|string}), no backup alternative "
 "has been found, pausing"
-msgstr ""
-"フィラメント切れ（ヘッド）({ifs.extruder_port|string}) バックアップ候補なし "
-"一時停止中"
+msgstr "フィラメント切れ（ヘッド）({ifs.extruder_port|string}) バックアップ候補なし 一時停止中"
 
 msgid "Run out filament (Head) ({ifs.extruder_port|string}), pausing"
-msgstr "フィラメント切れ（ヘッド）({ifs.extruder_port|string}) 一時停止中"
+msgstr "フィラメント切れ（ヘッド）({ifs.extruder_port|string}) 一時停止しています"
 
 msgid ""
 "Broken filament in the IFS tube (Head) ({ifs.extruder_port|string}), pausing"
-msgstr ""
-"IFSチューブ内でフィラメント破断（ヘッド）({ifs.extruder_port|string}) 一時停"
-"止中"
+msgstr "IFSチューブ内でフィラメント破断（ヘッド）({ifs.extruder_port|string}) 一時停止しています"
 
 msgid ""
 "IFS Port ({ifs.extruder_port|string}) empty, please insert filament, pausing"
-msgstr ""
-"IFSポート({ifs.extruder_port|string})が空です フィラメントを挿入してください "
-"一時停止中"
+msgstr "IFSポート({ifs.extruder_port|string})が空です フィラメントを挿入してください 一時停止しています"
 
 msgid "Restoring part cooling fan speed to"
-msgstr "部品冷却ファン速度を復元中"
+msgstr "部品冷却ファン速度を復元中です"
+
+msgid "Purging"
+msgstr "フラッシュ中です"
+
+msgid "Purging the previous color/material from the hotend"
+msgstr "ホットエンドから前の色/素材をフラッシュ中"
 
 msgid "Heating the nozzle to {extruder_temp} degrees"
-msgstr "ノズルを{extruder_temp}℃に加熱中"
+msgstr "ノズルを{extruder_temp}℃に加熱しています"
 
 msgid "HIDE FUTURE MESSAGES"
 msgstr "今後のメッセージを非表示"
@@ -208,16 +208,10 @@ msgid "The information dialogs have been hidden"
 msgstr "情報ダイアログを非表示にしました"
 
 msgid "Start print {extruder_temp}/{bed_temp}"
-msgstr "印刷を開始 {extruder_temp}/{bed_temp}"
-
-msgid "Purging"
-msgstr "フラッシュ中"
-
-msgid "Purging the previous color/material from the hotend"
-msgstr "ホットエンドから前の色/素材をフラッシュ中"
+msgstr "印刷を開始します {extruder_temp}/{bed_temp}"
 
 msgid "Homing Z"
-msgstr "Z軸をホーム"
+msgstr "Z軸をホーミング中です"
 
 msgid "Nozzle cleaning"
 msgstr "ノズル清掃中"
@@ -229,7 +223,7 @@ msgid "Bed leveling (KAMP)"
 msgstr "ベッドレベリング（KAMP）中"
 
 msgid "Go to trash"
-msgstr "廃棄位置へ移動"
+msgstr "パージシュートへ移動"
 
 msgid "Cleaning the nozzle on the rubber"
 msgstr "ゴムパッドでノズルを清掃中"
@@ -238,44 +232,41 @@ msgid "Wait"
 msgstr "お待ちください"
 
 msgid "Checking MD5 '{filename}'"
-msgstr "MD5を確認中 「{filename}」"
+msgstr "「{filename}」のMD5を確認中です"
 
 msgid "MD5 check started"
 msgstr "MD5確認を開始"
 
 msgid "Processing '{filename}'"
-msgstr "処理中 「{filename}」"
+msgstr "「{filename}」を処理中です"
 
 msgid "This may take a while. For faster processing"
 msgstr "これには時間がかかる場合があります。より高速な処理には"
 
 msgid "MD5 check failed. Print canceled"
-msgstr "MD5確認に失敗 印刷をキャンセルしました"
+msgstr "MD5確認に失敗しました 印刷をキャンセルしました"
 
 msgid ""
 "Loading filament at {extruder_temp} for {extrude_len}mm at {speed/60} mm/s"
-msgstr ""
-"{extruder_temp}℃で{extrude_len}mmを{speed/60} mm/sでフィラメントをロード中"
+msgstr "{extruder_temp}℃で{extrude_len}mmを{speed/60} mm/sでフィラメントをロード中"
 
 msgid ""
 "Unloading filament at {extruder_temp} for {extrude_len}mm at {speed/60} mm/s"
-msgstr ""
-"{extruder_temp}℃で{extrude_len}mmを{speed/60} mm/sでフィラメントをアンロード"
-"中"
+msgstr "{extruder_temp}℃で{extrude_len}mmを{speed/60} mm/sでフィラメントをアンロード中"
 
 msgid ""
 "Please manually clean the nozzle while it is heating up then press CONTINUE"
 msgstr "ノズルが温まっている間に手動で清掃し、その後「続行」を押してください"
 
 msgid "Bed screws"
-msgstr "ベッドネジ"
+msgstr "ベッドスクリュー調整"
 
 msgid ""
 "Please manually clean the nozzle while it is heating up then press continue"
 msgstr "加熱中にノズルを手動で清掃し、その後「続ける」を押してください"
 
 msgid "Restoring..."
-msgstr ""
+msgstr "復元中..."
 
 msgid "Please wait, this process may take a while"
-msgstr ""
+msgstr "お待ちください。この処理には時間がかかる場合があります"

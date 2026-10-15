@@ -8,57 +8,14 @@ def extract_msg_strings(filepath):
     with open(filepath, encoding='utf-8') as f:
         content = f.read()
 
-    # Busca todas las ocurrencias de MSG="..." y TITLE="..."
-    # Soporta comillas dobles y saltos de línea (poco probables, pero seguros)
-    pattern = r'(?:MSG|TITLE)\s*=\s*"([^"]*)"'
-    matches = re.findall(pattern, content)
+    # Las cadenas traducibles van marcadas por el autor con ===...===
+    pattern = r'===(.*?)==='
+    matches = [s.strip() for s in re.findall(pattern, content)]
 
-    # Lista de patrones que NO se traducen
-    NO_TRANSLATE_PREFIXES = (
-        "action:prompt_end",
-        "action:prompt_button_group_start",
-        "action:prompt_button {type}|_IFS_COLORS_PORT_TYPE_DIALOG PORT={port} TYPE={type}|primary",
-        "action:prompt_button {type}|_IFS_COLORS_PORT_TYPE_DIALOG PORT={port} TYPE={type}",
-        "action:prompt_button_group_end",
-        "action:prompt_footer_button Close|_IFS_COLORS:",
-        "action:prompt_show",
-        "action:prompt_button P{port}:{ifs_types[port-1]}|_IFS_COLORS_TYPE PORT={port}",
-        "action:prompt_button P{port}:—",
-        "action:prompt_button C{tool|int + 1}:{types[tool|int]}||ifs-color-slot warning|{colors[tool|int]}",
-        "action:prompt_button >P{port}|||{colors[tool|int]}",
-        "action:prompt_button P{port}|_IFS_COLORS_ASSIGN TOOL={tool} PORT={port}",
-        "{variable|lower|replace('_', ' ')|title} : {printer['gcode_macro _IFS_VARS'][variable|lower]}",
-        "{params.VARIABLE|lower|replace('_', ' ')|title} : {printer['gcode_macro _IFS_VARS'][params.VARIABLE|lower]}",
-        "{var}: {printer.save_variables.variables['bambufy_'+var]}",
-        "Bambufy - {title}: {msg}",
-        "{msg}",
-        "action:prompt_begin Bambufy - {title}",
-        "action:prompt_text {msg}",
-        "action:prompt_text {tip}",
-        "action:prompt_begin C{tool + 1}",
-        "action:prompt_button P{port}:{ifs_types[port-1]}|_IFS_COLORS_ASSIGN TOOL={tool} PORT={port}",
-        "action:prompt_button P{port}:{ifs_types[port-1]}|_IFS_COLORS",
-        "action:prompt_button P{port}|_IFS_COLORS",
-        "action:prompt_button C{tool|int + 1}:{types[tool|int]}>P{ifs.tools[tool|int]}|_IFS_COLORS_PORTS TOOL={tool}|ifs-color-slot warning|{colors[tool|int]}",
-        "action:prompt_button C{tool|int + 1}:{types[tool|int]}|_IFS_COLORS_PORTS TOOL={tool}|ifs-color-slot warning|{colors[tool|int]}",
-        "action:prompt_button C{tool|int + 1}>P{ifs.tools[tool|int]}|_IFS_COLORS_PORTS TOOL={tool}|ifs-color-slot warning|{colors[tool|int]}",
-        "{ifs_types[port-1]}",
-        "{types[tool|int]}",
-        "Z-Offset (KAMP): {ns.offsets.z}",
-        "Z-Offset: {ns.offsets.z}",
-        "Z-Offset (KAMP): {offsets.z}",
-        "Z-Offset: {offsets.z}"
-    )
-
-    filtered = [
-        s for s in matches
-        if s not in NO_TRANSLATE_PREFIXES
-    ]
-
-    return list(dict.fromkeys(filtered))  # elimina duplicados, mantiene orden
+    return list(dict.fromkeys(s for s in matches if s))  # elimina duplicados, mantiene orden
 
 if __name__ == "__main__":
-    en_cfg = sys.argv[1] if len(sys.argv) > 1 else "en/bambufy.cfg"
+    en_cfg = sys.argv[1] if len(sys.argv) > 1 else "../bambufy.cfg"
     strings = extract_msg_strings(en_cfg)
 
     # Generar base.pot (formato gettext, pero solo con msgid = texto inglés)

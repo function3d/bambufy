@@ -1,3 +1,4 @@
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
@@ -9,19 +10,18 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11) ? 0 : (n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20)) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11) ? 0 : (n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20)) ? 1 : 2;\n"
 "X-Generator: Poedit 3.4.2\n"
 
 msgid "Backup"
-msgstr "Резерв"
+msgstr "Запасной филамент"
 
 msgid ""
-"Run out filament (Head) ({ifs.extruder_port|string}), backup, loading {port} "
-"and continuing with printing"
+"Run out filament (Head) ({ifs.extruder_port|string}), backup, loading {port}"
+" and continuing with printing"
 msgstr ""
-"Окончание филамента (головка) ({ifs.extruder_port|string}), резерв, загрузка "
-"{port}, печать продолжается"
+"Филамент закончился (головка) ({ifs.extruder_port|string}), запасная "
+"катушка, загрузка {port}, печать продолжается"
 
 msgid ""
 "Filament run out in the IFS ({port|string}), we continue printing until it "
@@ -31,7 +31,7 @@ msgstr ""
 "в экструдере или смены филамента"
 
 msgid "Insert filament detected"
-msgstr "Обнаружен вставляемый филамент"
+msgstr "Обнаружена вставка филамента"
 
 msgid "Auto insert"
 msgstr "Автоматическая вставка"
@@ -45,8 +45,8 @@ msgid ""
 "through the waste chute in order to load the next one requested by the print"
 msgstr ""
 "Филамент в IFS ({consume}) закончился. Остаток был использован до предела, "
-"но теперь его необходимо вытолкнуть через лоток для отходов, чтобы загрузить "
-"следующий, требуемый печатью"
+"но теперь его необходимо вытолкнуть через лоток для отходов, чтобы загрузить"
+" следующий, требуемый печатью"
 
 msgid "Checking filaments"
 msgstr "Проверка филаментов"
@@ -55,21 +55,29 @@ msgid "Checking the status of the filaments in the IFS ports"
 msgstr "Проверка состояния филаментов в портах IFS"
 
 msgid ""
-"One of the filaments was just activating the sensor, retract 45mm all of them"
-msgstr "Один из филаментов только что активировал датчик. Откат всех на 45 мм"
+"One of the filaments was just activating the sensor, retract 45mm all of "
+"them"
+msgstr ""
+"Один из филаментов только что активировал датчик. Втяните все на 45 мм"
 
 msgid ""
-"One of the filaments is gripped by the extruder so we extrude {flush_length|"
-"string}mm to determine which one it is"
+"One of the filaments is gripped by the extruder so we extrude "
+"{flush_length|string}mm to determine which one it is"
 msgstr ""
-"Один филамент захвачен экструдером. Экструзия {flush_length|string} мм для "
-"его идентификации"
+"Один из филаментов захвачен экструдером. Выдавите {flush_length|string} мм, "
+"чтобы определить какой"
 
 msgid "Select for"
-msgstr "Выбрать для"
+msgstr "Выберите для"
 
 msgid "Close"
 msgstr "Закрыть"
+
+msgid "Loading"
+msgstr "Загрузка"
+
+msgid "Please try again in 10 seconds"
+msgstr "Повторите попытку через 10 секунд"
 
 msgid "Colors (slicer filaments)"
 msgstr "Цвета (филаменты слайсера)"
@@ -80,6 +88,12 @@ msgstr "Порты IFS"
 msgid "Spools (physical filaments)"
 msgstr "Катушки (физические филаменты)"
 
+msgid "Error"
+msgstr "Ошибка"
+
+msgid "IFS port P{port} empty"
+msgstr "Порт IFS P{port} пуст"
+
 msgid "Print options"
 msgstr "Параметры печати"
 
@@ -87,16 +101,13 @@ msgid "This is a multicolor printing, IFS cannot be disabled"
 msgstr "Это многоцветная печать. IFS нельзя отключить"
 
 msgid "The BACKUP function is only possible with IFS enabled"
-msgstr "Функция РЕЗЕРВ возможна только при включенном IFS"
+msgstr "Функция запасной катушки возможна только при включенном IFS"
 
 msgid "Update Filament change gcode to v{ifs.min_version} or higher"
-msgstr "Обновите gcode смены филамента до v{ifs.min_version} или выше"
+msgstr "Обновите G-code смены филамента до v{ifs.min_version} или выше"
 
 msgid "Print"
 msgstr "Печать"
-
-msgid "Error"
-msgstr "Ошибка"
 
 msgid "It is not possible to print until all colors have been assigned"
 msgstr "Печать невозможна, пока не назначены все цвета"
@@ -113,9 +124,6 @@ msgstr "Выбрать другой"
 msgid "Incorrect filament type"
 msgstr "Неверный тип филамента"
 
-msgid "IFS port P{port} empty"
-msgstr "Порт IFS P{port} пуст"
-
 msgid "Reinstalling bambufy"
 msgstr "Переустановка Bambufy"
 
@@ -126,7 +134,7 @@ msgid ""
 "Bambufy does not work with the native screen, it requires Guppy Screen "
 "(DISPLAY_OFF)"
 msgstr ""
-"Bambufy не работает с родным экраном. Требуется Guppy Screen (DISPLAY_OFF)"
+"Bambufy не работает со штатным экраном. Требуется Guppy Screen (DISPLAY_OFF)"
 
 msgid "Enable Guppy Screen"
 msgstr "Включить Guppy Screen"
@@ -141,20 +149,20 @@ msgid ""
 "The current bed mesh (auto) is no longer valid or does not exist. Press BED "
 "CALIBRATE to continue"
 msgstr ""
-"Текущая сетка стола (авто) больше не действительна или отсутствует. Нажмите "
+"Текущая карта стола (авто) больше не действительна или отсутствует. Нажмите "
 "BED CALIBRATE для продолжения"
 
 msgid "Loading filament"
 msgstr "Загрузка филамента"
 
 msgid "Cutting the filament"
-msgstr "Резка филамента"
+msgstr "Обрезка филамента"
 
 msgid "Unloading filament"
 msgstr "Выгрузка филамента"
 
 msgid "Timeout ignored because printer state is paused"
-msgstr "Тайм-аут проигнорирован, так как состояние принтера — пауза"
+msgstr "Тайм-аут проигнорирован, принтер на паузе"
 
 msgid "Pause during printing"
 msgstr "Пауза во время печати"
@@ -169,14 +177,14 @@ msgid "Jam detected loading filament ({ifs.extruder_port|string}), pausing"
 msgstr "Засор при загрузке филамента ({ifs.extruder_port|string}). Пауза"
 
 msgid "Jam detected (Motion) ({ifs.extruder_port|string}), pausing"
-msgstr "Засор (движение) ({ifs.extruder_port|string}). Пауза"
+msgstr "Засор (датчик движения) ({ifs.extruder_port|string}). Пауза"
 
 msgid ""
 "Run out filament (Head) ({ifs.extruder_port|string}), no backup alternative "
 "has been found, pausing"
 msgstr ""
-"Окончание филамента (головка) ({ifs.extruder_port|string}). Резервная "
-"альтернатива не найдена. Пауза"
+"Филамент закончился (головка) ({ifs.extruder_port|string}). Запасной "
+"филамент не найден. Пауза"
 
 msgid "Run out filament (Head) ({ifs.extruder_port|string}), pausing"
 msgstr "Окончание филамента (головка) ({ifs.extruder_port|string}). Пауза"
@@ -193,6 +201,12 @@ msgstr "Порт IFS ({ifs.extruder_port|string}) пуст. Вставьте ф�
 msgid "Restoring part cooling fan speed to"
 msgstr "Восстановление скорости вентилятора охлаждения детали до"
 
+msgid "Purging"
+msgstr "Продувка"
+
+msgid "Purging the previous color/material from the hotend"
+msgstr "Продувка предыдущего цвета/материала из хотэнда"
+
 msgid "Heating the nozzle to {extruder_temp} degrees"
 msgstr "Нагрев сопла до {extruder_temp} °C"
 
@@ -208,14 +222,8 @@ msgstr "Информационные диалоги скрыты"
 msgid "Start print {extruder_temp}/{bed_temp}"
 msgstr "Начать печать {extruder_temp}/{bed_temp}"
 
-msgid "Purging"
-msgstr "Продувка"
-
-msgid "Purging the previous color/material from the hotend"
-msgstr "Продувка предыдущего цвета/материала из хотенда"
-
 msgid "Homing Z"
-msgstr "Возврат по оси Z"
+msgstr "Парковка оси Z"
 
 msgid "Nozzle cleaning"
 msgstr "Очистка сопла"
@@ -227,10 +235,10 @@ msgid "Bed leveling (KAMP)"
 msgstr "Выравнивание стола (KAMP)"
 
 msgid "Go to trash"
-msgstr "Перейти к отходам"
+msgstr "Перейти к лотку для отходов"
 
 msgid "Cleaning the nozzle on the rubber"
-msgstr "Очистка сопла на резине"
+msgstr "Очистка сопла о резиновый очиститель"
 
 msgid "Wait"
 msgstr "Подождите"
@@ -273,10 +281,12 @@ msgstr "Винты стола"
 
 msgid ""
 "Please manually clean the nozzle while it is heating up then press continue"
-msgstr "Во время нагрева вручную очистите сопло, затем нажмите продолжить"
+msgstr ""
+"Пожалуйста, очистите сопло вручную во время его нагрева, а затем нажмите "
+"ПРОДОЛЖИТЬ"
 
 msgid "Restoring..."
-msgstr ""
+msgstr "Восстановление..."
 
 msgid "Please wait, this process may take a while"
-msgstr ""
+msgstr "Подождите, этот процесс может занять некоторое время"

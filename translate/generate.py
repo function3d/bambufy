@@ -21,16 +21,15 @@ def replace_messages(input_cfg, trans_dict, output_cfg):
     with open(input_cfg, encoding='utf-8') as f:
         content = f.read()
 
-    # Función de reemplazo: preserva variables ({port}, {VAR}, etc.)
+    # Solo se traduce lo marcado por el autor con ===...===.
+    # Sin traducción, se deja el original (y se quitan las marcas).
     def replacer(match):
-        prefix, orig_msg = match.group(1), match.group(2)
-        # Busca traducción; si no existe, deja el original
+        orig_msg = match.group(2).strip()
         new_msg = trans_dict.get(orig_msg, orig_msg)
-        return f'{prefix}="{new_msg}"'
+        return f'{new_msg}'
 
-    # Reemplaza MSG="..." y TITLE="..." (capturamos el prefijo para no tocar nada más)
     content = re.sub(
-        r'(MSG|TITLE)\s*=\s*"([^"]*)"',
+        r'(===)(.*?)(===)',
         replacer,
         content
     )
@@ -42,11 +41,11 @@ def replace_messages(input_cfg, trans_dict, output_cfg):
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
-        print("Uso: python generate.py <en_cfg> <lang>")
+        print("Uso: python generate.py <root_cfg> <lang>")
         print("Ej:  python generate.py bambufy.cfg es")
         sys.exit(1)
-    
-    en_cfg = sys.argv[1] if len(sys.argv) > 1 else "../en/bambufy.cfg"
+
+    en_cfg = sys.argv[1] if len(sys.argv) > 1 else "../bambufy.cfg"
     lang = sys.argv[2]
     trans = load_translations(f"{lang}.po")
     replace_messages(en_cfg, trans, f"../{lang}/bambufy.cfg")

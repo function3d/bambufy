@@ -1,3 +1,4 @@
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
@@ -16,11 +17,11 @@ msgid "Backup"
 msgstr "Sicherung"
 
 msgid ""
-"Run out filament (Head) ({ifs.extruder_port|string}), backup, loading {port} "
-"and continuing with printing"
+"Run out filament (Head) ({ifs.extruder_port|string}), backup, loading {port}"
+" and continuing with printing"
 msgstr ""
-"Filamentende (Druckkopf) ({ifs.extruder_port|string}), Sicherung, Lade "
-"{port} und setze Druck fort"
+"Filamentende (Druckkopf) ({ifs.extruder_port|string}), BACKUP, {port} laden "
+"und Druck fortsetzen"
 
 msgid ""
 "Filament run out in the IFS ({port|string}), we continue printing until it "
@@ -30,10 +31,10 @@ msgstr ""
 "Filament im Extruder endet oder gewechselt wird"
 
 msgid "Insert filament detected"
-msgstr "Einfügefaden erkannt"
+msgstr "Filamenteinzug erkannt"
 
 msgid "Auto insert"
-msgstr "Automatische Einführung"
+msgstr "Automatischer Einzug"
 
 msgid "Poop {i}/20"
 msgstr "Spülen {i}/20"
@@ -48,19 +49,20 @@ msgstr ""
 "werden, um das nächste vom Druck benötigte Filament zu laden"
 
 msgid "Checking filaments"
-msgstr "Überprüfe Filamente"
+msgstr "Filamente werden überprüft"
 
 msgid "Checking the status of the filaments in the IFS ports"
 msgstr "Status der Filamente in den IFS-Ports wird geprüft"
 
 msgid ""
-"One of the filaments was just activating the sensor, retract 45mm all of them"
+"One of the filaments was just activating the sensor, retract 45mm all of "
+"them"
 msgstr ""
 "Ein Filament hat gerade den Sensor ausgelöst. Alle um 45 mm zurückziehen"
 
 msgid ""
-"One of the filaments is gripped by the extruder so we extrude {flush_length|"
-"string}mm to determine which one it is"
+"One of the filaments is gripped by the extruder so we extrude "
+"{flush_length|string}mm to determine which one it is"
 msgstr ""
 "Ein Filament wird vom Extruder erfasst. Extrudiere {flush_length|string} mm "
 "zur Identifikation"
@@ -71,6 +73,12 @@ msgstr "Auswählen für"
 msgid "Close"
 msgstr "Schließen"
 
+msgid "Loading"
+msgstr "Wird geladen"
+
+msgid "Please try again in 10 seconds"
+msgstr "Bitte versuchen Sie es in 10 Sekunden erneut"
+
 msgid "Colors (slicer filaments)"
 msgstr "Farben (Slicer-Filamente)"
 
@@ -80,6 +88,12 @@ msgstr "IFS-Ports"
 msgid "Spools (physical filaments)"
 msgstr "Spulen (physische Filamente)"
 
+msgid "Error"
+msgstr "Fehler"
+
+msgid "IFS port P{port} empty"
+msgstr "IFS-Port P{port} leer"
+
 msgid "Print options"
 msgstr "Druckoptionen"
 
@@ -87,17 +101,15 @@ msgid "This is a multicolor printing, IFS cannot be disabled"
 msgstr "Dies ist ein Mehrfarbendruck. IFS kann nicht deaktiviert werden"
 
 msgid "The BACKUP function is only possible with IFS enabled"
-msgstr "Die SICHERUNGS-Funktion ist nur bei aktiviertem IFS möglich"
+msgstr "Die BACKUP-Funktion ist nur bei aktiviertem IFS möglich"
 
 msgid "Update Filament change gcode to v{ifs.min_version} or higher"
 msgstr ""
-"Aktualisieren Sie den Filamentwechsel-GCode auf v{ifs.min_version} oder höher"
+"Aktualisieren Sie den Filamentwechsel-GCode auf v{ifs.min_version} oder "
+"höher"
 
 msgid "Print"
 msgstr "Drucken"
-
-msgid "Error"
-msgstr "Fehler"
 
 msgid "It is not possible to print until all colors have been assigned"
 msgstr "Drucken erst möglich, wenn allen Farben ein Port zugewiesen wurde"
@@ -113,9 +125,6 @@ msgstr "Anderes auswählen"
 
 msgid "Incorrect filament type"
 msgstr "Falscher Filamenttyp"
-
-msgid "IFS port P{port} empty"
-msgstr "IFS-Port P{port} leer"
 
 msgid "Reinstalling bambufy"
 msgstr "Bambufy wird neu installiert"
@@ -137,26 +146,26 @@ msgid "Disable Bambufy"
 msgstr "Bambufy deaktivieren"
 
 msgid "Bed leveling"
-msgstr "Bett-Nivellierung"
+msgstr "Druckbett-Nivellierung"
 
 msgid ""
 "The current bed mesh (auto) is no longer valid or does not exist. Press BED "
 "CALIBRATE to continue"
 msgstr ""
-"Das aktuelle Bett-Mesh (auto) ist nicht mehr gültig oder existiert nicht. "
-"Drücken Sie BED CALIBRATE, um fortzufahren"
+"Das aktuelle Druckbett-Mesh (auto) ist nicht mehr gültig oder existiert "
+"nicht. Drücken Sie BED CALIBRATE, um fortzufahren"
 
 msgid "Loading filament"
-msgstr "Lade Filament"
+msgstr "Filament wird geladen"
 
 msgid "Cutting the filament"
-msgstr "Schneide Filament"
+msgstr "Filament wird geschnitten"
 
 msgid "Unloading filament"
-msgstr "Entlade Filament"
+msgstr "Filament wird entladen"
 
 msgid "Timeout ignored because printer state is paused"
-msgstr "Timeout ignoriert, da Druckerstatus pausiert ist"
+msgstr "Timeout ignoriert, da der Drucker pausiert ist"
 
 msgid "Pause during printing"
 msgstr "Pause während des Drucks"
@@ -168,34 +177,46 @@ msgid "Pause"
 msgstr "Pause"
 
 msgid "Jam detected loading filament ({ifs.extruder_port|string}), pausing"
-msgstr "Verstopfung beim Laden erkannt ({ifs.extruder_port|string}). Pausiere"
+msgstr ""
+"Verstopfung beim Laden erkannt ({ifs.extruder_port|string}). Druck wird "
+"pausiert"
 
 msgid "Jam detected (Motion) ({ifs.extruder_port|string}), pausing"
-msgstr "Verstopfung (Bewegung) erkannt ({ifs.extruder_port|string}). Pausiere"
+msgstr ""
+"Verstopfung (Bewegung) erkannt ({ifs.extruder_port|string}). Druck wird "
+"pausiert"
 
 msgid ""
 "Run out filament (Head) ({ifs.extruder_port|string}), no backup alternative "
 "has been found, pausing"
 msgstr ""
-"Filamentende (Kopf) ({ifs.extruder_port|string}). Keine "
-"Sicherungsalternative gefunden. Pausiere"
+"Filamentende (Druckkopf) ({ifs.extruder_port|string}). Keine BACKUP-"
+"Alternative gefunden. Druck wird pausiert"
 
 msgid "Run out filament (Head) ({ifs.extruder_port|string}), pausing"
-msgstr "Filamentende (Kopf) ({ifs.extruder_port|string}). Pausiere"
+msgstr ""
+"Filamentende (Druckkopf) ({ifs.extruder_port|string}). Druck wird pausiert"
 
 msgid ""
 "Broken filament in the IFS tube (Head) ({ifs.extruder_port|string}), pausing"
 msgstr ""
-"Defektes Filament im IFS-Schlauch (Kopf) ({ifs.extruder_port|string}). "
-"Pausiere"
+"Gebrochenes Filament im IFS-Schlauch (Druckkopf) "
+"({ifs.extruder_port|string}). Druck wird pausiert"
 
 msgid ""
 "IFS Port ({ifs.extruder_port|string}) empty, please insert filament, pausing"
 msgstr ""
-"IFS-Port ({ifs.extruder_port|string}) leer. Bitte Filament einlegen. Pausiere"
+"IFS-Port ({ifs.extruder_port|string}) leer. Bitte Filament einlegen. Druck "
+"wird pausiert"
 
 msgid "Restoring part cooling fan speed to"
-msgstr "Stelle Lüftergeschwindigkeit für Bauteilkühlung wieder her auf"
+msgstr "Bauteillüfter-Drehzahl wird wiederhergestellt auf"
+
+msgid "Purging"
+msgstr "Spülvorgang"
+
+msgid "Purging the previous color/material from the hotend"
+msgstr "Vorherige Farbe/Material aus dem Hotend spülen"
 
 msgid "Heating the nozzle to {extruder_temp} degrees"
 msgstr "Düse wird auf {extruder_temp} °C aufgeheizt"
@@ -212,12 +233,6 @@ msgstr "Informationsdialoge wurden ausgeblendet"
 msgid "Start print {extruder_temp}/{bed_temp}"
 msgstr "Druck starten {extruder_temp}/{bed_temp}"
 
-msgid "Purging"
-msgstr "Spülvorgang"
-
-msgid "Purging the previous color/material from the hotend"
-msgstr "Vorherige Farbe/Material aus dem Hotend spülen"
-
 msgid "Homing Z"
 msgstr "Z-Referenzierung"
 
@@ -228,19 +243,19 @@ msgid "Leveling"
 msgstr "Nivellierung"
 
 msgid "Bed leveling (KAMP)"
-msgstr "Bett-Nivellierung (KAMP)"
+msgstr "Druckbett-Nivellierung (KAMP)"
 
 msgid "Go to trash"
-msgstr "Zum Abfall"
+msgstr "Zur Abfallrinne"
 
 msgid "Cleaning the nozzle on the rubber"
-msgstr "Düse an Gummi reinigen"
+msgstr "Düse am Gummi reinigen"
 
 msgid "Wait"
 msgstr "Warten"
 
 msgid "Checking MD5 '{filename}'"
-msgstr "Prüfe MD5 von '{filename}'"
+msgstr "MD5-Prüfung von '{filename}'"
 
 msgid "MD5 check started"
 msgstr "MD5-Prüfung gestartet"
@@ -257,14 +272,14 @@ msgstr "MD5-Prüfung fehlgeschlagen. Druck abgebrochen"
 msgid ""
 "Loading filament at {extruder_temp} for {extrude_len}mm at {speed/60} mm/s"
 msgstr ""
-"Lade Filament bei {extruder_temp} °C über {extrude_len} mm mit {speed/60} mm/"
-"s"
+"Filament wird bei {extruder_temp} °C über {extrude_len} mm mit {speed/60} "
+"mm/s geladen"
 
 msgid ""
 "Unloading filament at {extruder_temp} for {extrude_len}mm at {speed/60} mm/s"
 msgstr ""
-"Entlade Filament bei {extruder_temp} °C über {extrude_len} mm mit {speed/60} "
-"mm/s"
+"Filament wird bei {extruder_temp} °C über {extrude_len} mm mit {speed/60} "
+"mm/s entladen"
 
 msgid ""
 "Please manually clean the nozzle while it is heating up then press CONTINUE"
@@ -273,16 +288,16 @@ msgstr ""
 "WEITER"
 
 msgid "Bed screws"
-msgstr "Bett-Schrauben"
+msgstr "Druckbett-Schrauben"
 
 msgid ""
 "Please manually clean the nozzle while it is heating up then press continue"
 msgstr ""
 "Reinigen Sie die Düse manuell während des Aufheizens und drücken Sie dann "
-"Weiter"
+"WEITER"
 
 msgid "Restoring..."
-msgstr ""
+msgstr "Wird wiederhergestellt..."
 
 msgid "Please wait, this process may take a while"
-msgstr ""
+msgstr "Bitte warten, dieser Vorgang kann eine Weile dauern"

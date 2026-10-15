@@ -1,3 +1,4 @@
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
@@ -16,8 +17,8 @@ msgid "Backup"
 msgstr "Backup"
 
 msgid ""
-"Run out filament (Head) ({ifs.extruder_port|string}), backup, loading {port} "
-"and continuing with printing"
+"Run out filament (Head) ({ifs.extruder_port|string}), backup, loading {port}"
+" and continuing with printing"
 msgstr ""
 "Filamento esgotado (cabeçote) ({ifs.extruder_port|string}), backup, "
 "carregando {port} e continuando a impressão"
@@ -26,11 +27,11 @@ msgid ""
 "Filament run out in the IFS ({port|string}), we continue printing until it "
 "runs out in the extruder or there is a filament change"
 msgstr ""
-"Filamento esgotado no IFS ({port|string}). Impressão continua até esgotar no "
-"extrusor ou houver troca de filamento"
+"Filamento esgotado no IFS ({port|string}). Impressão continua até esgotar no"
+" extrusor ou houver troca de filamento"
 
 msgid "Insert filament detected"
-msgstr "Filamento de inserção detectado"
+msgstr "Inserção de filamento detectada"
 
 msgid "Auto insert"
 msgstr "Inserção automática"
@@ -54,12 +55,13 @@ msgid "Checking the status of the filaments in the IFS ports"
 msgstr "Verificando o estado dos filamentos nas portas IFS"
 
 msgid ""
-"One of the filaments was just activating the sensor, retract 45mm all of them"
+"One of the filaments was just activating the sensor, retract 45mm all of "
+"them"
 msgstr "Um filamento acabou de ativar o sensor. Retrair 45 mm em todos"
 
 msgid ""
-"One of the filaments is gripped by the extruder so we extrude {flush_length|"
-"string}mm to determine which one it is"
+"One of the filaments is gripped by the extruder so we extrude "
+"{flush_length|string}mm to determine which one it is"
 msgstr ""
 "Um filamento está preso no extrusor. Extrudir {flush_length|string} mm para "
 "identificá-lo"
@@ -70,6 +72,12 @@ msgstr "Selecionar para"
 msgid "Close"
 msgstr "Fechar"
 
+msgid "Loading"
+msgstr "Carregando"
+
+msgid "Please try again in 10 seconds"
+msgstr "Tente novamente em 10 segundos"
+
 msgid "Colors (slicer filaments)"
 msgstr "Cores (filamentos do fatiador)"
 
@@ -79,8 +87,14 @@ msgstr "Portas IFS"
 msgid "Spools (physical filaments)"
 msgstr "Carretéis (filamentos físicos)"
 
+msgid "Error"
+msgstr "Erro"
+
+msgid "IFS port P{port} empty"
+msgstr "Porta IFS P{port} vazia"
+
 msgid "Print options"
-msgstr "Pções de impressão"
+msgstr "Opções de impressão"
 
 msgid "This is a multicolor printing, IFS cannot be disabled"
 msgstr "Esta é uma impressão multicolor. O IFS não pode ser desativado"
@@ -94,9 +108,6 @@ msgstr ""
 
 msgid "Print"
 msgstr "Imprimir"
-
-msgid "Error"
-msgstr "Erro"
 
 msgid "It is not possible to print until all colors have been assigned"
 msgstr "Não é possível imprimir até que todas as cores sejam atribuídas"
@@ -112,9 +123,6 @@ msgstr "Selecionar outra"
 
 msgid "Incorrect filament type"
 msgstr "Tipo de filamento incorreto"
-
-msgid "IFS port P{port} empty"
-msgstr "Porta IFS P{port} vazia"
 
 msgid "Reinstalling bambufy"
 msgstr "Reinstalando Bambufy"
@@ -198,6 +206,12 @@ msgstr ""
 msgid "Restoring part cooling fan speed to"
 msgstr "Restaurando velocidade do ventilador de refrigeração da peça para"
 
+msgid "Purging"
+msgstr "Purgando"
+
+msgid "Purging the previous color/material from the hotend"
+msgstr "Purgando a cor/material anterior do hotend"
+
 msgid "Heating the nozzle to {extruder_temp} degrees"
 msgstr "Aquecendo o bico a {extruder_temp} °C"
 
@@ -213,14 +227,8 @@ msgstr "As caixas de diálogo informativas foram ocultadas"
 msgid "Start print {extruder_temp}/{bed_temp}"
 msgstr "Iniciar impressão {extruder_temp}/{bed_temp}"
 
-msgid "Purging"
-msgstr "Purgando"
-
-msgid "Purging the previous color/material from the hotend"
-msgstr "Purgando a cor/material anterior do hotend"
-
 msgid "Homing Z"
-msgstr "Referenciando Z"
+msgstr "Retornando Z à origem"
 
 msgid "Nozzle cleaning"
 msgstr "Limpeza do bico"
@@ -232,7 +240,7 @@ msgid "Bed leveling (KAMP)"
 msgstr "Nivelamento da mesa (KAMP)"
 
 msgid "Go to trash"
-msgstr "Ir para o lixo"
+msgstr "Ir para a calha de resíduos"
 
 msgid "Cleaning the nozzle on the rubber"
 msgstr "Limpando o bico na borracha"
@@ -279,7 +287,7 @@ msgid ""
 msgstr "Limpe manualmente o bico enquanto aquece e depois pressione continuar"
 
 msgid "Restoring..."
-msgstr ""
+msgstr "Restaurando..."
 
 msgid "Please wait, this process may take a while"
-msgstr ""
+msgstr "Aguarde, este processo pode demorar um pouco"

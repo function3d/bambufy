@@ -1,99 +1,119 @@
+#
 msgid ""
 msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
 "Language: en\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 
 msgid "Backup"
 msgstr ""
 
-msgid "Run out filament (Head) ({ifs.extruder_port|string}), backup, loading {port} and continuing with printing..."
+msgid ""
+"Run out filament (Head) ({ifs.extruder_port|string}), backup, loading {port}"
+" and continuing with printing"
 msgstr ""
 
-msgid "Filament run out in the IFS ({port|string}), we continue printing until it runs out in the extruder or there is a filament change"
+msgid ""
+"Filament run out in the IFS ({port|string}), we continue printing until it "
+"runs out in the extruder or there is a filament change"
 msgstr ""
 
 msgid "Insert filament detected"
 msgstr ""
 
-msgid "Auto insert: {port} ..."
+msgid "Auto insert"
 msgstr ""
 
 msgid "Poop {i}/20"
 msgstr ""
 
-msgid "The filament in the IFS ({consume}) has run out. The remaining filament has been used until it was no longer possible, but now it must be expelled through the waste chute in order to load the next one requested by the print."
+msgid ""
+"The filament in the IFS ({consume}) has run out. The remaining filament has "
+"been used until it was no longer possible, but now it must be expelled "
+"through the waste chute in order to load the next one requested by the print"
 msgstr ""
 
 msgid "Checking filaments"
 msgstr ""
 
-msgid "Checking the status of the filaments in the IFS ports ..."
+msgid "Checking the status of the filaments in the IFS ports"
 msgstr ""
 
-msgid "One of the filaments was just activating the sensor, retract 45mm all of them ..."
+msgid ""
+"One of the filaments was just activating the sensor, retract 45mm all of "
+"them"
 msgstr ""
 
-msgid "One of the filaments is gripped by the extruder so we extrude {flush_length|string}mm to determine which one it is ..."
+msgid ""
+"One of the filaments is gripped by the extruder so we extrude "
+"{flush_length|string}mm to determine which one it is"
 msgstr ""
 
-msgid "Select type and color in P{port}"
+msgid "Select for"
 msgstr ""
 
 msgid "Close"
 msgstr ""
 
-msgid "Color to Port"
+msgid "Loading"
 msgstr ""
 
-msgid "LEVELING"
+msgid "Please try again in 10 seconds"
 msgstr ""
 
-msgid "This is a multicolor printing, IFS cannot be disabled."
+msgid "Colors (slicer filaments)"
 msgstr ""
 
-msgid "BACKUP"
+msgid "IFS Ports"
 msgstr ""
 
-msgid "The BACKUP function is only possible with IFS enabled."
+msgid "Spools (physical filaments)"
 msgstr ""
 
 msgid "Error"
 msgstr ""
 
-msgid "IFS port P{port} empty."
+msgid "IFS port P{port} empty"
 msgstr ""
 
-msgid "Incorrect filament type."
+msgid "Print options"
 msgstr ""
 
-msgid "Update 'Filament change gcode' to v{ifs.min_version} or higher"
+msgid "This is a multicolor printing, IFS cannot be disabled"
 msgstr ""
 
-msgid "Update 'Filament change gcode' to v{ifs.min_version} or higher https://github.com/function3d/bambufy/blob/master/MACHINE_GCODE.md"
+msgid "The BACKUP function is only possible with IFS enabled"
 msgstr ""
 
-msgid "Cancel"
+msgid "Update Filament change gcode to v{ifs.min_version} or higher"
 msgstr ""
 
 msgid "Print"
 msgstr ""
 
-msgid "Update Filament change gcode to v{ifs.min_version} or higher https://github.com/function3d/bambufy/blob/master/MACHINE_GCODE.md"
+msgid "It is not possible to print until all colors have been assigned"
 msgstr ""
 
-msgid "It is not possible to print until all colors have been assigned."
+msgid "Select"
 msgstr ""
 
-msgid "Select port for"
+msgid "Current selection"
 msgstr ""
 
-msgid "Reinstalling bambufy..."
+msgid "Select another"
+msgstr ""
+
+msgid "Incorrect filament type"
+msgstr ""
+
+msgid "Reinstalling bambufy"
 msgstr ""
 
 msgid "Warning"
 msgstr ""
 
-msgid "Bambufy does not work with the native screen, it requires Guppy Screen (DISPLAY_OFF)"
+msgid ""
+"Bambufy does not work with the native screen, it requires Guppy Screen "
+"(DISPLAY_OFF)"
 msgstr ""
 
 msgid "Enable Guppy Screen"
@@ -105,7 +125,9 @@ msgstr ""
 msgid "Bed leveling"
 msgstr ""
 
-msgid "The current bed mesh (auto) is no longer valid or does not exist. Press BED_CALIBRATE to continue"
+msgid ""
+"The current bed mesh (auto) is no longer valid or does not exist. Press BED "
+"CALIBRATE to continue"
 msgstr ""
 
 msgid "Loading filament"
@@ -117,7 +139,7 @@ msgstr ""
 msgid "Unloading filament"
 msgstr ""
 
-msgid "Timeout ignored because printer state is paused."
+msgid "Timeout ignored because printer state is paused"
 msgstr ""
 
 msgid "Pause during printing"
@@ -129,25 +151,35 @@ msgstr ""
 msgid "Pause"
 msgstr ""
 
-msgid "Jam detected loading filament ({ifs.extruder_port|string}), pausing..."
+msgid "Jam detected loading filament ({ifs.extruder_port|string}), pausing"
 msgstr ""
 
-msgid "Jam detected (Motion) ({ifs.extruder_port|string}), pausing..."
+msgid "Jam detected (Motion) ({ifs.extruder_port|string}), pausing"
 msgstr ""
 
-msgid "Run out filament (Head) ({ifs.extruder_port|string}), no backup alternative has been found, pausing..."
+msgid ""
+"Run out filament (Head) ({ifs.extruder_port|string}), no backup alternative "
+"has been found, pausing"
 msgstr ""
 
-msgid "Run out filament (Head) ({ifs.extruder_port|string}), pausing..."
+msgid "Run out filament (Head) ({ifs.extruder_port|string}), pausing"
 msgstr ""
 
-msgid "Broken filament in the IFS tube (Head) ({ifs.extruder_port|string}), pausing..."
+msgid ""
+"Broken filament in the IFS tube (Head) ({ifs.extruder_port|string}), pausing"
 msgstr ""
 
-msgid "IFS Port ({ifs.extruder_port|string}) empty, please insert filament, pausing..."
+msgid ""
+"IFS Port ({ifs.extruder_port|string}) empty, please insert filament, pausing"
 msgstr ""
 
 msgid "Restoring part cooling fan speed to"
+msgstr ""
+
+msgid "Purging"
+msgstr ""
+
+msgid "Purging the previous color/material from the hotend"
 msgstr ""
 
 msgid "Heating the nozzle to {extruder_temp} degrees"
@@ -162,25 +194,19 @@ msgstr ""
 msgid "The information dialogs have been hidden"
 msgstr ""
 
-msgid "Start print {extruder_temp}/{bed_temp} ..."
-msgstr ""
-
-msgid "Purging"
-msgstr ""
-
-msgid "Purging the previous color/material from the hotend. ..."
+msgid "Start print {extruder_temp}/{bed_temp}"
 msgstr ""
 
 msgid "Homing Z"
 msgstr ""
 
-msgid "Nozzle cleaning ..."
+msgid "Nozzle cleaning"
 msgstr ""
 
 msgid "Leveling"
 msgstr ""
 
-msgid "Bed leveling (KAMP) ..."
+msgid "Bed leveling (KAMP)"
 msgstr ""
 
 msgid "Go to trash"
@@ -192,30 +218,42 @@ msgstr ""
 msgid "Wait"
 msgstr ""
 
-msgid "Checking MD5 '{filename}' ..."
+msgid "Checking MD5 '{filename}'"
 msgstr ""
 
 msgid "MD5 check started"
 msgstr ""
 
-msgid "Processing '{filename}' ..."
+msgid "Processing '{filename}'"
 msgstr ""
 
-msgid "MD5 check failed. Print canceled."
+msgid "This may take a while. For faster processing"
 msgstr ""
 
-msgid "Loading filament at {extruder_temp} for {extrude_len}mm at {speed/60} mm/s"
+msgid "MD5 check failed. Print canceled"
 msgstr ""
 
-msgid "Unloading filament at {extruder_temp} for {extrude_len}mm at {speed/60} mm/s"
+msgid ""
+"Loading filament at {extruder_temp} for {extrude_len}mm at {speed/60} mm/s"
 msgstr ""
 
-msgid "Please manually clean the nozzle while it is heating up then press continue."
+msgid ""
+"Unloading filament at {extruder_temp} for {extrude_len}mm at {speed/60} mm/s"
+msgstr ""
+
+msgid ""
+"Please manually clean the nozzle while it is heating up then press CONTINUE"
 msgstr ""
 
 msgid "Bed screws"
 msgstr ""
 
-msgid "Please manually clean the nozzle while it is heating up then press continue"
+msgid ""
+"Please manually clean the nozzle while it is heating up then press continue"
 msgstr ""
 
+msgid "Restoring..."
+msgstr ""
+
+msgid "Please wait, this process may take a while"
+msgstr ""

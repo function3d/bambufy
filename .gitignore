@@ -1,0 +1,6 @@
+venv/
+.vscode/
+translate/*.mo
+translate/en.pot
+*.xcf
+needs_guppy.png

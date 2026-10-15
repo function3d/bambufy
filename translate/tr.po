@@ -1,3 +1,4 @@
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
@@ -16,8 +17,8 @@ msgid "Backup"
 msgstr "Yedek"
 
 msgid ""
-"Run out filament (Head) ({ifs.extruder_port|string}), backup, loading {port} "
-"and continuing with printing"
+"Run out filament (Head) ({ifs.extruder_port|string}), backup, loading {port}"
+" and continuing with printing"
 msgstr ""
 "Filaman bitti (başlık) ({ifs.extruder_port|string}), yedekleme, {port} "
 "yükleniyor ve yazdırmaya devam ediliyor"
@@ -48,21 +49,22 @@ msgstr ""
 "adına artık atık kanalından atılmalı"
 
 msgid "Checking filaments"
-msgstr "Filamanlar denetleniyor"
+msgstr "Filamanlar kontrol ediliyor"
 
 msgid "Checking the status of the filaments in the IFS ports"
-msgstr "IFS portlarındaki filamanların durumu denetleniyor"
+msgstr "IFS portlarındaki filamanların durumu kontrol ediliyor"
 
 msgid ""
-"One of the filaments was just activating the sensor, retract 45mm all of them"
+"One of the filaments was just activating the sensor, retract 45mm all of "
+"them"
 msgstr "Filamanlardan biri sensörü tetikledi. Hepsi 45 mm geri çekiliyor"
 
 msgid ""
-"One of the filaments is gripped by the extruder so we extrude {flush_length|"
-"string}mm to determine which one it is"
+"One of the filaments is gripped by the extruder so we extrude "
+"{flush_length|string}mm to determine which one it is"
 msgstr ""
-"Filamanlardan biri ekstrüder tarafından tutuldu. Hangisi olduğunu belirlemek "
-"için {flush_length|string} mm itiliyor"
+"Filamanlardan biri ekstrüder tarafından tutuldu. Hangisi olduğunu belirlemek"
+" için {flush_length|string} mm ekstrüde ediliyor"
 
 msgid "Select for"
 msgstr "Şunun için seçin"
@@ -70,14 +72,26 @@ msgstr "Şunun için seçin"
 msgid "Close"
 msgstr "Kapat"
 
+msgid "Loading"
+msgstr "Yükleniyor"
+
+msgid "Please try again in 10 seconds"
+msgstr "Lütfen 10 saniye sonra tekrar deneyin"
+
 msgid "Colors (slicer filaments)"
 msgstr "Renkler (dilimleyici filamentleri)"
 
 msgid "IFS Ports"
-msgstr "IFS Portlar"
+msgstr "IFS Portları"
 
 msgid "Spools (physical filaments)"
 msgstr "Makaralar (fiziksel filamentler)"
+
+msgid "Error"
+msgstr "Hata"
+
+msgid "IFS port P{port} empty"
+msgstr "IFS portu P{port} boş"
 
 msgid "Print options"
 msgstr "Yazdırma seçenekleri"
@@ -95,9 +109,6 @@ msgstr ""
 msgid "Print"
 msgstr "Yazdır"
 
-msgid "Error"
-msgstr "Hata"
-
 msgid "It is not possible to print until all colors have been assigned"
 msgstr "Tüm renklere port atanmadan yazdırılamaz"
 
@@ -111,10 +122,7 @@ msgid "Select another"
 msgstr "Başka bir seçenek seç"
 
 msgid "Incorrect filament type"
-msgstr "Geçersiz filaman türü"
-
-msgid "IFS port P{port} empty"
-msgstr "IFS portu P{port} boş"
+msgstr "Yanlış filaman türü"
 
 msgid "Reinstalling bambufy"
 msgstr "Bambufy yeniden yükleniyor"
@@ -125,7 +133,8 @@ msgstr "Uyarı"
 msgid ""
 "Bambufy does not work with the native screen, it requires Guppy Screen "
 "(DISPLAY_OFF)"
-msgstr "Bambufy, orijinal ekranda çalışmaz. Guppy Screen (DISPLAY_OFF) gerekir"
+msgstr ""
+"Bambufy, orijinal ekranda çalışmaz. Guppy Screen (DISPLAY_OFF) gerekir"
 
 msgid "Enable Guppy Screen"
 msgstr "Guppy Screen'i Etkinleştir"
@@ -134,14 +143,14 @@ msgid "Disable Bambufy"
 msgstr "Bambufy'i Devre Dışı Bırak"
 
 msgid "Bed leveling"
-msgstr "Yatak hizalama"
+msgstr "Tabla hizalama"
 
 msgid ""
 "The current bed mesh (auto) is no longer valid or does not exist. Press BED "
 "CALIBRATE to continue"
 msgstr ""
-"Mevcut yatak örgüsü (oto) artık geçerli değil veya mevcut değil. Devam etmek "
-"için BED CALIBRATE tuşuna basın"
+"Mevcut tabla örgüsü (oto) artık geçerli değil veya mevcut değil. Devam etmek"
+" için BED CALIBRATE tuşuna basın"
 
 msgid "Loading filament"
 msgstr "Filaman yükleniyor"
@@ -153,26 +162,26 @@ msgid "Unloading filament"
 msgstr "Filaman boşaltılıyor"
 
 msgid "Timeout ignored because printer state is paused"
-msgstr "Zaman aşımı, yazıcı durumu 'duraklatıldı' olduğu için göz ardı edildi"
+msgstr "Zaman aşımı, yazıcı durumu 'duraklatıldı' olduğu için yoksayıldı"
 
 msgid "Pause during printing"
-msgstr "Yazdırma sırasında duraklat"
+msgstr "Yazdırma sırasında duraklatma"
 
 msgid "Pause during loading"
-msgstr "Yükleme sırasında duraklat"
+msgstr "Yükleme sırasında duraklatma"
 
 msgid "Pause"
 msgstr "Duraklat"
 
 msgid "Jam detected loading filament ({ifs.extruder_port|string}), pausing"
 msgstr ""
-"Filaman yüklenirken tıkanma algılandı ({ifs.extruder_port|"
-"string})Duraklatılıyor"
+"Filaman yüklenirken tıkanma algılandı ({ifs.extruder_port|string}) "
+"Duraklatıldı."
 
 msgid "Jam detected (Motion) ({ifs.extruder_port|string}), pausing"
 msgstr ""
-"Hareket sırasında tıkanma algılandı ({ifs.extruder_port|"
-"string})Duraklatılıyor"
+"Hareket sırasında tıkanma algılandı ({ifs.extruder_port|string}) "
+"Duraklatıldı."
 
 msgid ""
 "Run out filament (Head) ({ifs.extruder_port|string}), no backup alternative "
@@ -187,17 +196,23 @@ msgstr "Filaman bitti (başlık) ({ifs.extruder_port|string}). Duraklatılıyor"
 msgid ""
 "Broken filament in the IFS tube (Head) ({ifs.extruder_port|string}), pausing"
 msgstr ""
-"IFS borusunda filaman koptu (başlık) ({ifs.extruder_port|"
-"string})Duraklatılıyor"
+"IFS borusunda filaman koptu (başlık) ({ifs.extruder_port|string}) "
+"Duraklatıldı."
 
 msgid ""
 "IFS Port ({ifs.extruder_port|string}) empty, please insert filament, pausing"
 msgstr ""
-"IFS portu ({ifs.extruder_port|string}) boş. Lütfen filamanı "
-"yerleştirinDuraklatılıyor"
+"IFS portu ({ifs.extruder_port|string}) boş. Lütfen filamanı takın. "
+"Duraklatıldı."
 
 msgid "Restoring part cooling fan speed to"
-msgstr "Parça soğutma fanı hızı şuna geri yükleniyor"
+msgstr "Parça soğutma fanı hızı önceki hızına geri alınıyor:"
+
+msgid "Purging"
+msgstr "Pürj yapılıyor"
+
+msgid "Purging the previous color/material from the hotend"
+msgstr "Hotend'den önceki renk/malzeme akıtılıyor"
 
 msgid "Heating the nozzle to {extruder_temp} degrees"
 msgstr "Nozül {extruder_temp} °C'ye ısıtılıyor"
@@ -214,14 +229,8 @@ msgstr "Bilgi iletileri gizlendi"
 msgid "Start print {extruder_temp}/{bed_temp}"
 msgstr "Yazdırmayı başlat {extruder_temp}/{bed_temp}"
 
-msgid "Purging"
-msgstr "Temizleniyor"
-
-msgid "Purging the previous color/material from the hotend"
-msgstr "Hotend'den önceki renk/malzeme temizleniyor"
-
 msgid "Homing Z"
-msgstr "Z eksenini referans al"
+msgstr "Z ekseni sıfırlanıyor"
 
 msgid "Nozzle cleaning"
 msgstr "Nozül temizleniyor"
@@ -230,22 +239,22 @@ msgid "Leveling"
 msgstr "Hizalama"
 
 msgid "Bed leveling (KAMP)"
-msgstr "Yatak hizalama (KAMP)"
+msgstr "Tabla hizalama (KAMP)"
 
 msgid "Go to trash"
-msgstr "Çöpe git"
+msgstr "Atık kanalına git"
 
 msgid "Cleaning the nozzle on the rubber"
-msgstr "Nozül lastik üzerinde temizleniyor"
+msgstr "Nozül temizleme pedi üzerinde temizleniyor"
 
 msgid "Wait"
 msgstr "Bekleyin"
 
 msgid "Checking MD5 '{filename}'"
-msgstr "MD5 denetleniyor: '{filename}'"
+msgstr "MD5 kontrol ediliyor: '{filename}'"
 
 msgid "MD5 check started"
-msgstr "MD5 denetimi başladı"
+msgstr "MD5 kontrolü başladı"
 
 msgid "Processing '{filename}'"
 msgstr "İşleniyor: '{filename}'"
@@ -271,17 +280,18 @@ msgstr ""
 msgid ""
 "Please manually clean the nozzle while it is heating up then press CONTINUE"
 msgstr ""
-"Isınma sırasında nozulu elle temizleyin, ardından DEVAM düğmesine basın"
+"Isınma sırasında nozülü elle temizleyin, ardından DEVAM düğmesine basın"
 
 msgid "Bed screws"
-msgstr "Yatak vidaları"
+msgstr "Tabla vidaları"
 
 msgid ""
 "Please manually clean the nozzle while it is heating up then press continue"
-msgstr "Isınırken nozülü manuel olarak temizleyin, ardından devam tuşuna basın"
+msgstr ""
+"Isınma sırasında nozülü elle temizleyin, ardından DEVAM düğmesine basın"
 
 msgid "Restoring..."
-msgstr ""
+msgstr "Geri yükleniyor..."
 
 msgid "Please wait, this process may take a while"
-msgstr ""
+msgstr "Lütfen bekleyin, bu işlem biraz sürebilir"

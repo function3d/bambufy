@@ -1,3 +1,4 @@
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
@@ -16,11 +17,11 @@ msgid "Backup"
 msgstr "Záloha"
 
 msgid ""
-"Run out filament (Head) ({ifs.extruder_port|string}), backup, loading {port} "
-"and continuing with printing"
+"Run out filament (Head) ({ifs.extruder_port|string}), backup, loading {port}"
+" and continuing with printing"
 msgstr ""
-"Konec filamentu (hlava) ({ifs.extruder_port|string}), záloha, načítá se "
-"{port}, tisk pokračuje"
+"Konec filamentu (hlava) ({ifs.extruder_port|string}), záložní filament, "
+"načítá se {port}, tisk pokračuje"
 
 msgid ""
 "Filament run out in the IFS ({port|string}), we continue printing until it "
@@ -30,13 +31,13 @@ msgstr ""
 "nedojde v extrudéru nebo nedojde ke změně filamentu"
 
 msgid "Insert filament detected"
-msgstr "Zjištěn vkládací filament"
+msgstr "Detekováno vložení filamentu"
 
 msgid "Auto insert"
 msgstr "Automatické vložení"
 
 msgid "Poop {i}/20"
-msgstr "Čištění {i}/20"
+msgstr "Výplach {i}/20"
 
 msgid ""
 "The filament in the IFS ({consume}) has run out. The remaining filament has "
@@ -44,8 +45,8 @@ msgid ""
 "through the waste chute in order to load the next one requested by the print"
 msgstr ""
 "Filament v IFS ({consume}) došel. Zbývající filament byl využit, dokud to "
-"bylo možné, ale nyní musí být vysunut odpadním žlabem, aby bylo možné načíst "
-"další požadovaný tiskem"
+"bylo možné, ale nyní musí být vysunut odpadním žlabem, aby bylo možné načíst"
+" další filament požadovaný tiskem"
 
 msgid "Checking filaments"
 msgstr "Kontrola filamentů"
@@ -54,12 +55,13 @@ msgid "Checking the status of the filaments in the IFS ports"
 msgstr "Kontrola stavu filamentů v portech IFS"
 
 msgid ""
-"One of the filaments was just activating the sensor, retract 45mm all of them"
+"One of the filaments was just activating the sensor, retract 45mm all of "
+"them"
 msgstr "Jeden z filamentů právě aktivoval senzor. Všechny zataženy o 45 mm"
 
 msgid ""
-"One of the filaments is gripped by the extruder so we extrude {flush_length|"
-"string}mm to determine which one it is"
+"One of the filaments is gripped by the extruder so we extrude "
+"{flush_length|string}mm to determine which one it is"
 msgstr ""
 "Jeden filament je uchopen extrudérem. Extrudujeme {flush_length|string} mm "
 "pro jeho identifikaci"
@@ -70,6 +72,12 @@ msgstr "Vybrat pro"
 msgid "Close"
 msgstr "Zavřít"
 
+msgid "Loading"
+msgstr "Zavádění"
+
+msgid "Please try again in 10 seconds"
+msgstr "Zkuste to prosím znovu za 10 sekund"
+
 msgid "Colors (slicer filaments)"
 msgstr "Barvy (filamenty sliceru)"
 
@@ -78,6 +86,12 @@ msgstr "Porty IFS"
 
 msgid "Spools (physical filaments)"
 msgstr "Cívky (fyzické filamenty)"
+
+msgid "Error"
+msgstr "Chyba"
+
+msgid "IFS port P{port} empty"
+msgstr "Port IFS P{port} prázdný"
 
 msgid "Print options"
 msgstr "Možnosti tisku"
@@ -95,29 +109,23 @@ msgstr ""
 msgid "Print"
 msgstr "Tisk"
 
-msgid "Error"
-msgstr "Chyba"
-
 msgid "It is not possible to print until all colors have been assigned"
 msgstr "Tisk není možný, dokud nejsou všechny barvy přiřazeny"
 
 msgid "Select"
-msgstr "Wybierz"
+msgstr "Vybrat"
 
 msgid "Current selection"
-msgstr "Aktualny wybór"
+msgstr "Aktuální výběr"
 
 msgid "Select another"
-msgstr "Wybierz inny"
+msgstr "Vybrat jiný"
 
 msgid "Incorrect filament type"
 msgstr "Nesprávný typ filamentu"
 
-msgid "IFS port P{port} empty"
-msgstr "Port IFS P{port} prázdný"
-
 msgid "Reinstalling bambufy"
-msgstr "Přeinstalace Bambufy"
+msgstr "Přeinstalování bambufy"
 
 msgid "Warning"
 msgstr "Varování"
@@ -145,10 +153,10 @@ msgstr ""
 "CALIBRATE pro pokračování"
 
 msgid "Loading filament"
-msgstr "Načítání filamentu"
+msgstr "Zavádění filamentu"
 
 msgid "Cutting the filament"
-msgstr "Řezání filamentu"
+msgstr "Odstřižení filamentu"
 
 msgid "Unloading filament"
 msgstr "Vysouvání filamentu"
@@ -163,14 +171,14 @@ msgid "Pause during loading"
 msgstr "Pozastavení během zavádění"
 
 msgid "Pause"
-msgstr "Pozastavit"
+msgstr "Pauza"
 
 msgid "Jam detected loading filament ({ifs.extruder_port|string}), pausing"
 msgstr ""
-"Zaseknutí při zavádění filamentu ({ifs.extruder_port|string}). Pozastavuje se"
+"Zaseknutí při zavádění filamentu ({ifs.extruder_port|string}). Pozastaveno"
 
 msgid "Jam detected (Motion) ({ifs.extruder_port|string}), pausing"
-msgstr "Zaseknutí (pohyb) ({ifs.extruder_port|string}). Pozastavuje se"
+msgstr "Zaseknutí (pohyb) ({ifs.extruder_port|string}). Pozastaveno"
 
 msgid ""
 "Run out filament (Head) ({ifs.extruder_port|string}), no backup alternative "
@@ -194,7 +202,13 @@ msgstr ""
 "Port IFS ({ifs.extruder_port|string}) prázdný. Vložte filament. Pozastaveno"
 
 msgid "Restoring part cooling fan speed to"
-msgstr "Obnovování rychlosti ventilátoru chlazení dílu na"
+msgstr "Obnovení rychlosti ventilátoru ofuku tisku na"
+
+msgid "Purging"
+msgstr "Proplachování"
+
+msgid "Purging the previous color/material from the hotend"
+msgstr "Proplachování předchozí barvy/materiálu z hotendu"
 
 msgid "Heating the nozzle to {extruder_temp} degrees"
 msgstr "Ohřev trysky na {extruder_temp} °C"
@@ -211,14 +225,8 @@ msgstr "Informační dialogy byly skryty"
 msgid "Start print {extruder_temp}/{bed_temp}"
 msgstr "Spustit tisk {extruder_temp}/{bed_temp}"
 
-msgid "Purging"
-msgstr "Proplachování"
-
-msgid "Purging the previous color/material from the hotend"
-msgstr "Proplachování předchozí barvy/materiálu z hotendu"
-
 msgid "Homing Z"
-msgstr "Referencování osy Z"
+msgstr "Najetí osy Z do výchozí polohy"
 
 msgid "Nozzle cleaning"
 msgstr "Čištění trysky"
@@ -230,10 +238,10 @@ msgid "Bed leveling (KAMP)"
 msgstr "Nivelace podložky (KAMP)"
 
 msgid "Go to trash"
-msgstr "Jít k odpadu"
+msgstr "Přejezd k odpadu"
 
 msgid "Cleaning the nozzle on the rubber"
-msgstr "Čištění trysky na gumě"
+msgstr "Čištění trysky o gumu"
 
 msgid "Wait"
 msgstr "Čekejte"
@@ -256,7 +264,7 @@ msgstr "Kontrola MD5 selhala. Tisk zrušen"
 msgid ""
 "Loading filament at {extruder_temp} for {extrude_len}mm at {speed/60} mm/s"
 msgstr ""
-"Načítání filamentu při {extruder_temp} °C po {extrude_len} mm rychlostí "
+"Zavádění filamentu při {extruder_temp} °C po {extrude_len} mm rychlostí "
 "{speed/60} mm/s"
 
 msgid ""
@@ -274,10 +282,10 @@ msgstr "Šrouby podložky"
 
 msgid ""
 "Please manually clean the nozzle while it is heating up then press continue"
-msgstr "Během ohřevu ručně vyčistěte trysku a poté stiskněte pokračovat"
+msgstr "Během ohřevu ručně vyčistěte trysku a poté stiskněte POKRAČOVAT"
 
 msgid "Restoring..."
-msgstr ""
+msgstr "Obnovování..."
 
 msgid "Please wait, this process may take a while"
-msgstr ""
+msgstr "Čekejte, tento proces může chvíli trvat"

@@ -1,3 +1,4 @@
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
@@ -16,21 +17,17 @@ msgid "Backup"
 msgstr "백업"
 
 msgid ""
-"Run out filament (Head) ({ifs.extruder_port|string}), backup, loading {port} "
-"and continuing with printing"
-msgstr ""
-"필라멘트 소진(헤드)({ifs.extruder_port|string}) 백업 중 {port} 로딩 후 인쇄 "
-"계속"
+"Run out filament (Head) ({ifs.extruder_port|string}), backup, loading {port}"
+" and continuing with printing"
+msgstr "필라멘트 소진(헤드)({ifs.extruder_port|string}), 백업 필라멘트 {port} 로드 후 인쇄 계속"
 
 msgid ""
 "Filament run out in the IFS ({port|string}), we continue printing until it "
 "runs out in the extruder or there is a filament change"
-msgstr ""
-"IFS 내 필라멘트 소진({port|string}) 압출기에서 소진되거나 필라멘트 교체 시까"
-"지 인쇄 계속"
+msgstr "IFS 필라멘트 소진({port|string}). 압출기 내 잔량이 소진되거나 필라멘트 교체 시까지 인쇄 계속"
 
 msgid "Insert filament detected"
-msgstr "삽입 필라멘트 감지됨"
+msgstr "필라멘트 삽입 감지됨"
 
 msgid "Auto insert"
 msgstr "자동 삽입"
@@ -43,9 +40,8 @@ msgid ""
 "been used until it was no longer possible, but now it must be expelled "
 "through the waste chute in order to load the next one requested by the print"
 msgstr ""
-"IFS 내 필라멘트({consume})가 소진되었습니다 남은 필라멘트는 더 이상 사용 불가"
-"능할 때까지 사용되었으며 이제 폐기 채널을 통해 배출하고 인쇄가 요청한 다음 필"
-"라멘트를 로드해야 합니다"
+"IFS 내 필라멘트({consume})가 소진되었습니다. 남은 필라멘트는 더 이상 사용 불가능할 때까지 사용되었으며 이제 퍼지 슈트를 "
+"통해 배출하고 인쇄가 요청한 다음 필라멘트를 로드해야 합니다"
 
 msgid "Checking filaments"
 msgstr "필라멘트 확인 중"
@@ -54,21 +50,26 @@ msgid "Checking the status of the filaments in the IFS ports"
 msgstr "IFS 포트 내 필라멘트 상태 확인 중"
 
 msgid ""
-"One of the filaments was just activating the sensor, retract 45mm all of them"
-msgstr "필라멘트 중 하나가 센서를 방금 활성화했습니다 전부 45mm 후진 중"
+"One of the filaments was just activating the sensor, retract 45mm all of "
+"them"
+msgstr "하나의 필라멘트가 센서를 작동시켰습니다. 모두 45mm 리트랙트 중"
 
 msgid ""
-"One of the filaments is gripped by the extruder so we extrude {flush_length|"
-"string}mm to determine which one it is"
-msgstr ""
-"필라멘트 중 하나가 압출기에 걸려 있습니다 식별을 위해 {flush_length|string}"
-"mm 압출 중"
+"One of the filaments is gripped by the extruder so we extrude "
+"{flush_length|string}mm to determine which one it is"
+msgstr "필라멘트 하나가 압출기에 물려 있습니다. 식별을 위해 {flush_length|string}mm 압출 중"
 
 msgid "Select for"
 msgstr "선택"
 
 msgid "Close"
 msgstr "닫기"
+
+msgid "Loading"
+msgstr "로딩 중"
+
+msgid "Please try again in 10 seconds"
+msgstr "10초 후에 다시 시도하세요"
 
 msgid "Colors (slicer filaments)"
 msgstr "색상 (슬라이서 필라멘트)"
@@ -79,23 +80,26 @@ msgstr "IFS 포트"
 msgid "Spools (physical filaments)"
 msgstr "스풀 (물리적 필라멘트)"
 
+msgid "Error"
+msgstr "오류"
+
+msgid "IFS port P{port} empty"
+msgstr "IFS 포트 P{port} 비어 있음"
+
 msgid "Print options"
 msgstr "인쇄 옵션"
 
 msgid "This is a multicolor printing, IFS cannot be disabled"
-msgstr "다색 인쇄 중입니다 IFS를 비활성화할 수 없습니다"
+msgstr "다색 인쇄 중입니다. IFS를 비활성화할 수 없습니다"
 
 msgid "The BACKUP function is only possible with IFS enabled"
-msgstr "백업 기능은 IFS가 활성화된 경우에만 사용 가능합니다"
+msgstr "백업 필라멘트 기능은 IFS가 활성화된 경우에만 사용 가능합니다"
 
 msgid "Update Filament change gcode to v{ifs.min_version} or higher"
 msgstr "필라멘트 교체 G코드를 v{ifs.min_version} 이상으로 업데이트하세요"
 
 msgid "Print"
 msgstr "인쇄"
-
-msgid "Error"
-msgstr "오류"
 
 msgid "It is not possible to print until all colors have been assigned"
 msgstr "모든 색상에 포트가 할당될 때까지 인쇄할 수 없습니다"
@@ -112,9 +116,6 @@ msgstr "다른 항목 선택"
 msgid "Incorrect filament type"
 msgstr "필라멘트 유형 불일치"
 
-msgid "IFS port P{port} empty"
-msgstr "IFS 포트 P{port} 비어 있음"
-
 msgid "Reinstalling bambufy"
 msgstr "Bambufy 재설치 중"
 
@@ -124,7 +125,7 @@ msgstr "경고"
 msgid ""
 "Bambufy does not work with the native screen, it requires Guppy Screen "
 "(DISPLAY_OFF)"
-msgstr "Bambufy는 기본 화면과 호환되지 않습니다 Guppy Screen(DISPLAY_OFF) 필요"
+msgstr "Bambufy는 기본 화면과 호환되지 않습니다. Guppy Screen(DISPLAY_OFF)이 필요합니다"
 
 msgid "Enable Guppy Screen"
 msgstr "Guppy Screen 활성화"
@@ -138,9 +139,7 @@ msgstr "베드 레벨링"
 msgid ""
 "The current bed mesh (auto) is no longer valid or does not exist. Press BED "
 "CALIBRATE to continue"
-msgstr ""
-"현재 베드 메시(자동)가 더 이상 유효하지 않거나 존재하지 않습니다. 계속하려면 "
-"BED CALIBRATE를 누르세요"
+msgstr "현재 베드 메시(자동)가 더 이상 유효하지 않거나 존재하지 않습니다. 계속하려면 BED CALIBRATE를 누르세요"
 
 msgid "Loading filament"
 msgstr "필라멘트 로딩 중"
@@ -149,10 +148,10 @@ msgid "Cutting the filament"
 msgstr "필라멘트 절단 중"
 
 msgid "Unloading filament"
-msgstr "필라멘트 언로딩 중"
+msgstr "필라멘트 언로드 중"
 
 msgid "Timeout ignored because printer state is paused"
-msgstr "프린터 상태가 일시 정지됨으로 타임아웃 무시됨"
+msgstr "프린터가 일시 정지 상태이므로 타임아웃을 무시합니다"
 
 msgid "Pause during printing"
 msgstr "인쇄 중 일시 정지"
@@ -164,32 +163,35 @@ msgid "Pause"
 msgstr "일시 정지"
 
 msgid "Jam detected loading filament ({ifs.extruder_port|string}), pausing"
-msgstr "필라멘트 로딩 중 장전 감지({ifs.extruder_port|string}) 일시 정지 중"
+msgstr "필라멘트 로딩 중 걸림(잼) 감지({ifs.extruder_port|string}). 일시 정지합니다"
 
 msgid "Jam detected (Motion) ({ifs.extruder_port|string}), pausing"
-msgstr "이동 중 장전 감지({ifs.extruder_port|string}) 일시 정지 중"
+msgstr "이동 중 걸림(잼) 감지({ifs.extruder_port|string}). 일시 정지합니다"
 
 msgid ""
 "Run out filament (Head) ({ifs.extruder_port|string}), no backup alternative "
 "has been found, pausing"
-msgstr ""
-"필라멘트 소진(헤드)({ifs.extruder_port|string}) 백업 대안 없음 일시 정지 중"
+msgstr "필라멘트 소진(헤드)({ifs.extruder_port|string}). 백업 필라멘트 없음. 일시 정지합니다"
 
 msgid "Run out filament (Head) ({ifs.extruder_port|string}), pausing"
 msgstr "필라멘트 소진(헤드)({ifs.extruder_port|string}) 일시 정지 중"
 
 msgid ""
 "Broken filament in the IFS tube (Head) ({ifs.extruder_port|string}), pausing"
-msgstr ""
-"IFS 튜브 내 필라멘트 파손(헤드)({ifs.extruder_port|string}) 일시 정지 중"
+msgstr "IFS 튜브 내 필라멘트 파손(헤드)({ifs.extruder_port|string}) 일시 정지 중"
 
 msgid ""
 "IFS Port ({ifs.extruder_port|string}) empty, please insert filament, pausing"
-msgstr ""
-"IFS 포트({ifs.extruder_port|string}) 비어 있음 필라멘트 삽입 후 일시 정지 중"
+msgstr "IFS 포트({ifs.extruder_port|string})가 비어 있습니다. 필라멘트를 삽입하십시오. 일시 정지합니다"
 
 msgid "Restoring part cooling fan speed to"
 msgstr "파트 냉각 팬 속도 복원 중"
+
+msgid "Purging"
+msgstr "플러싱 중"
+
+msgid "Purging the previous color/material from the hotend"
+msgstr "핫엔드에서 이전 색상/재료 플러싱 중"
 
 msgid "Heating the nozzle to {extruder_temp} degrees"
 msgstr "노즐 {extruder_temp}℃로 가열 중"
@@ -206,14 +208,8 @@ msgstr "정보 대화상자가 숨겨졌습니다"
 msgid "Start print {extruder_temp}/{bed_temp}"
 msgstr "인쇄 시작 {extruder_temp}/{bed_temp}"
 
-msgid "Purging"
-msgstr "플러싱 중"
-
-msgid "Purging the previous color/material from the hotend"
-msgstr "핫엔드에서 이전 색상/재료 플러싱 중"
-
 msgid "Homing Z"
-msgstr "Z축 홈 위치 설정"
+msgstr "Z축 호밍 중"
 
 msgid "Nozzle cleaning"
 msgstr "노즐 청소 중"
@@ -225,52 +221,50 @@ msgid "Bed leveling (KAMP)"
 msgstr "베드 레벨링(KAMP) 중"
 
 msgid "Go to trash"
-msgstr "폐기 위치로 이동"
+msgstr "퍼지 위치로 이동"
 
 msgid "Cleaning the nozzle on the rubber"
 msgstr "고무 패드에서 노즐 청소 중"
 
 msgid "Wait"
-msgstr "잠시 기다려 주세요"
+msgstr "대기 중"
 
 msgid "Checking MD5 '{filename}'"
-msgstr "MD5 확인 중 '{filename}'"
+msgstr "'{filename}' MD5 확인 중"
 
 msgid "MD5 check started"
 msgstr "MD5 확인 시작"
 
 msgid "Processing '{filename}'"
-msgstr "처리 중 '{filename}'"
+msgstr "'{filename}' 처리 중"
 
 msgid "This may take a while. For faster processing"
 msgstr "이 작업은 시간이 다소 걸릴 수 있습니다. 더 빠른 처리를 위해"
 
 msgid "MD5 check failed. Print canceled"
-msgstr "MD5 확인 실패 인쇄 취소됨"
+msgstr "MD5 확인 실패. 인쇄가 취소되었습니다"
 
 msgid ""
 "Loading filament at {extruder_temp} for {extrude_len}mm at {speed/60} mm/s"
-msgstr ""
-"{extruder_temp}℃에서 {extrude_len}mm {speed/60} mm/s로 필라멘트 로딩 중"
+msgstr "{extruder_temp}℃에서 {extrude_len}mm {speed/60} mm/s로 필라멘트 로딩 중"
 
 msgid ""
 "Unloading filament at {extruder_temp} for {extrude_len}mm at {speed/60} mm/s"
-msgstr ""
-"{extruder_temp}℃에서 {extrude_len}mm {speed/60} mm/s로 필라멘트 언로딩 중"
+msgstr "{extruder_temp}℃에서 {extrude_len}mm {speed/60} mm/s로 필라멘트 언로딩 중"
 
 msgid ""
 "Please manually clean the nozzle while it is heating up then press CONTINUE"
-msgstr "노즐이 예열되는 동안 수동으로 청소한 다음 ‘계속’을 누르십시오"
+msgstr "노즐이 예열되는 동안 수동으로 청소한 다음 ‘계속’을 누르세요"
 
 msgid "Bed screws"
 msgstr "베드 나사"
 
 msgid ""
 "Please manually clean the nozzle while it is heating up then press continue"
-msgstr "가열 중 노즐을 수동으로 청소한 후 계속을 누르세요"
+msgstr "가열 중 노즐을 수동으로 청소한 후 ‘계속’을 누르세요"
 
 msgid "Restoring..."
-msgstr ""
+msgstr "복원 중..."
 
 msgid "Please wait, this process may take a while"
-msgstr ""
+msgstr "잠시 기다려 주세요. 이 과정은 시간이 걸릴 수 있습니다"

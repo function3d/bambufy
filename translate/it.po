@@ -1,3 +1,4 @@
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
@@ -16,8 +17,8 @@ msgid "Backup"
 msgstr "Backup"
 
 msgid ""
-"Run out filament (Head) ({ifs.extruder_port|string}), backup, loading {port} "
-"and continuing with printing"
+"Run out filament (Head) ({ifs.extruder_port|string}), backup, loading {port}"
+" and continuing with printing"
 msgstr ""
 "Esaurimento filamento (testina) ({ifs.extruder_port|string}), backup, "
 "caricamento di {port} e ripresa della stampa"
@@ -30,13 +31,13 @@ msgstr ""
 "esaurimento nell’estrusore o cambio filamento"
 
 msgid "Insert filament detected"
-msgstr "Filamento di inserimento rilevato"
+msgstr "Inserimento filamento rilevato"
 
 msgid "Auto insert"
 msgstr "Inserimento automatico"
 
 msgid "Poop {i}/20"
-msgstr "Pulizia {i}/20"
+msgstr "Spurgo {i}/20"
 
 msgid ""
 "The filament in the IFS ({consume}) has run out. The remaining filament has "
@@ -54,21 +55,28 @@ msgid "Checking the status of the filaments in the IFS ports"
 msgstr "Verifica stato filamenti nelle porte IFS"
 
 msgid ""
-"One of the filaments was just activating the sensor, retract 45mm all of them"
-msgstr "Un filamento ha appena attivato il sensore. Retrai 45 mm su tutti"
+"One of the filaments was just activating the sensor, retract 45mm all of "
+"them"
+msgstr "Un filamento ha appena attivato il sensore. Arretrare tutti di 45 mm"
 
 msgid ""
-"One of the filaments is gripped by the extruder so we extrude {flush_length|"
-"string}mm to determine which one it is"
+"One of the filaments is gripped by the extruder so we extrude "
+"{flush_length|string}mm to determine which one it is"
 msgstr ""
-"Un filamento è afferrato dall’estrusore. Estrudi {flush_length|string} mm "
+"Un filamento è afferrato dall’estrusore. Estrudere {flush_length|string} mm "
 "per identificarlo"
 
 msgid "Select for"
-msgstr "Seleziona per"
+msgstr "Selezionare per"
 
 msgid "Close"
 msgstr "Chiudi"
+
+msgid "Loading"
+msgstr "Caricamento"
+
+msgid "Please try again in 10 seconds"
+msgstr "Riprovare tra 10 secondi"
 
 msgid "Colors (slicer filaments)"
 msgstr "Colori (filamenti dello slicer)"
@@ -78,6 +86,12 @@ msgstr "Porte IFS"
 
 msgid "Spools (physical filaments)"
 msgstr "Bobine (filamenti fisici)"
+
+msgid "Error"
+msgstr "Errore"
+
+msgid "IFS port P{port} empty"
+msgstr "Porta IFS P{port} vuota"
 
 msgid "Print options"
 msgstr "Opzioni di stampa"
@@ -89,13 +103,11 @@ msgid "The BACKUP function is only possible with IFS enabled"
 msgstr "La funzione BACKUP è possibile solo con IFS attivo"
 
 msgid "Update Filament change gcode to v{ifs.min_version} or higher"
-msgstr "Aggiorna il gcode cambio filamento alla v{ifs.min_version} o superiore"
+msgstr ""
+"Aggiornare il G-code di cambio filamento alla v{ifs.min_version} o superiore"
 
 msgid "Print"
 msgstr "Stampa"
-
-msgid "Error"
-msgstr "Errore"
 
 msgid "It is not possible to print until all colors have been assigned"
 msgstr "Impossibile stampare finché non sono assegnati tutti i colori"
@@ -107,16 +119,13 @@ msgid "Current selection"
 msgstr "Selezione attuale"
 
 msgid "Select another"
-msgstr "Seleziona un'altra opzione"
+msgstr "Selezionarne un altro"
 
 msgid "Incorrect filament type"
 msgstr "Tipo di filamento errato"
 
-msgid "IFS port P{port} empty"
-msgstr "Porta IFS P{port} vuota"
-
 msgid "Reinstalling bambufy"
-msgstr "Reinstallazione di Bambufy"
+msgstr "Reinstallazione di bambufy"
 
 msgid "Warning"
 msgstr "Avviso"
@@ -141,8 +150,8 @@ msgid ""
 "The current bed mesh (auto) is no longer valid or does not exist. Press BED "
 "CALIBRATE to continue"
 msgstr ""
-"La mesh attuale del piatto (auto) non è più valida o non esiste. Premere BED "
-"CALIBRATE per continuare"
+"La mesh attuale del piatto (auto) non è più valida o non esiste. Premere BED"
+" CALIBRATE per continuare"
 
 msgid "Loading filament"
 msgstr "Caricamento filamento"
@@ -182,12 +191,14 @@ msgstr ""
 "disponibile. In pausa"
 
 msgid "Run out filament (Head) ({ifs.extruder_port|string}), pausing"
-msgstr "Esaurimento filamento (testina) ({ifs.extruder_port|string}). In pausa"
+msgstr ""
+"Esaurimento filamento (testina) ({ifs.extruder_port|string}). In pausa"
 
 msgid ""
 "Broken filament in the IFS tube (Head) ({ifs.extruder_port|string}), pausing"
 msgstr ""
-"Filamento rotto nel tubo IFS (testina) ({ifs.extruder_port|string}). In pausa"
+"Filamento rotto nel tubo IFS (testina) ({ifs.extruder_port|string}). In "
+"pausa"
 
 msgid ""
 "IFS Port ({ifs.extruder_port|string}) empty, please insert filament, pausing"
@@ -195,7 +206,13 @@ msgstr ""
 "Porta IFS ({ifs.extruder_port|string}) vuota. Inserire filamento. In pausa"
 
 msgid "Restoring part cooling fan speed to"
-msgstr "Ripristino velocità ventola di raffreddamento a"
+msgstr "Ripristino velocità ventola raffreddamento pezzo a"
+
+msgid "Purging"
+msgstr "Spurgo in corso"
+
+msgid "Purging the previous color/material from the hotend"
+msgstr "Spurgo del colore/materiale precedente dall’hotend"
 
 msgid "Heating the nozzle to {extruder_temp} degrees"
 msgstr "Riscaldamento ugello a {extruder_temp} °C"
@@ -212,14 +229,8 @@ msgstr "Le finestre informative sono state nascoste"
 msgid "Start print {extruder_temp}/{bed_temp}"
 msgstr "Avvia stampa {extruder_temp}/{bed_temp}"
 
-msgid "Purging"
-msgstr "Pulizia in corso"
-
-msgid "Purging the previous color/material from the hotend"
-msgstr "Pulizia del colore/materiale precedente dall’hotend"
-
 msgid "Homing Z"
-msgstr "Referenziazione Z"
+msgstr "Homing Z"
 
 msgid "Nozzle cleaning"
 msgstr "Pulizia ugello"
@@ -231,10 +242,10 @@ msgid "Bed leveling (KAMP)"
 msgstr "Livellamento piatto (KAMP)"
 
 msgid "Go to trash"
-msgstr "Vai al cestino"
+msgstr "Andare allo scarico"
 
 msgid "Cleaning the nozzle on the rubber"
-msgstr "Pulizia ugello su gomma"
+msgstr "Pulizia ugello sulla gomma"
 
 msgid "Wait"
 msgstr "Attendere"
@@ -257,8 +268,8 @@ msgstr "Controllo MD5 fallito. Stampa annullata"
 msgid ""
 "Loading filament at {extruder_temp} for {extrude_len}mm at {speed/60} mm/s"
 msgstr ""
-"Caricamento filamento a {extruder_temp} °C per {extrude_len} mm a {speed/60} "
-"mm/s"
+"Caricamento filamento a {extruder_temp} °C per {extrude_len} mm a {speed/60}"
+" mm/s"
 
 msgid ""
 "Unloading filament at {extruder_temp} for {extrude_len}mm at {speed/60} mm/s"
@@ -269,7 +280,8 @@ msgstr ""
 msgid ""
 "Please manually clean the nozzle while it is heating up then press CONTINUE"
 msgstr ""
-"Pulire manualmente l’ugello durante il riscaldamento, quindi premere CONTINUA"
+"Pulire manualmente l’ugello durante il riscaldamento, quindi premere "
+"CONTINUA"
 
 msgid "Bed screws"
 msgstr "Viti del piatto"
@@ -277,10 +289,11 @@ msgstr "Viti del piatto"
 msgid ""
 "Please manually clean the nozzle while it is heating up then press continue"
 msgstr ""
-"Pulire manualmente l’ugello durante il riscaldamento, quindi premere continua"
+"Pulire manualmente l’ugello durante il riscaldamento, quindi premere "
+"CONTINUA"
 
 msgid "Restoring..."
-msgstr ""
+msgstr "Ripristino..."
 
 msgid "Please wait, this process may take a while"
-msgstr ""
+msgstr "Attendere, procedura può richiedere un po’ di tempo"
