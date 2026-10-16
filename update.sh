@@ -3,6 +3,8 @@
 CONF=/opt/config/printer.base.cfg
 VARS="/opt/config/mod_data/variables.cfg"
 
+#g28_tenz: comment position_endstop in [stepper_z]
+cp "$CONF" /tmp/printer.base.before
 awk '
   /^\[stepper_z\]/ {
     in_z = 1
@@ -30,9 +32,13 @@ cat > "/opt/config/.theme/custom.css" << 'EOF'
 }
 EOF
 
-if grep -q "^[[:space:]]*bambufy_mesh[[:space:]]*=" "$VARS"; then
-    sed -i "s|^[[:space:]]*bambufy_mesh[[:space:]]*=.*|bambufy_mesh = 0|" "$VARS"
-else
+if ! cmp -s /tmp/printer.base.before "$CONF"; then
+    if grep -q "^[[:space:]]*bambufy_mesh[[:space:]]*=" "$VARS"; then
+        sed -i "s|^[[:space:]]*bambufy_mesh[[:space:]]*=.*|bambufy_mesh = 0|" "$VARS"
+    else
+        echo "bambufy_mesh = 0" >> "$VARS"
+    fi
+elif ! grep -q "^[[:space:]]*bambufy_mesh[[:space:]]*=" "$VARS"; then
     echo "bambufy_mesh = 0" >> "$VARS"
 fi
 

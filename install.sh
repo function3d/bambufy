@@ -35,12 +35,6 @@ else
     echo "web = '$WEB'" >> "$VARS"
 fi
 
-if grep -q "^[[:space:]]*bambufy_mesh[[:space:]]*=" "$VARS"; then
-    sed -i "s|^[[:space:]]*bambufy_mesh[[:space:]]*=.*|bambufy_mesh = 0|" "$VARS"
-else
-    echo "bambufy_mesh = 0" >> "$VARS"
-fi
-
 #display_off_timeout = 10 (variables.cfg)
 if grep -qE '^[[:space:]]*display_off_timeout[[:space:]]*=' "$VARS" 2>/dev/null; then
     sed -i 's/^[[:space:]]*display_off_timeout[[:space:]]*=.*/display_off_timeout = 10/' "$VARS"
@@ -58,8 +52,9 @@ elif [ -z "$bambufy_version" ]; then #version empty
   echo "gcode_offsets = {'z': '0'}" >> "$VARS"
 fi
 
-#g28_tenz
+#g28_tenz: comment position_endstop in [stepper_z], mesh only invalid if file really changed
 CONF=/opt/config/printer.base.cfg
+cp "$CONF" /tmp/printer.base.before
 awk '
   /^\[stepper_z\]/ {
     in_z = 1
@@ -77,6 +72,16 @@ awk '
   }
   { print }
 ' ${CONF} > /tmp/tmp && mv /tmp/tmp $CONF
+
+if ! cmp -s /tmp/printer.base.before "$CONF"; then
+    if grep -q "^[[:space:]]*bambufy_mesh[[:space:]]*=" "$VARS"; then
+        sed -i "s|^[[:space:]]*bambufy_mesh[[:space:]]*=.*|bambufy_mesh = 0|" "$VARS"
+    else
+        echo "bambufy_mesh = 0" >> "$VARS"
+    fi
+elif ! grep -q "^[[:space:]]*bambufy_mesh[[:space:]]*=" "$VARS"; then
+    echo "bambufy_mesh = 0" >> "$VARS"
+fi
 
 #update custom.css
 cat > "/opt/config/.theme/custom.css" << 'EOF'

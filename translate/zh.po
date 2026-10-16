@@ -13,55 +13,49 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 3.4.2\n"
 
-msgid "Backup"
-msgstr "备用"
+msgid "Automatic backup"
+msgstr "自动备用耗材"
 
 msgid ""
-"Run out filament (Head) ({ifs.extruder_port|string}), backup, loading {port} "
-"and continuing with printing"
-msgstr ""
-"喷头耗材用尽 ({ifs.extruder_port|string}) 启用备用 正在加载 {port} 并继续打印"
+"Filament runout on Port {ifs.extruder_port|string}. Loading backup Port "
+"{port} and resuming print"
+msgstr "端口 {ifs.extruder_port|string} 耗材用尽。正在加载备用端口 {port} 并恢复打印"
 
 msgid ""
-"Filament run out in the IFS ({port|string}), we continue printing until it "
-"runs out in the extruder or there is a filament change"
-msgstr "IFS 中耗材已用尽 ({port|string}) 将继续打印 直至挤出机耗尽或更换耗材"
+"Filament runout in IFS Port {port|string}. Printing continues until extruder"
+" empties or next filament change"
+msgstr "IFS 端口 {port|string} 耗材用尽。打印将继续，直到挤出机排空或进行下一次换料"
 
 msgid "Insert filament detected"
 msgstr "检测到耗材插入"
 
-msgid "Auto insert"
-msgstr "自动进料"
+msgid "Auto-inserting filament"
+msgstr "自动送丝"
 
-msgid "Poop {i}/20"
-msgstr "排废 {i}/20"
+msgid "Purging {i}/20"
+msgstr "排料 {i}/20"
 
 msgid ""
-"The filament in the IFS ({consume}) has run out. The remaining filament has "
-"been used until it was no longer possible, but now it must be expelled "
-"through the waste chute in order to load the next one requested by the print"
-msgstr ""
-"IFS 中的耗材 ({consume}) 已耗尽 剩余部分已尽可能使用 现在必须通过废料槽排出 "
-"以便加载打印任务所需的下一种耗材"
+"Filament in IFS Port {consume} ran out. Purging leftovers through waste "
+"chute to load next filament"
+msgstr "IFS 端口 {consume} 耗材已用尽。正在通过废料管排出残留耗材，以便装载下一个耗材"
 
 msgid "Checking filaments"
 msgstr "正在检查耗材"
 
-msgid "Checking the status of the filaments in the IFS ports"
-msgstr "正在检查 IFS 各端口耗材状态"
+msgid "Checking filament status in IFS ports"
+msgstr "正在检查 IFS 端口的耗材状态"
+
+msgid "Filament only touched sensor. Retracting all ports 45mm"
+msgstr "耗材仅触碰到传感器。正在将所有端口耗材回抽45毫米"
 
 msgid ""
-"One of the filaments was just activating the sensor, retract 45mm all of them"
-msgstr "某根耗材刚刚触发传感器 正在将全部耗材回抽 45mm"
+"Extruder holds one filament. Extruding {flush_length|string}mm to identify "
+"port"
+msgstr "挤出机夹住了一根耗材。正在挤出 {flush_length|string}mm 以识别端口"
 
-msgid ""
-"One of the filaments is gripped by the extruder so we extrude {flush_length|"
-"string}mm to determine which one it is"
-msgstr ""
-"某根耗材被挤出机夹住 正在挤出 {flush_length|string}mm 以识别具体是哪一根"
-
-msgid "Select for"
-msgstr "选择"
+msgid "Select filament for Port"
+msgstr "为端口选择耗材"
 
 msgid "Close"
 msgstr "关闭"
@@ -72,61 +66,59 @@ msgstr "正在加载"
 msgid "Please try again in 10 seconds"
 msgstr "请在10秒后重试"
 
-msgid "Colors (slicer filaments)"
-msgstr "颜色（切片耗材）"
+msgid "Filaments (from slicer)"
+msgstr "耗材（来自切片软件）"
 
-msgid "IFS Ports"
+msgid "IFS ports"
 msgstr "IFS 端口"
 
-msgid "Spools (physical filaments)"
-msgstr "料卷（实体耗材）"
+msgid "Spools (loaded filaments)"
+msgstr "料盘（已装载耗材）"
 
 msgid "Error"
 msgstr "错误"
 
-msgid "IFS port P{port} empty"
-msgstr "IFS 端口 P{port} 为空"
+msgid "IFS Port {port} empty"
+msgstr "IFS 端口 {port} 为空"
 
 msgid "Print options"
 msgstr "打印选项"
 
-msgid "This is a multicolor printing, IFS cannot be disabled"
-msgstr "当前为多色打印 IFS 无法禁用"
+msgid "Multicolor print requires IFS. Cannot disable it"
+msgstr "多色打印需要启用 IFS。无法将其禁用"
 
-msgid "The BACKUP function is only possible with IFS enabled"
-msgstr "仅当 IFS 启用时 备用功能才可用"
+msgid "Backup requires IFS enabled"
+msgstr "使用备用耗材需启用 IFS"
 
-msgid "Update Filament change gcode to v{ifs.min_version} or higher"
-msgstr "请将「换料 G 代码」更新至 v{ifs.min_version} 或更高版本"
+msgid "Update Filament Change G-code to v{ifs.min_version} or higher"
+msgstr "请将“换料”G代码更新至 v{ifs.min_version} 或更高版本"
 
 msgid "Print"
 msgstr "打印"
 
-msgid "It is not possible to print until all colors have been assigned"
-msgstr "所有颜色均分配端口后方可打印"
+msgid "Assign all filaments before printing"
+msgstr "打印前请分配所有耗材"
 
-msgid "Select"
-msgstr "选择"
+msgid "Select IFS port"
+msgstr "选择 IFS 端口"
 
 msgid "Current selection"
 msgstr "当前选择"
 
-msgid "Select another"
-msgstr "选择其他"
+msgid "Select a different port"
+msgstr "选择另一个端口"
 
 msgid "Incorrect filament type"
 msgstr "耗材类型不匹配"
 
-msgid "Reinstalling bambufy"
-msgstr "正在重新安装 Bambufy"
+msgid "Reinstalling Bambufy"
+msgstr "重新安装 Bambufy"
 
 msgid "Warning"
 msgstr "警告"
 
-msgid ""
-"Bambufy does not work with the native screen, it requires Guppy Screen "
-"(DISPLAY_OFF)"
-msgstr "Bambufy 不支持原生屏幕 需使用 Guppy Screen (DISPLAY_OFF)"
+msgid "Bambufy needs Guppy Screen. Native screen not supported"
+msgstr "Bambufy 需要 Guppy Screen。不支持原生屏幕"
 
 msgid "Enable Guppy Screen"
 msgstr "启用 Guppy Screen"
@@ -137,22 +129,20 @@ msgstr "禁用 Bambufy"
 msgid "Bed leveling"
 msgstr "床面调平"
 
-msgid ""
-"The current bed mesh (auto) is no longer valid or does not exist. Press BED "
-"CALIBRATE to continue"
-msgstr "当前床面网格（自动）已失效或不存在。请按 BED CALIBRATE 继续"
+msgid "Bed mesh invalid or missing. Press BED CALIBRATE to continue"
+msgstr "床面网格无效或缺失。按 BED CALIBRATE 继续"
 
 msgid "Loading filament"
 msgstr "正在加载耗材"
 
-msgid "Cutting the filament"
+msgid "Cutting filament"
 msgstr "正在切割耗材"
 
 msgid "Unloading filament"
 msgstr "正在卸载耗材"
 
-msgid "Timeout ignored because printer state is paused"
-msgstr "因打印机处于暂停状态 忽略超时"
+msgid "Timeout ignored: printer paused"
+msgstr "超时被忽略：打印机暂停"
 
 msgid "Pause during printing"
 msgstr "打印中暂停"
@@ -163,41 +153,38 @@ msgstr "加载中暂停"
 msgid "Pause"
 msgstr "暂停"
 
-msgid "Jam detected loading filament ({ifs.extruder_port|string}), pausing"
-msgstr "加载耗材时检测到堵料 ({ifs.extruder_port|string}) 正在暂停"
+msgid "Jam detected while loading Port {ifs.extruder_port|string}"
+msgstr "加载端口 {ifs.extruder_port|string} 时检测到堵塞"
 
-msgid "Jam detected (Motion) ({ifs.extruder_port|string}), pausing"
-msgstr "移动传感器检测到堵料 ({ifs.extruder_port|string})，正在暂停"
-
-msgid ""
-"Run out filament (Head) ({ifs.extruder_port|string}), no backup alternative "
-"has been found, pausing"
-msgstr "喷头耗材用尽 ({ifs.extruder_port|string}) 未找到备用方案 正在暂停"
-
-msgid "Run out filament (Head) ({ifs.extruder_port|string}), pausing"
-msgstr "喷头耗材用尽 ({ifs.extruder_port|string}) 正在暂停"
+msgid "Motion jam detected on Port {ifs.extruder_port|string}"
+msgstr "端口 {ifs.extruder_port|string} 检测到运动堵塞"
 
 msgid ""
-"Broken filament in the IFS tube (Head) ({ifs.extruder_port|string}), pausing"
-msgstr "IFS 管内耗材断裂（喷头端）({ifs.extruder_port|string})，正在暂停"
+"Filament runout on Port {ifs.extruder_port|string}. No backup available"
+msgstr "端口 {ifs.extruder_port|string} 耗材用尽。无备用耗材"
 
-msgid ""
-"IFS Port ({ifs.extruder_port|string}) empty, please insert filament, pausing"
-msgstr "IFS 端口 ({ifs.extruder_port|string}) 为空 请插入耗材 正在暂停"
+msgid "Filament runout on Port {ifs.extruder_port|string}"
+msgstr "端口 {ifs.extruder_port|string} 耗材用尽"
 
-msgid "Restoring part cooling fan speed to"
-msgstr "正在将零件冷却风扇速度恢复至"
+msgid "Broken filament near head, Port {ifs.extruder_port|string}"
+msgstr "喷头附近耗材断裂，端口 {ifs.extruder_port|string}"
+
+msgid "IFS Port {ifs.extruder_port|string} empty. Insert filament"
+msgstr "IFS 端口 {ifs.extruder_port|string} 为空。请插入耗材"
+
+msgid "Restoring part-cooling fan to"
+msgstr "部件冷却风扇风速恢复至"
 
 msgid "Purging"
 msgstr "正在排料"
 
-msgid "Purging the previous color/material from the hotend"
-msgstr "正在从热端排出上一种颜色/材料"
+msgid "Purging previous filament from hotend"
+msgstr "正在排料，清除热端中的旧耗材"
 
-msgid "Heating the nozzle to {extruder_temp} degrees"
-msgstr "正在将喷嘴加热至 {extruder_temp}℃"
+msgid "Heating nozzle to {extruder_temp}°C"
+msgstr "喷嘴正在加热至 {extruder_temp}°C"
 
-msgid "HIDE FUTURE MESSAGES"
+msgid "Hide future messages"
 msgstr "隐藏后续消息"
 
 msgid "The information dialogs will be displayed"
@@ -206,8 +193,8 @@ msgstr "将显示信息对话框"
 msgid "The information dialogs have been hidden"
 msgstr "信息对话框已隐藏"
 
-msgid "Start print {extruder_temp}/{bed_temp}"
-msgstr "开始打印 {extruder_temp}/{bed_temp}"
+msgid "Starting print: {extruder_temp}/{bed_temp}°C"
+msgstr "开始打印：{extruder_temp}/{bed_temp}°C"
 
 msgid "Homing Z"
 msgstr "Z 轴回零"
@@ -215,17 +202,14 @@ msgstr "Z 轴回零"
 msgid "Nozzle cleaning"
 msgstr "正在清洁喷嘴"
 
-msgid "Leveling"
-msgstr "调平"
-
 msgid "Bed leveling (KAMP)"
 msgstr "正在执行床面调平（KAMP）"
 
-msgid "Go to trash"
-msgstr "前往废料槽"
+msgid "Moving to waste chute"
+msgstr "移至废料管"
 
-msgid "Cleaning the nozzle on the rubber"
-msgstr "正在橡胶垫上清洁喷嘴"
+msgid "Wiping nozzle on cleaner"
+msgstr "正在清洁器上擦拭喷嘴"
 
 msgid "Wait"
 msgstr "请稍候"
@@ -239,35 +223,28 @@ msgstr "已开始校验 MD5"
 msgid "Processing '{filename}'"
 msgstr "正在处理「{filename}」"
 
-msgid "This may take a while. For faster processing"
-msgstr "此操作可能需要一些时间。如需更快处理，请"
+msgid "This may take a while"
+msgstr "这可能需要一段时间"
 
-msgid "MD5 check failed. Print canceled"
-msgstr "MD5 校验失败 已取消打印"
-
-msgid ""
-"Loading filament at {extruder_temp} for {extrude_len}mm at {speed/60} mm/s"
-msgstr ""
-"正在以 {extruder_temp}℃ {speed/60} mm/s 的速度加载 {extrude_len}mm 耗材"
+msgid "MD5 check failed. Print cancelled"
+msgstr "MD5校验失败。打印已取消"
 
 msgid ""
-"Unloading filament at {extruder_temp} for {extrude_len}mm at {speed/60} mm/s"
-msgstr ""
-"正在以 {extruder_temp}℃ {speed/60} mm/s 的速度卸载 {extrude_len}mm 耗材"
+"Loading filament: {extruder_temp}°C, {extrude_len}mm at {speed/60} mm/s"
+msgstr "正在加载耗材：{extruder_temp}°C，{extrude_len}mm，速度 {speed/60} mm/s"
 
 msgid ""
-"Please manually clean the nozzle while it is heating up then press CONTINUE"
-msgstr "请在喷嘴预热时手动清洁喷嘴，然后点击“继续”"
+"Unloading filament: {extruder_temp}°C, {extrude_len}mm at {speed/60} mm/s"
+msgstr "正在卸载耗材：{extruder_temp}°C，{extrude_len}mm，速度 {speed/60} mm/s"
+
+msgid "Clean nozzle while heating, then press CONTINUE"
+msgstr "在加热过程中清洁喷嘴，然后按CONTINUE"
 
 msgid "Bed screws"
 msgstr "床面螺丝"
 
-msgid ""
-"Please manually clean the nozzle while it is heating up then press continue"
-msgstr "请在加热过程中手动清洁喷嘴 然后点击“继续”"
-
-msgid "Restoring..."
-msgstr "正在恢复..."
+msgid "Restoring"
+msgstr "恢复"
 
 msgid "Please wait, this process may take a while"
 msgstr "请稍候，此过程可能需要一些时间"
