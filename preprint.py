@@ -24,11 +24,13 @@ def get_exclude_object_define(lines) -> Optional[str]:
     maxx = maxy = float("-inf")
 
     for line in lines:
-        parts = line.split()
+        # Drop the comment first: Orca's calibration G-code has moves like
+        # "G1 X60.731 Y80.787 F30000 ; Move to start XY position" (#61)
+        parts = line.split(";", 1)[0].split()
         if not parts:
             continue
         cmd = parts[0]
-        if cmd.startswith(("G1", "G2", "G3")):
+        if cmd in ("G1", "G2", "G3"):
             x = y = e = None
             for p in parts[1:]:
                 if p.startswith("X"):
