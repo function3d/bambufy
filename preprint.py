@@ -7,6 +7,7 @@ from typing import Optional
 import shutil
 from pathlib import Path
 import tempfile
+import zipfile
 
 PRINTER_PATH = "/tmp/printer"
 
@@ -17,6 +18,41 @@ def write_to_file(path: str, content: str):
             f.write(content)
     except OSError as e:
         print(f"Error when writing in {path}: {e}")
+
+
+def report_error(message: str):
+    """Replace the "Processing" dialog with an error when run by the printer."""
+    if any(k.startswith("SLIC3R_") for k in os.environ):
+        return
+    text = " ".join(str(message).split()).replace('"', "'")[:300]
+    write_to_file(PRINTER_PATH, (
+        'RESPOND TYPE=command MSG="action:prompt_begin Error"\n'
+        f'RESPOND TYPE=command MSG="action:prompt_text Preprint failed: {text}"\n'
+        'RESPOND TYPE=command MSG="action:prompt_show"\n'
+    ))
+
+
+def extract_3mf(file_path: str) -> tuple:
+    """Return the G-code track of a 3MF archive, extracted next to it.
+
+    Same naming as Z-Mod's 3mf2gcode: "part.3mf" and "part.gcode.3mf" become
+    "part.gcode", so the printer can start it with the usual filename.
+    """
+    path = Path(file_path)
+    if path.suffix.lower() != ".3mf":
+        return path, False
+
+    target = path.with_name(
+        path.name.replace(".gcode.3mf", "").replace(".3mf", "") + ".gcode")
+    with zipfile.ZipFile(path) as archive:
+        tracks = [n for n in archive.namelist() if n.lower().endswith(".gcode")]
+        if not tracks:
+            raise ValueError(f"no G-code track in {path.name}")
+        with archive.open(sorted(tracks)[0]) as source, \
+                open(target, "wb") as output:
+            shutil.copyfileobj(source, output)
+    print(f"Extracted {sorted(tracks)[0]} to {target}")
+    return target, True
 
 def get_exclude_object_define(lines) -> Optional[str]:
     """bounding box first layer"""
@@ -108,8 +144,13 @@ def main():
     nozzle_diameter=""
     nozzle_temperature=""
 
-    file_path = sys.argv[1]
-    
+    file_path, converted = extract_3mf(sys.argv[1])
+    gcodes_root = sys.argv[2] if len(sys.argv) > 2 else ""
+    filename_param = ""
+    if converted and gcodes_root:
+        print_name = os.path.relpath(file_path, gcodes_root).replace(os.sep, "/")
+        filename_param = f' FILENAME="{print_name}"'
+
     with open(file_path, 'r', encoding='utf-8') as f:
         for line_num, line in enumerate(f):
 
@@ -117,7 +158,7 @@ def main():
                 match = already_processed_re.search(line)
                 if match:
                     print("Already post-processed")
-                    existing = match.group(0).lstrip("; ").rstrip() + "\n"
+                    existing = match.group(0).lstrip("; ").rstrip() + filename_param + "\n"
                     print(existing)
                     write_to_file(PRINTER_PATH, existing)
                     sys.exit(0)
@@ -203,7 +244,8 @@ def main():
         f'COLORS={",".join(c[1:] for c in colors)} '
         f'TOOLS={",".join(tools)} '
         f'VERSION={version} '
-        f'EXCLUDE="{exclude}"\n'
+        f'EXCLUDE="{exclude}"'
+        f'{filename_param}\n'
     )
     print(ifs_colors)
 
@@ -231,4 +273,11 @@ def main():
         write_to_file(PRINTER_PATH, ifs_colors + "\n")
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except Exception as exc:
+        # Without this the "Processing" dialog stays on screen forever: the
+        # script is the only one that can close it when preprocessing fails.
+        print(f"preprint.py: {type(exc).__name__}: {exc}", file=sys.stderr)
+        report_error(f"{type(exc).__name__}: {exc}")
+        sys.exit(1)
