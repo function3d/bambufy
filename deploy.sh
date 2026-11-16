@@ -11,12 +11,22 @@ python3 -c "import polib" 2>/dev/null || { echo "falta polib: pip install polib"
 cd translate
 ./generate.sh
 cd ..
+PLUGIN_DIR="/usr/data/config/mod_data/plugins/bambufy"
 for lang in ${1:-en es fr de it pt cs ru tr ja ko zh}; do
   f="$lang/bambufy.cfg"
-  if cat "$f" | sshpass -p "$PRINTER_PASS" ssh -o StrictHostKeyChecking=no -o ConnectTimeout=10 "$PRINTER_USER@$PRINTER_IP" "cat > /usr/data/config/mod_data/plugins/bambufy/$f"; then
+  if cat "$f" | sshpass -p "$PRINTER_PASS" ssh -o StrictHostKeyChecking=no -o ConnectTimeout=10 "$PRINTER_USER@$PRINTER_IP" "cat > $PLUGIN_DIR/$f"; then
     echo "✅ Uploaded $f"
   else
     echo "✗ $f"
     exit 1
   fi
 done
+
+# The preprocessor is not a language file and is easy to forget: the printer
+# keeps running the old copy until it is uploaded too.
+if cat preprint.py | sshpass -p "$PRINTER_PASS" ssh -o StrictHostKeyChecking=no -o ConnectTimeout=10 "$PRINTER_USER@$PRINTER_IP" "cat > $PLUGIN_DIR/preprint.py"; then
+  echo "✅ Uploaded preprint.py"
+else
+  echo "✗ preprint.py"
+  exit 1
+fi
